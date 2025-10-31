@@ -1,37 +1,40 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navigation from "@/components/Navigation";
+import type { Metadata } from 'next';
+import { Inter, Playfair_Display } from 'next/font/google';
+import './globals.css';
+import { siteConfig } from '@/shared/config/site';
+import { Header } from '@/presentation/components/layout/Header';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Film & Television Set Designer",
-  description: "Portfolio of a professional film and television set designer",
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: ['velas artesanales', 'velas hechas a mano', 'velas aromáticas', 'decoración'],
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black`}
-      >
-        <Navigation />
-        <main className="pt-16">
-          {children}
-        </main>
+    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="antialiased">
+        <Header />
+        {children}
       </body>
     </html>
   );

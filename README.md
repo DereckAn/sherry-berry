@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sherry Berry - E-commerce de Velas Artesanales
 
-## Getting Started
+Una tienda online elegante y profesional para velas artesanales hechas a mano.
 
-First, run the development server:
+## 🚀 Stack Tecnológico
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript** (strict mode)
+- **Tailwind CSS v4**
+- **Zustand** (state management)
+
+## 📁 Arquitectura
+
+El proyecto sigue principios de **Clean Architecture** con la siguiente estructura:
+
+```
+src/
+├── app/                    # Next.js App Router
+├── core/                   # Domain Layer (Entities, Interfaces)
+├── infrastructure/         # Data Layer (Repositories, API)
+├── application/            # Use Cases (Business Logic)
+├── presentation/           # UI Layer (Components, Hooks, Stores)
+└── shared/                 # Utilities & Constants
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Sistema de Diseño
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Paleta de Colores
+- Crema (#FAF7F2)
+- Arena (#E8E0D5)
+- Taupe (#B5A393)
+- Charcoal (#2D2D2D)
+- Burgundy (#8B4049)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Tipografía
+- **Serif**: Playfair Display (headings)
+- **Sans-serif**: Inter (body)
 
-## Learn More
+### Principios
+- Minimalismo sofisticado
+- Espaciado generoso
+- Sin emojis en producción
+- Bordes sutiles
+- Transiciones elegantes
 
-To learn more about Next.js, take a look at the following resources:
+## 🏃 Comandos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Desarrollo
+bun dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Build
+bun run build
 
-## Deploy on Vercel
+# Lint
+bun run lint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Start production
+bun start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Componentes Principales
+
+### Secciones
+- **Hero**: Landing principal con CTA
+- **About**: Información sobre la marca
+- **FeaturedProducts**: Productos destacados
+- **CTASection**: Hook visual con imagen y texto
+- **Footer**: Footer elegante con enlaces
+
+### UI Components
+- **Button**: Variantes primary, secondary, outline, ghost
+- **Container**: Layout wrapper con tamaños responsive
+- **ProductCard**: Card de producto con hover effects
+
+## 🗺️ Próximos Pasos
+
+Ver `IMPLEMENTATION_PLAN.md` para el plan completo de implementación.
+
+### Fase Actual: Página Principal ✅
+- [x] Hero section
+- [x] About section
+- [x] Featured products
+- [x] CTA section
+- [x] Footer
+
+### Próximas Fases
+- [ ] Header/Navigation
+- [ ] Catálogo completo de productos
+- [ ] Página de producto individual
+- [ ] Carrito de compras
+- [ ] Checkout flow
+- [ ] Integración Zustand
+- [ ] Sistema de filtros
+- [ ] Wishlist
+
+## 🎯 Patrones de Diseño
+
+- **Repository Pattern**: Abstracción de datos
+- **Factory Pattern**: Creación de entidades
+- **Observer Pattern**: State management (Zustand)
+- **Strategy Pattern**: Pagos y envíos
+- **Adapter Pattern**: DTOs ↔ Entities
+
+## 📝 Notas de Desarrollo
+
+- TypeScript strict mode habilitado
+- Server Components por defecto
+- Client Components solo cuando necesario
+- Path alias `@/*` apunta a `src/*`
+
+## 🌐 Servidor de Desarrollo
+
+El servidor corre en: http://localhost:3000
+
+---
+
+**Sherry Berry** © 2025
