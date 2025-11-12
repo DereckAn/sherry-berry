@@ -1,19 +1,37 @@
-import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
-import './globals.css';
-import { siteConfig } from '@/shared/config/site';
-import { Header } from '@/components/layout/Header';
+import { Header } from "@/components/layout/Header";
+import { siteConfig } from "@/shared/config/site";
+import type { Metadata } from "next";
+import {
+  Antic_Slab,
+  Inter,
+  Josefin_Sans,
+  Playfair_Display,
+} from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
 });
 
 const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+  variable: "--font-josefin",
+  display: "swap",
+});
+
+const antic = Antic_Slab({
+  subsets: ["latin"],
+  variable: "--font-antic",
+  display: "swap",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +40,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ['velas artesanales', 'velas hechas a mano', 'velas aromáticas', 'decoración'],
+  keywords: [
+    "velas artesanales",
+    "velas hechas a mano",
+    "velas aromáticas",
+    "decoración",
+  ],
 };
 
 export default function RootLayout({

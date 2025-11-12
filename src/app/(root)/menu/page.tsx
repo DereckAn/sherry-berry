@@ -70,27 +70,22 @@ type Product = (typeof menuItems)[number];
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <article className="flex flex-col items-center text-center">
-      <div className="relative w-full max-w-[220px] aspect-3/4">
+    <article className="flex flex-col items-start">
+      <div className="relative w-full max-w-[420px] aspect-square">
         <Image
           src={product.image}
           alt={product.title}
           fill
-          sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 220px"
+          sizes="(max-width: 640px) 80vw, (max-width: 1024px) 45vw, 320px"
           className="object-cover"
         />
       </div>
 
-      <div className="mt-6">
-        {product.variant && (
-          <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-400">
-            {product.variant}
-          </p>
-        )}
-        <h3 className="mt-2 text-base font-semibold text-neutral-900">
+      <div className="mt-2 text-start space-y-2">
+        <h3 className="text-base font-semibold  font-josefin gtext-neutral-900">
           {product.title}
         </h3>
-        <p className="mt-2 text-sm text-neutral-600">{product.price}</p>
+        <p className="text-sm font-antic font-bold text-neutral-600">{product.price}</p>
       </div>
     </article>
   );
@@ -114,7 +109,7 @@ export default function MenuPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-14 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-10">
           {menuItems.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

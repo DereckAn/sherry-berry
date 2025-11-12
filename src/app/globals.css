@@ -4,6 +4,8 @@
   /* Typography */
   --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
   --font-family-serif: Playfair Display, Georgia, serif;
+  --font-josefin: "Josefin Sans", sans-serif;
+  --font-antic: "Antic Slab", serif;
 
   /* Colors - Elegant neutral palette */
   --color-cream: #faf7f2;
