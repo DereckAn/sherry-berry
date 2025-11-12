@@ -1,4 +1,4 @@
-import { Button } from '@/presentation/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
 export interface ProductCardProps {
   name: string;
