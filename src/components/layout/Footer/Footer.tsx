@@ -1,4 +1,4 @@
-import { Container } from '@/presentation/components/layout/Container';
+import { Container } from '@/components/layout/Container';
 import { siteConfig } from '@/shared/config/site';
 
 export function Footer() {

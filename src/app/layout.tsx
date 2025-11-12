@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/shared/config/site';
-import { Header } from '@/presentation/components/layout/Header';
+import { Header } from '@/components/layout/Header';
 
 const inter = Inter({
   subsets: ['latin'],

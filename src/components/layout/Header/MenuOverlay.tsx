@@ -8,9 +8,9 @@ interface MenuOverlayProps {
 }
 
 const menuItems = [
-  { label: 'Productos', href: '/productos' },
-  { label: 'Sobre Nosotros', href: '/sobre-nosotros' },
-  { label: 'Contacto', href: '/contacto' },
+  { label: 'Menu', href: '/menu' },
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Our Art', href: '/our-art' },
   { label: 'Blog', href: '/blog' },
 ];
 

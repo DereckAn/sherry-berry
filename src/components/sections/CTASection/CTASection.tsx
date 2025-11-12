@@ -1,5 +1,5 @@
-import { Container } from "@/presentation/components/layout/Container";
-import { Button } from "@/presentation/components/ui/Button";
+import { Container } from "@/components/layout/Container";
+import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
 export function CTASection() {

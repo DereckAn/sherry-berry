@@ -1,9 +1,9 @@
-import { Hero } from '@/presentation/components/sections/Hero';
-import { About } from '@/presentation/components/sections/About';
-import { Craft } from '@/presentation/components/sections/Craft';
-import { FeaturedProducts } from '@/presentation/components/sections/FeaturedProducts';
-import { CTASection } from '@/presentation/components/sections/CTASection';
-import { Footer } from '@/presentation/components/layout/Footer';
+import { Hero } from '@/components/sections/Hero';
+import { About } from '@/components/sections/About';
+import { Craft } from '@/components/sections/Craft';
+import { FeaturedProducts } from '@/components/sections/FeaturedProducts';
+import { CTASection } from '@/components/sections/CTASection';
+import { Footer } from '@/components/layout/Footer';
 
 export default function HomePage() {
   return (
