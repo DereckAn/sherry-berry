@@ -1,37 +1,31 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { MenuOverlay } from './MenuOverlay';
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { MenuOverlay } from "./MenuOverlay";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const isHomePage = pathname === "/";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-    const threshold = 100; // Mostrar después de 100px de scroll
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // Mostrar navbar si scrolleamos más de 100px
-      if (currentScrollY > threshold) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-
-      lastScrollY = currentScrollY;
+      // Cambiar el estado cuando el scroll sea mayor a 50px
+      setIsScrolled(currentScrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -39,15 +33,22 @@ export function Header() {
     <>
       {/* Header/Navbar */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-transform duration-300 ease-in-out ${
-          isVisible ? 'translate-y-0' : '-translate-y-full'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-sm shadow-sm"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-full px-6 lg:px-8 py-4 lg:py-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div>
-              <a href="/" className="text-xl lg:text-2xl font-serif font-normal text-black">
+              <a
+                href="/"
+                className={`text-xl lg:text-2xl font-serif font-normal transition-colors ${
+                  isHomePage && !isScrolled ? "text-white" : "text-black"
+                }`}
+              >
                 Sherry Berry
               </a>
             </div>
@@ -56,7 +57,9 @@ export function Header() {
             <div className="flex items-center gap-6 lg:gap-8">
               {/* Directory Button */}
               <button
-                className="flex items-center gap-2 text-xs lg:text-sm uppercase tracking-wider text-black hover:text-primary transition-colors"
+                className={`flex items-center gap-2 text-xs lg:text-sm uppercase tracking-wider hover:text-primary transition-colors ${
+                  isHomePage && !isScrolled ? "text-white" : "text-black"
+                }`}
                 aria-label="Directory"
               >
                 <svg
@@ -78,7 +81,9 @@ export function Header() {
               {/* Menu Button */}
               <button
                 onClick={toggleMenu}
-                className="flex items-center gap-2 text-xs lg:text-sm uppercase tracking-wider text-black hover:text-primary transition-colors"
+                className={`flex items-center gap-2 text-xs lg:text-sm uppercase tracking-wider hover:text-primary transition-colors ${
+                  isHomePage && !isScrolled ? "text-white" : "text-black"
+                }`}
                 aria-label="Menu"
               >
                 <svg

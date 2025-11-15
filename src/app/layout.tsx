@@ -6,6 +6,7 @@ import {
   Inter,
   Josefin_Sans,
   Playfair_Display,
+  Rokkitt,
 } from "next/font/google";
 import "./globals.css";
 
@@ -30,6 +31,13 @@ const josefin = Josefin_Sans({
 const antic = Antic_Slab({
   subsets: ["latin"],
   variable: "--font-antic",
+  display: "swap",
+  weight: "400",
+});
+
+const rokkitt = Rokkitt({
+  subsets: ["latin"],
+  variable: "--font-rokkitt",
   display: "swap",
   weight: "400",
 });
