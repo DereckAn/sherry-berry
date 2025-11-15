@@ -1,80 +1,93 @@
 "use client";
 
-import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 // Mock images - Replace with real images
 const heroImages = [
   {
     id: 1,
-    url: "/images/velas1.webp", // Placeholder
+    url: "/images/herocandel.webp",
     alt: "Velas artesanales ambiente 1",
   },
   {
     id: 2,
-    url: "/images/velas2.webp", // Placeholder
+    url: "/images/velas2.webp",
     alt: "Velas artesanales ambiente 2",
   },
   {
     id: 3,
-    url: "/images/velas3.webp", // Placeholder
+    url: "/images/velas3.webp",
     alt: "Velas artesanales ambiente 3",
   },
   {
     id: 4,
-    url: "/images/velas4.webp", // Placeholder
+    url: "/images/velas4.webp",
     alt: "Velas artesanales ambiente 4",
   },
   {
     id: 5,
-    url: "/images/velas5.webp", // Placeholder
+    url: "/images/velas5.webp",
     alt: "Velas artesanales ambiente 5",
   },
 ];
 
 export function Hero() {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      duration: 40,
-    },
-    [Autoplay({ delay: 10000, stopOnInteraction: false })]
-  );
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 10000); // Cambia cada 10 segundos
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Embla Carousel */}
-      <div className="embla h-full" ref={emblaRef}>
-        <div className="embla__container h-full">
-          {heroImages.map((image) => (
-            <div
-              key={image.id}
-              className="embla__slide relative h-full min-w-full"
-            >
-              {/* Background Image - Replace with actual images */}
-              <div className="relative h-full w-full ">
-                <Image
-                  src={image.url}
-                  alt={image.alt}
-                  fill
-                  className="object-cover "
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                />
-              </div>
+      {/* Images con fade transition */}
+      {heroImages.map((image, index) => (
+        <div
+          key={image.id}
+          className={`absolute inset-0 transition-opacity duration-3000 ease-in-out ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {/* Background Image */}
+          <div className="relative h-full w-full">
+            <Image
+              src={image.url}
+              alt={image.alt}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority={index === 0}
+            />
+          </div>
 
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/50" />
-            </div>
-          ))}
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/20" />
         </div>
-      </div>
+      ))}
 
       {/* Content overlay */}
-      <div className="absolute bottom-0 flex flex-col justify-between w-full leading-20 lg:leading-44">
-        <h2 className="text-[6.5rem] lg:text-[14.5vw] lg:text-nowrap font-serif font-bold text-white tracking-tighter text-center select-none pointer-events-none">
-          SHERRY BERRY
+      <div className="absolute bottom-0 h-64 w-full md:px-28 text-white">
+        <h2 className="text-8xl select-none font-legquinne pointer-events-none">
+          Luxury candles for your home
         </h2>
+        <div className=" flex flex-row justify-between mt-6">
+          <p className="max-w-2xl font-antic tracking-wider text-xl">
+            Handcrafted candles made with natural ingredients to create a cozy
+            atmosphere in your home.
+          </p>
+          <Link
+            href="/menu"
+            className="rounded-full py-3 px-5 bg-[#6A031E] hover:bg-[#91001A] transition-colors duration-300 text-sm h-fit"
+          >
+            Explore our collection
+          </Link>
+        </div>
       </div>
     </section>
   );

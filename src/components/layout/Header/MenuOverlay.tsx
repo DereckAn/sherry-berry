@@ -71,7 +71,7 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                 }}
               >
                 <div className="text-center md:text-left py-12 md:py-16 lg:py-20 border-t border-charcoal/20 hover:border-primary transition-colors">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-black group-hover:text-primary transition-colors">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-legquinne text-black group-hover:text-primary transition-colors">
                     {item.label}
                   </h2>
                 </div>

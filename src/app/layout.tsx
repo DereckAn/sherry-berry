@@ -2,12 +2,13 @@ import { Header } from "@/components/layout/Header";
 import { siteConfig } from "@/shared/config/site";
 import type { Metadata } from "next";
 import {
-  Antic_Slab,
-  Inter,
-  Josefin_Sans,
-  Playfair_Display,
-  Rokkitt,
+    Antic_Slab,
+    Inter,
+    Josefin_Sans,
+    Playfair_Display,
+    Rokkitt,
 } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({
@@ -42,6 +43,12 @@ const rokkitt = Rokkitt({
   weight: "400",
 });
 
+const legquinne = localFont({
+  src: "../../public/fonts/legquinne-light.otf",
+  variable: "--font-legquinne",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -62,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="es" className={`${inter.variable} ${playfair.variable} ${legquinne.variable}`}>
       <body className="antialiased">
         <Header />
         {children}
