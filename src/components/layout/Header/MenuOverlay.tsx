@@ -1,20 +1,17 @@
 'use client';
 
+import { navDictionary, type Language } from '@/shared/i18n/dictionary';
 import { useEffect } from 'react';
 
 interface MenuOverlayProps {
   isOpen: boolean;
   onClose: () => void;
+  language: Language;
 }
 
-const menuItems = [
-  { label: 'Menu', href: '/menu' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Our Art', href: '/our-art' },
-  { label: 'Blog', href: '/blog' },
-];
+export function MenuOverlay({ isOpen, onClose, language }: MenuOverlayProps) {
+  const { items, privacy, terms } = navDictionary[language];
 
-export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
@@ -58,7 +55,7 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         >
           {/* Grid layout like the reference */}
           <nav className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24 max-w-5xl w-full px-8">
-            {menuItems.map((item, index) => (
+            {items.map((item, index) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -88,10 +85,10 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           style={{ transitionDelay: isOpen ? '600ms' : '0ms' }}
         >
           <a href="/privacidad" className="hover:text-primary transition-colors">
-            Privacidad
+            {privacy}
           </a>
           <a href="/terminos" className="hover:text-primary transition-colors">
-            Términos
+            {terms}
           </a>
         </div>
       </div>

@@ -10,8 +10,8 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <About />
-      <Craft />
+      {/* <About /> */}
+      {/* <Craft /> */}
       <FeaturedProducts />
       <Projects />
       <CTASection />

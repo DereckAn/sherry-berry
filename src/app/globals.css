@@ -47,11 +47,13 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   line-height: 1.6;
+  overscroll-behavior: none;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 
