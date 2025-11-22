@@ -17,7 +17,7 @@ export function Header() {
 
   const isHomePage = pathname === "/";
   const textColorClass =
-    isHomePage && !isScrolled ? "text-white" : "text-black";
+    isHomePage && !isScrolled && !isMenuOpen ? "text-white" : "text-black";
 
   const menuLabel = useMemo(
     () => navDictionary[language].menuButton,
@@ -105,7 +105,7 @@ export function Header() {
               {/* Menu Button */}
               <button
                 onClick={toggleMenu}
-                className={`flex items-center gap-2 text-xs lg:text-sm uppercase tracking-wider hover:text-primary transition-colors ${textColorClass}`}
+                className={`flex items-center gap-2 text-xs lg:text-sm uppercase tracking-wider hover:text-primary transition-colors ${textColorClass} `}
                 aria-label={menuLabel}
               >
                 <svg
@@ -134,7 +134,11 @@ export function Header() {
                     </>
                   )}
                 </svg>
-                <span className="font-rokkitt">{menuLabel}</span>
+                <span
+                  className={`font-rokkitt ${isMenuOpen ? "text-black" : ""}`}
+                >
+                  {menuLabel}
+                </span>
               </button>
             </div>
           </div>
