@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "dev": "tinacms dev -c \"bun dev\"",
+    "dev": "tinacms dev -c \"bun next dev\"",
     "tina:build": "tinacms build"
   },
   "dependencies": {

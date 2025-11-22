@@ -5,13 +5,10 @@ const branch =
   process.env.VERCEL_GIT_COMMIT_REF ||
   "main";
 
-const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true" || process.env.NODE_ENV !== "production";
-
 export default defineConfig({
   branch,
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "local-client",
   token: process.env.TINA_TOKEN || "local-token",
-  local: isLocal,
   build: {
     outputFolder: "admin",
     publicFolder: "public",

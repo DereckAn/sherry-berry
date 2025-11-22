@@ -1,12 +1,10 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
 var branch = process.env.NEXT_PUBLIC_TINA_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main";
-var isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true" || true;
 var config_default = defineConfig({
   branch,
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "local-client",
   token: process.env.TINA_TOKEN || "local-token",
-  local: isLocal,
   build: {
     outputFolder: "admin",
     publicFolder: "public"
