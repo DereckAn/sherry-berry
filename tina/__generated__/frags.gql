@@ -1,0 +1,15 @@
+fragment HomeParts on Home {
+  __typename
+  language
+  heroTitle
+  heroSubtitle
+  ctaLabel
+}
+
+fragment SectionsParts on Sections {
+  __typename
+  language
+  title
+  excerpt
+  body
+}
