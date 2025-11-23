@@ -1,8 +1,18 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
+import type { HomeContent } from "@/shared/i18n/homeContent";
 
-export function CTASection() {
+type CTASectionProps = {
+  copy: Pick<
+    HomeContent,
+    "ctaTitle" | "ctaParagraphs" | "ctaBullets" | "ctaButtonLabel" | "ctaImageAlt"
+  >;
+};
+
+export function CTASection({ copy }: CTASectionProps) {
+  const { ctaTitle, ctaParagraphs, ctaBullets, ctaButtonLabel, ctaImageAlt } = copy;
+
   return (
     <section className="py-24 bg-white">
       <Container size="lg">
@@ -13,7 +23,7 @@ export function CTASection() {
             <div className="relative aspect-4/5">
               <Image
                 src="/images/vela11.webp"
-                alt="Vela Lavanda Tranquila"
+                alt={ctaImageAlt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -24,53 +34,27 @@ export function CTASection() {
           {/* Content */}
           <div className="order-1 lg:order-2 space-y-6">
             <h2 className="text-4xl sm:text-5xl font-serif text-black leading-tight">
-              Crea tu ambiente perfecto
+              {ctaTitle}
             </h2>
             <div className="space-y-4 text-lg text-charcoal leading-relaxed">
-              <p>
-                Cada vela está diseñada para evocar emociones y crear
-                experiencias únicas. Desde la tranquilidad de la lavanda hasta
-                la calidez de la vainilla, tenemos el aroma perfecto para cada
-                momento de tu día.
-              </p>
-              <p>
-                Nuestro compromiso con la calidad significa que cada producto
-                pasa por rigurosos controles para garantizar una combustión
-                limpia, duradera y aromática que transformará tu espacio.
-              </p>
+              {ctaParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             {/* Features list */}
             <ul className="space-y-3 py-4">
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span className="text-charcoal">
-                  Cera de soja 100% natural y biodegradable
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span className="text-charcoal">
-                  Aceites esenciales de la más alta calidad
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span className="text-charcoal">
-                  Mechas de algodón orgánico sin plomo
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">✓</span>
-                <span className="text-charcoal">
-                  Empaque sostenible y reutilizable
-                </span>
-              </li>
+              {ctaBullets.map((bullet) => (
+                <li key={bullet} className="flex items-start gap-3">
+                  <span className="text-primary mt-1">✓</span>
+                  <span className="text-charcoal">{bullet}</span>
+                </li>
+              ))}
             </ul>
 
             <div className="pt-4">
               <Button variant="primary" size="lg">
-                Descubre más
+                {ctaButtonLabel}
               </Button>
             </div>
           </div>

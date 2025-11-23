@@ -1,49 +1,27 @@
+import type { HomeContent } from "@/shared/i18n/homeContent";
 import Image from "next/image";
 
-// Top 3 best-selling products
-const topProducts = [
-  {
-    id: "1",
-    name: "Lavanda Tranquila",
-    price: 24.99,
-    image: "/images/velas8.webp",
-    colors: ["#8B4049", "#2D2D2D", "#D4AF37"],
-    rating: 4.9,
-  },
-  {
-    id: "2",
-    name: "Vainilla Clásica",
-    price: 22.99,
-    image: "/images/velas9.webp",
-    rating: 4.8,
-  },
-  {
-    id: "3",
-    name: "Bosque de Pino",
-    price: 26.99,
-    image: "/images/velas10.webp",
-    colors: ["#2D5016", "#8B4049"],
-    rating: 4.7,
-  },
-];
+type FeaturedProductsProps = {
+  copy: Pick<HomeContent, "featuredTitle" | "featuredSubtitle" | "featuredProducts">;
+};
 
-export function FeaturedProducts() {
+export function FeaturedProducts({ copy }: FeaturedProductsProps) {
+  const { featuredTitle, featuredSubtitle, featuredProducts } = copy;
+
   return (
     <section className="bg-cream grid grid-cols-2 lg:grid-cols-4 w-full">
       {/* First card - Title card */}
       <div className="bg-white p-8 lg:p-10 flex flex-col justify-center">
         <h2 className="text-5xl sm:text-6xl lg:text-7xl font-sans font-black uppercase text-black leading-none mb-4">
-          MÁS
-          <br />
-          VENDIDAS
+          {featuredTitle}
         </h2>
         <p className="text-sm lg:text-base text-charcoal">
-          Nuestras piezas más amadas, perfeccionadas para ti.
+          {featuredSubtitle}
         </p>
       </div>
 
       {/* Product cards */}
-      {topProducts.map((product) => (
+      {featuredProducts.map((product) => (
         <div key={product.id} className="group">
           {/* Image container */}
           <div className="relative aspect-square bg-sand mb-4 overflow-hidden ">

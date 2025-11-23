@@ -183,12 +183,45 @@ export type CollectionDocumentsArgs = {
 
 export type DocumentNode = Home | Sections | Folder;
 
+export type HomeFeaturedProducts = {
+  __typename?: 'HomeFeaturedProducts';
+  id: Scalars['String']['output'];
+  name: Scalars['String']['output'];
+  price: Scalars['Float']['output'];
+  image: Scalars['String']['output'];
+  colors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  rating?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeProjectsItems = {
+  __typename?: 'HomeProjectsItems';
+  id: Scalars['Float']['output'];
+  title: Scalars['String']['output'];
+  image: Scalars['String']['output'];
+  alt: Scalars['String']['output'];
+};
+
 export type Home = Node & Document & {
   __typename?: 'Home';
   language: Scalars['String']['output'];
   heroTitle: Scalars['String']['output'];
   heroSubtitle: Scalars['String']['output'];
-  ctaLabel: Scalars['String']['output'];
+  heroCtaLabel: Scalars['String']['output'];
+  featuredTitle: Scalars['String']['output'];
+  featuredSubtitle: Scalars['String']['output'];
+  featuredProducts?: Maybe<Array<Maybe<HomeFeaturedProducts>>>;
+  projectsTitle: Scalars['String']['output'];
+  projectsDescription: Scalars['String']['output'];
+  projectsCtaLabel: Scalars['String']['output'];
+  projectsItems?: Maybe<Array<Maybe<HomeProjectsItems>>>;
+  ctaTitle: Scalars['String']['output'];
+  ctaParagraphs: Array<Scalars['String']['output']>;
+  ctaBullets: Array<Scalars['String']['output']>;
+  ctaButtonLabel: Scalars['String']['output'];
+  ctaImageAlt: Scalars['String']['output'];
+  trustTitle: Scalars['String']['output'];
+  trustSubtitle: Scalars['String']['output'];
+  trustCtaLabel: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -201,11 +234,52 @@ export type StringFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type NumberFilter = {
+  lt?: InputMaybe<Scalars['Float']['input']>;
+  lte?: InputMaybe<Scalars['Float']['input']>;
+  gte?: InputMaybe<Scalars['Float']['input']>;
+  gt?: InputMaybe<Scalars['Float']['input']>;
+  eq?: InputMaybe<Scalars['Float']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
+};
+
+export type HomeFeaturedProductsFilter = {
+  id?: InputMaybe<StringFilter>;
+  name?: InputMaybe<StringFilter>;
+  price?: InputMaybe<NumberFilter>;
+  image?: InputMaybe<StringFilter>;
+  colors?: InputMaybe<StringFilter>;
+  rating?: InputMaybe<NumberFilter>;
+};
+
+export type HomeProjectsItemsFilter = {
+  id?: InputMaybe<NumberFilter>;
+  title?: InputMaybe<StringFilter>;
+  image?: InputMaybe<StringFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
 export type HomeFilter = {
   language?: InputMaybe<StringFilter>;
   heroTitle?: InputMaybe<StringFilter>;
   heroSubtitle?: InputMaybe<StringFilter>;
-  ctaLabel?: InputMaybe<StringFilter>;
+  heroCtaLabel?: InputMaybe<StringFilter>;
+  featuredTitle?: InputMaybe<StringFilter>;
+  featuredSubtitle?: InputMaybe<StringFilter>;
+  featuredProducts?: InputMaybe<HomeFeaturedProductsFilter>;
+  projectsTitle?: InputMaybe<StringFilter>;
+  projectsDescription?: InputMaybe<StringFilter>;
+  projectsCtaLabel?: InputMaybe<StringFilter>;
+  projectsItems?: InputMaybe<HomeProjectsItemsFilter>;
+  ctaTitle?: InputMaybe<StringFilter>;
+  ctaParagraphs?: InputMaybe<StringFilter>;
+  ctaBullets?: InputMaybe<StringFilter>;
+  ctaButtonLabel?: InputMaybe<StringFilter>;
+  ctaImageAlt?: InputMaybe<StringFilter>;
+  trustTitle?: InputMaybe<StringFilter>;
+  trustSubtitle?: InputMaybe<StringFilter>;
+  trustCtaLabel?: InputMaybe<StringFilter>;
 };
 
 export type HomeConnectionEdges = {
@@ -339,11 +413,42 @@ export type DocumentMutation = {
   sections?: InputMaybe<SectionsMutation>;
 };
 
+export type HomeFeaturedProductsMutation = {
+  id?: InputMaybe<Scalars['String']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  price?: InputMaybe<Scalars['Float']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  colors?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  rating?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeProjectsItemsMutation = {
+  id?: InputMaybe<Scalars['Float']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  alt?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type HomeMutation = {
   language?: InputMaybe<Scalars['String']['input']>;
   heroTitle?: InputMaybe<Scalars['String']['input']>;
   heroSubtitle?: InputMaybe<Scalars['String']['input']>;
-  ctaLabel?: InputMaybe<Scalars['String']['input']>;
+  heroCtaLabel?: InputMaybe<Scalars['String']['input']>;
+  featuredTitle?: InputMaybe<Scalars['String']['input']>;
+  featuredSubtitle?: InputMaybe<Scalars['String']['input']>;
+  featuredProducts?: InputMaybe<Array<InputMaybe<HomeFeaturedProductsMutation>>>;
+  projectsTitle?: InputMaybe<Scalars['String']['input']>;
+  projectsDescription?: InputMaybe<Scalars['String']['input']>;
+  projectsCtaLabel?: InputMaybe<Scalars['String']['input']>;
+  projectsItems?: InputMaybe<Array<InputMaybe<HomeProjectsItemsMutation>>>;
+  ctaTitle?: InputMaybe<Scalars['String']['input']>;
+  ctaParagraphs?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  ctaBullets?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  ctaButtonLabel?: InputMaybe<Scalars['String']['input']>;
+  ctaImageAlt?: InputMaybe<Scalars['String']['input']>;
+  trustTitle?: InputMaybe<Scalars['String']['input']>;
+  trustSubtitle?: InputMaybe<Scalars['String']['input']>;
+  trustCtaLabel?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SectionsMutation = {
@@ -353,7 +458,7 @@ export type SectionsMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type HomePartsFragment = { __typename: 'Home', language: string, heroTitle: string, heroSubtitle: string, ctaLabel: string };
+export type HomePartsFragment = { __typename: 'Home', language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null };
 
 export type SectionsPartsFragment = { __typename: 'Sections', language: string, title: string, excerpt?: string | null, body?: any | null };
 
@@ -362,7 +467,7 @@ export type HomeQueryVariables = Exact<{
 }>;
 
 
-export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, language: string, heroTitle: string, heroSubtitle: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null } };
 
 export type HomeConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -374,7 +479,7 @@ export type HomeConnectionQueryVariables = Exact<{
 }>;
 
 
-export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, language: string, heroTitle: string, heroSubtitle: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null } | null } | null> | null } };
 
 export type SectionsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -401,7 +506,36 @@ export const HomePartsFragmentDoc = gql`
   language
   heroTitle
   heroSubtitle
-  ctaLabel
+  heroCtaLabel
+  featuredTitle
+  featuredSubtitle
+  featuredProducts {
+    __typename
+    id
+    name
+    price
+    image
+    colors
+    rating
+  }
+  projectsTitle
+  projectsDescription
+  projectsCtaLabel
+  projectsItems {
+    __typename
+    id
+    title
+    image
+    alt
+  }
+  ctaTitle
+  ctaParagraphs
+  ctaBullets
+  ctaButtonLabel
+  ctaImageAlt
+  trustTitle
+  trustSubtitle
+  trustCtaLabel
 }
     `;
 export const SectionsPartsFragmentDoc = gql`

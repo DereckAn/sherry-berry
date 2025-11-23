@@ -10,6 +10,7 @@ import {
 } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { LanguageProvider } from "@/shared/i18n/LanguageProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,8 +72,10 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable} ${legquinne.variable}`}>
       <body className="antialiased">
-        <Header />
-        {children}
+        <LanguageProvider>
+          <Header />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

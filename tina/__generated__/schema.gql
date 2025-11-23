@@ -90,11 +90,42 @@ type Collection {
 
 union DocumentNode = Home | Sections | Folder
 
+type HomeFeaturedProducts {
+  id: String!
+  name: String!
+  price: Float!
+  image: String!
+  colors: [String]
+  rating: Float
+}
+
+type HomeProjectsItems {
+  id: Float!
+  title: String!
+  image: String!
+  alt: String!
+}
+
 type Home implements Node & Document {
   language: String!
   heroTitle: String!
   heroSubtitle: String!
-  ctaLabel: String!
+  heroCtaLabel: String!
+  featuredTitle: String!
+  featuredSubtitle: String!
+  featuredProducts: [HomeFeaturedProducts]
+  projectsTitle: String!
+  projectsDescription: String!
+  projectsCtaLabel: String!
+  projectsItems: [HomeProjectsItems]
+  ctaTitle: String!
+  ctaParagraphs: [String!]!
+  ctaBullets: [String!]!
+  ctaButtonLabel: String!
+  ctaImageAlt: String!
+  trustTitle: String!
+  trustSubtitle: String!
+  trustCtaLabel: String!
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -107,11 +138,52 @@ input StringFilter {
   in: [String]
 }
 
+input NumberFilter {
+  lt: Float
+  lte: Float
+  gte: Float
+  gt: Float
+  eq: Float
+  exists: Boolean
+  in: [Float]
+}
+
+input HomeFeaturedProductsFilter {
+  id: StringFilter
+  name: StringFilter
+  price: NumberFilter
+  image: StringFilter
+  colors: StringFilter
+  rating: NumberFilter
+}
+
+input HomeProjectsItemsFilter {
+  id: NumberFilter
+  title: StringFilter
+  image: StringFilter
+  alt: StringFilter
+}
+
 input HomeFilter {
   language: StringFilter
   heroTitle: StringFilter
   heroSubtitle: StringFilter
-  ctaLabel: StringFilter
+  heroCtaLabel: StringFilter
+  featuredTitle: StringFilter
+  featuredSubtitle: StringFilter
+  featuredProducts: HomeFeaturedProductsFilter
+  projectsTitle: StringFilter
+  projectsDescription: StringFilter
+  projectsCtaLabel: StringFilter
+  projectsItems: HomeProjectsItemsFilter
+  ctaTitle: StringFilter
+  ctaParagraphs: StringFilter
+  ctaBullets: StringFilter
+  ctaButtonLabel: StringFilter
+  ctaImageAlt: StringFilter
+  trustTitle: StringFilter
+  trustSubtitle: StringFilter
+  trustCtaLabel: StringFilter
 }
 
 type HomeConnectionEdges {
@@ -182,11 +254,42 @@ input DocumentMutation {
   sections: SectionsMutation
 }
 
+input HomeFeaturedProductsMutation {
+  id: String
+  name: String
+  price: Float
+  image: String
+  colors: [String]
+  rating: Float
+}
+
+input HomeProjectsItemsMutation {
+  id: Float
+  title: String
+  image: String
+  alt: String
+}
+
 input HomeMutation {
   language: String
   heroTitle: String
   heroSubtitle: String
-  ctaLabel: String
+  heroCtaLabel: String
+  featuredTitle: String
+  featuredSubtitle: String
+  featuredProducts: [HomeFeaturedProductsMutation]
+  projectsTitle: String
+  projectsDescription: String
+  projectsCtaLabel: String
+  projectsItems: [HomeProjectsItemsMutation]
+  ctaTitle: String
+  ctaParagraphs: [String]
+  ctaBullets: [String]
+  ctaButtonLabel: String
+  ctaImageAlt: String
+  trustTitle: String
+  trustSubtitle: String
+  trustCtaLabel: String
 }
 
 input SectionsMutation {

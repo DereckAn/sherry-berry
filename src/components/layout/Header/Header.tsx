@@ -1,10 +1,8 @@
 "use client";
 
-import {
-  LANGUAGE_OPTIONS,
-  Language,
-  navDictionary,
-} from "@/shared/i18n/dictionary";
+import { LANGUAGE_OPTIONS, navDictionary } from "@/shared/i18n/dictionary";
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { MenuOverlay } from "./MenuOverlay";
@@ -12,7 +10,7 @@ import { MenuOverlay } from "./MenuOverlay";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [language, setLanguage] = useState<Language>("en");
+  const { language, setLanguage } = useLanguage();
   const pathname = usePathname();
 
   const isHomePage = pathname === "/";
@@ -27,24 +25,6 @@ export function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const handleLanguageChange = (newLanguage: Language) => {
-    setLanguage(newLanguage);
-    // Persist for subsequent navigations
-    if (typeof window !== "undefined") {
-      localStorage.setItem("sb-language", newLanguage);
-    }
-  };
-
-  useEffect(() => {
-    const storedLanguage =
-      typeof window !== "undefined"
-        ? localStorage.getItem("sb-language")
-        : null;
-    if (storedLanguage && ["en", "es", "fr"].includes(storedLanguage)) {
-      setLanguage(storedLanguage as Language);
-    }
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,12 +54,12 @@ export function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div>
-              <a
+              <Link
                 href="/"
                 className={`text-xl lg:text-2xl font-serif font-normal transition-colors ${textColorClass}`}
               >
                 Sherry Berry
-              </a>
+              </Link>
             </div>
 
             {/* Right side: Language + Menu */}
@@ -90,9 +70,7 @@ export function Header() {
               <select
                 id="language-select"
                 value={language}
-                onChange={(event) =>
-                  handleLanguageChange(event.target.value as Language)
-                }
+                onChange={(event) => setLanguage(event.target.value as typeof language)}
                 className={`text-xs lg:text-sm uppercase tracking-wide focus:outline-none px-3 py-2 hover:text-primary ${textColorClass} transition-colors`}
               >
                 {LANGUAGE_OPTIONS.map((option) => (

@@ -3,7 +3,36 @@ fragment HomeParts on Home {
   language
   heroTitle
   heroSubtitle
-  ctaLabel
+  heroCtaLabel
+  featuredTitle
+  featuredSubtitle
+  featuredProducts {
+    __typename
+    id
+    name
+    price
+    image
+    colors
+    rating
+  }
+  projectsTitle
+  projectsDescription
+  projectsCtaLabel
+  projectsItems {
+    __typename
+    id
+    title
+    image
+    alt
+  }
+  ctaTitle
+  ctaParagraphs
+  ctaBullets
+  ctaButtonLabel
+  ctaImageAlt
+  trustTitle
+  trustSubtitle
+  trustCtaLabel
 }
 
 fragment SectionsParts on Sections {

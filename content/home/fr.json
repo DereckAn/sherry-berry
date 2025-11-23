@@ -2,5 +2,60 @@
   "language": "fr",
   "heroTitle": "Bougies de luxe pour votre intérieur",
   "heroSubtitle": "Bougies artisanales, ingrédients naturels, ambiance chaleureuse pour chaque pièce.",
-  "ctaLabel": "Découvrir la collection"
+  "heroCtaLabel": "Découvrir la collection",
+  "featuredTitle": "Meilleures ventes",
+  "featuredSubtitle": "Nos pièces les plus appréciées, perfectionnées pour vous.",
+  "featuredProducts": [
+    {
+      "id": "1",
+      "name": "Lavande Calme",
+      "price": 24.99,
+      "image": "/images/velas8.webp",
+      "colors": ["#8B4049", "#2D2D2D", "#D4AF37"],
+      "rating": 4.9
+    },
+    {
+      "id": "2",
+      "name": "Vanille Classique",
+      "price": 22.99,
+      "image": "/images/velas9.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "name": "Forêt de Pins",
+      "price": 26.99,
+      "image": "/images/velas10.webp",
+      "colors": ["#2D5016", "#8B4049"],
+      "rating": 4.7
+    }
+  ],
+  "projectsTitle": "Notre processus",
+  "projectsDescription": "Depuis le début, nous collaborons avec des professionnels du design pour créer des pièces qui traversent le temps et les tendances.",
+  "projectsCtaLabel": "Voir tous les projets",
+  "projectsItems": [
+    { "id": 1, "title": "RÊVES DE LAVANDE", "image": "/images/velas1.webp", "alt": "Projet bougie lavande" },
+    { "id": 2, "title": "ESSENCE DE VANILLE", "image": "/images/velas2.webp", "alt": "Projet bougie vanille" },
+    { "id": 3, "title": "BRISE D'AGRUMES", "image": "/images/velas3.webp", "alt": "Projet bougie agrumes" },
+    { "id": 4, "title": "BRUME DE FORÊT", "image": "/images/velas4.webp", "alt": "Projet bougie forêt" },
+    { "id": 5, "title": "JARDIN DE ROSES", "image": "/images/velas5.webp", "alt": "Projet bougie roses" },
+    { "id": 6, "title": "VAGUE OCÉANE", "image": "/images/herocandel.webp", "alt": "Projet bougie océan" },
+    { "id": 7, "title": "NUITS AMBRÉES", "image": "/images/herocandel.webp", "alt": "Projet bougie ambre" }
+  ],
+  "ctaTitle": "Créez votre ambiance idéale",
+  "ctaParagraphs": [
+    "Chaque bougie est conçue pour éveiller des émotions et créer des expériences uniques. De la sérénité de la lavande à la chaleur de la vanille, nous avons le parfum parfait pour chaque moment.",
+    "Notre engagement qualité passe par des contrôles stricts pour garantir une combustion propre, longue et parfumée qui transforme vos espaces."
+  ],
+  "ctaBullets": [
+    "Cire de soja 100% naturelle et biodégradable",
+    "Huiles essentielles de haute qualité",
+    "Mèches en coton sans plomb",
+    "Emballage durable et réutilisable"
+  ],
+  "ctaButtonLabel": "En savoir plus",
+  "ctaImageAlt": "Bougie lavande calme",
+  "trustTitle": "Bougies artisanales de luxe",
+  "trustSubtitle": "Confiance et élégance dans chaque parfum",
+  "trustCtaLabel": "Découvrir Sherry Berry"
 }

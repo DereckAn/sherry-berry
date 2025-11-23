@@ -2,5 +2,60 @@
   "language": "en",
   "heroTitle": "Luxury candles for your home",
   "heroSubtitle": "Handcrafted candles made with natural ingredients to create a cozy atmosphere in your home.",
-  "ctaLabel": "Explore our collection"
+  "heroCtaLabel": "Explore our collection",
+  "featuredTitle": "Best Sellers",
+  "featuredSubtitle": "Our most loved pieces, perfected for you.",
+  "featuredProducts": [
+    {
+      "id": "1",
+      "name": "Calm Lavender",
+      "price": 24.99,
+      "image": "/images/velas8.webp",
+      "colors": ["#8B4049", "#2D2D2D", "#D4AF37"],
+      "rating": 4.9
+    },
+    {
+      "id": "2",
+      "name": "Classic Vanilla",
+      "price": 22.99,
+      "image": "/images/velas9.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "name": "Pine Forest",
+      "price": 26.99,
+      "image": "/images/velas10.webp",
+      "colors": ["#2D5016", "#8B4049"],
+      "rating": 4.7
+    }
+  ],
+  "projectsTitle": "Our Process",
+  "projectsDescription": "Since the beginning, we have worked with design professionals to create pieces that transcend time and trends.",
+  "projectsCtaLabel": "See all projects",
+  "projectsItems": [
+    { "id": 1, "title": "LAVENDER DREAMS", "image": "/images/velas1.webp", "alt": "Lavender Dreams candle project" },
+    { "id": 2, "title": "VANILLA ESSENCE", "image": "/images/velas2.webp", "alt": "Vanilla Essence candle project" },
+    { "id": 3, "title": "CITRUS BREEZE", "image": "/images/velas3.webp", "alt": "Citrus Breeze candle project" },
+    { "id": 4, "title": "FOREST MIST", "image": "/images/velas4.webp", "alt": "Forest Mist candle project" },
+    { "id": 5, "title": "ROSE GARDEN", "image": "/images/velas5.webp", "alt": "Rose Garden candle project" },
+    { "id": 6, "title": "OCEAN WAVE", "image": "/images/herocandel.webp", "alt": "Ocean Wave candle project" },
+    { "id": 7, "title": "AMBER NIGHTS", "image": "/images/herocandel.webp", "alt": "Amber Nights candle project" }
+  ],
+  "ctaTitle": "Create your perfect atmosphere",
+  "ctaParagraphs": [
+    "Each candle is designed to evoke emotions and craft unique experiences. From the calm of lavender to the warmth of vanilla, we have the perfect scent for every moment of your day.",
+    "Our commitment to quality means each product goes through rigorous checks to ensure a clean, long-lasting burn that transforms your space."
+  ],
+  "ctaBullets": [
+    "100% natural, biodegradable soy wax",
+    "High-grade essential oils",
+    "Lead-free cotton wicks",
+    "Reusable, sustainable packaging"
+  ],
+  "ctaButtonLabel": "Learn more",
+  "ctaImageAlt": "Calm lavender candle",
+  "trustTitle": "Luxury Handcrafted Candles",
+  "trustSubtitle": "Confidence and elegance in every scent",
+  "trustCtaLabel": "Discover Sherry Berry"
 }

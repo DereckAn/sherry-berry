@@ -3,6 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import type { HomeContent } from "@/shared/i18n/homeContent";
+
+type HeroProps = {
+  copy: Pick<HomeContent, "heroTitle" | "heroSubtitle" | "heroCtaLabel">;
+};
 
 // Mock images - Replace with real images
 const heroImages = [
@@ -13,17 +18,17 @@ const heroImages = [
   },
   {
     id: 2,
-    url: "/images/velas2.webp",
+    url: "/images/herovela2.webp",
     alt: "Velas artesanales ambiente 2",
   },
   {
     id: 3,
-    url: "/images/velas3.webp",
+    url: "/images/herovela3.webp",
     alt: "Velas artesanales ambiente 3",
   },
   {
     id: 4,
-    url: "/images/velas4.webp",
+    url: "/images/herovela4.webp",
     alt: "Velas artesanales ambiente 4",
   },
   {
@@ -33,8 +38,9 @@ const heroImages = [
   },
 ];
 
-export function Hero() {
+export function Hero({ copy }: HeroProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { heroTitle, heroSubtitle, heroCtaLabel } = copy;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -74,18 +80,17 @@ export function Hero() {
       {/* Content overlay */}
       <div className="absolute bottom-0 h-64 w-full md:px-28 text-white">
         <h2 className="text-8xl select-none font-legquinne pointer-events-none">
-          Luxury candles for your home
+          {heroTitle}
         </h2>
         <div className=" flex flex-row justify-between mt-6">
           <p className="max-w-2xl font-antic tracking-wider text-xl">
-            Handcrafted candles made with natural ingredients to create a cozy
-            atmosphere in your home.
+            {heroSubtitle}
           </p>
           <Link
             href="/menu"
             className="rounded-full py-3 px-5 bg-[#6A031E] hover:bg-[#91001A] transition-colors duration-300 text-sm h-fit"
           >
-            Explore our collection
+            {heroCtaLabel}
           </Link>
         </div>
       </div>

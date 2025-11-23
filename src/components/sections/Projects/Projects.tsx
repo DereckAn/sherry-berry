@@ -4,53 +4,16 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import type { HomeContent } from "@/shared/i18n/homeContent";
 
-const projects = [
-  {
-    id: 1,
-    title: "LAVENDER DREAMS",
-    image: "/images/velas1.webp",
-    alt: "Lavender Dreams candle project",
-  },
-  {
-    id: 2,
-    title: "VANILLA ESSENCE",
-    image: "/images/velas2.webp",
-    alt: "Vanilla Essence candle project",
-  },
-  {
-    id: 3,
-    title: "CITRUS BREEZE",
-    image: "/images/velas3.webp",
-    alt: "Citrus Breeze candle project",
-  },
-  {
-    id: 4,
-    title: "FOREST MIST",
-    image: "/images/velas4.webp",
-    alt: "Forest Mist candle project",
-  },
-  {
-    id: 5,
-    title: "ROSE GARDEN",
-    image: "/images/velas5.webp",
-    alt: "Rose Garden candle project",
-  },
-  {
-    id: 6,
-    title: "OCEAN WAVE",
-    image: "/images/herocandel.webp",
-    alt: "Ocean Wave candle project",
-  },
-  {
-    id: 7,
-    title: "AMBER NIGHTS",
-    image: "/images/herocandel.webp",
-    alt: "Amber Nights candle project",
-  },
-];
+type ProjectsProps = {
+  copy: Pick<
+    HomeContent,
+    "projectsTitle" | "projectsDescription" | "projectsCtaLabel" | "projectsItems"
+  >;
+};
 
-export function Projects() {
+export function Projects({ copy }: ProjectsProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     loop: true,
@@ -58,8 +21,6 @@ export function Projects() {
   });
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -72,16 +33,21 @@ export function Projects() {
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setCurrentIndex(emblaApi.selectedScrollSnap());
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
-    onSelect();
+    const raf = requestAnimationFrame(onSelect);
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
+    return () => {
+      cancelAnimationFrame(raf);
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
   }, [emblaApi, onSelect]);
+
+  const { projectsTitle, projectsDescription, projectsCtaLabel, projectsItems } = copy;
 
   return (
     <section className="section bg-[#E5DDD5] py-16 lg:py-24">
@@ -90,20 +56,18 @@ export function Projects() {
         <div className="lg:w-[800px] lg:min-w-[400px] px-6 lg:pl-12 space-y-6 flex flex-col justify-between">
           <div className="space-y-6">
             <h2 className="font-legquinne text-6xl lg:text-9xl text-black">
-              Our Process
+              {projectsTitle}
             </h2>
 
             <p className="text-black/80 text-base lg:text-lg leading-relaxed ">
-              Since its very beginning, LA has worked closely with design
-              professionals to create unique pieces that transcend time and
-              trends.
+              {projectsDescription}
             </p>
 
             <Link
               href="/our-art"
               className="inline-block bg-black text-white px-8 py-3 rounded-full hover:bg-black transition-colors duration-300"
             >
-              See all projects
+              {projectsCtaLabel}
             </Link>
           </div>
 
@@ -159,13 +123,13 @@ export function Projects() {
           {/* Counter - Desktop only */}
           <div className="hidden lg:block absolute top-6 right-16 z-10 text-black text-sm font-medium">
             {String(currentIndex + 1).padStart(2, "0")} /{" "}
-            {String(projects.length).padStart(2, "0")}
+            {String(projectsItems.length).padStart(2, "0")}
           </div>
 
           {/* Embla Carousel */}
           <div className="overflow-hidden pl-6 lg:pl-0" ref={emblaRef}>
             <div className="flex gap-4 lg:gap-6">
-              {projects.map((project) => (
+              {projectsItems.map((project) => (
                 <div
                   key={project.id}
                   className="relative group cursor-pointer flex-[0_0_85%] md:flex-[0_0_calc(60%-12px)]"
