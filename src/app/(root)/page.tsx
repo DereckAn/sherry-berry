@@ -10,6 +10,7 @@ import { HOME_CONTENT } from "@/shared/i18n/homeContent";
 import { useLanguage } from "@/shared/i18n/LanguageProvider";
 import { DetaislsCandles } from "@/components/sections/Details";
 import { useMemo } from "react";
+import { Ingredients } from "@/components/sections/Ingredients";
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Hero copy={copy} />
       <DetaislsCandles />
       <TrustBanner copy={copy} />
+      <Ingredients />
       <FeaturedProducts copy={copy} />
       <Projects copy={copy} />
       <CTASection copy={copy} />
