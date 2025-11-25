@@ -1,0 +1,2 @@
+
+export { DetaislsCandles } from './DetailsCandles';

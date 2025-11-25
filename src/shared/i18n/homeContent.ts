@@ -38,7 +38,7 @@ export type HomeContent = {
 };
 
 export const HOME_CONTENT: Record<Language, HomeContent> = {
-  en,
-  es,
-  fr,
+  en: en as HomeContent,
+  es: es as HomeContent,
+  fr: fr as HomeContent,
 };
