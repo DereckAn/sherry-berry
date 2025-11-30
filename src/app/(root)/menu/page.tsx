@@ -4,8 +4,8 @@ import { menuItems } from "@/shared/data/menu";
 export default function MenuPage() {
   return (
     <main className="min-h-screen">
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <header className="mb-14 text-center lg:text-left">
+      <section className="mx-auto max-w-10xl border-2 border-amber-700 px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <header className="mb-14 text-center lg:text-left border">
           <p className="text-[12px] uppercase tracking-[0.4em] text-neutral-400">
             Colección permanente
           </p>

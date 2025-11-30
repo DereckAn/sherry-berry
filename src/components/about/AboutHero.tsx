@@ -6,12 +6,12 @@ import velas1 from "../../../public/images/velas1.webp";
 
 export const AboutHero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-vainilla">
+    <section className="min-h-screen flex flex-col font-legquinne justify-center items-center text-vainilla">
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-9xl xl:text-[200px] font-bold text-center tracking-wider relative z-10 mb-[-40px] md:mb-[-40px] lg:mb-[-60px]"
+        className="text-9xl xl:text-[200px] font-bold text-center tracking-wider relative z-10 -mb-10 lg:mb-[-60px]"
       >
         Our
       </motion.h1>

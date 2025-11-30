@@ -14,8 +14,14 @@ export function Header() {
   const pathname = usePathname();
 
   const isHomePage = pathname === "/";
-  const textColorClass =
-    isHomePage && !isScrolled && !isMenuOpen ? "text-white" : "text-black";
+  const isAboutPage = pathname === "/about";
+
+  // En la página About, siempre transparente con texto negro
+  const textColorClass = isAboutPage
+    ? "text-black"
+    : isHomePage && !isScrolled && !isMenuOpen
+    ? "text-white"
+    : "text-black";
 
   const menuLabel = useMemo(
     () => navDictionary[language].menuButton,
@@ -45,7 +51,9 @@ export function Header() {
       {/* Header/Navbar */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-          isScrolled
+          isAboutPage
+            ? "bg-transparent"
+            : isScrolled
             ? "bg-white/95 backdrop-blur-sm shadow-sm"
             : "bg-transparent"
         }`}
@@ -70,7 +78,9 @@ export function Header() {
               <select
                 id="language-select"
                 value={language}
-                onChange={(event) => setLanguage(event.target.value as typeof language)}
+                onChange={(event) =>
+                  setLanguage(event.target.value as typeof language)
+                }
                 className={`text-xs lg:text-sm uppercase tracking-wide focus:outline-none px-3 py-2 hover:text-primary ${textColorClass} transition-colors`}
               >
                 {LANGUAGE_OPTIONS.map((option) => (

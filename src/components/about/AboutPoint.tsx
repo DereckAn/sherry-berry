@@ -4,12 +4,35 @@ import { motion, useInView } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
 
+type ShapeType =
+  | "square"
+  | "triangle"
+  | "circle"
+  | "hexagon"
+  | "diamond"
+  | "pentagon";
+
 interface AboutPointsProps {
   image: string | StaticImageData;
   texto: string;
+  shape?: ShapeType;
 }
 
-export const AboutPoints = ({ image, texto }: AboutPointsProps) => {
+const shapeStyles: Record<ShapeType, string> = {
+  square: "rounded-lg",
+  triangle: "[clip-path:polygon(50%_0%,_0%_100%,_100%_100%)]",
+  circle: "rounded-full",
+  hexagon:
+    "[clip-path:polygon(25%_0%,_75%_0%,_100%_50%,_75%_100%,_25%_100%,_0%_50%)]",
+  diamond: "[clip-path:polygon(50%_0%,_100%_50%,_50%_100%,_0%_50%)] rotate-0",
+  pentagon: "[clip-path:polygon(50%_0%,_100%_38%,_82%_100%,_18%_100%,_0%_38%)]",
+};
+
+export const AboutPoints = ({
+  image,
+  texto,
+  shape = "circle",
+}: AboutPointsProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -29,7 +52,7 @@ export const AboutPoints = ({ image, texto }: AboutPointsProps) => {
           height={500}
           src={image}
           alt={`texto imagen about ${texto}`}
-          className="size-52 lg:size-80 max-w-[400px] max-h-[400px] aspect-square object-cover rounded-full"
+          className={`size-52 lg:size-80 max-w-[400px] max-h-[400px] aspect-square object-cover ${shapeStyles[shape]}`}
         />
       </motion.div>
       <motion.h3
