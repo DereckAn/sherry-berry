@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { useRef } from "react";
 
 type ShapeType =
@@ -13,8 +13,10 @@ type ShapeType =
   | "pentagon";
 
 interface AboutPointsProps {
-  image: string | StaticImageData;
-  texto: string;
+  image: string;
+  imageAlt: string;
+  title: string;
+  text: string;
   shape?: ShapeType;
 }
 
@@ -30,7 +32,9 @@ const shapeStyles: Record<ShapeType, string> = {
 
 export const AboutPoints = ({
   image,
-  texto,
+  imageAlt,
+  title,
+  text,
   shape = "circle",
 }: AboutPointsProps) => {
   const ref = useRef(null);
@@ -51,18 +55,19 @@ export const AboutPoints = ({
           width={500}
           height={500}
           src={image}
-          alt={`texto imagen about ${texto}`}
+          alt={imageAlt}
           className={`size-52 lg:size-80 max-w-[400px] max-h-[400px] aspect-square object-cover ${shapeStyles[shape]}`}
         />
       </motion.div>
-      <motion.h3
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        className="text-xl md:text-4xl max-w-3xl text-center tracking-wider"
+        className="flex flex-col gap-3 max-w-3xl text-center"
       >
-        {texto}
-      </motion.h3>
+        <h3 className="text-lg md:text-2xl font-semibold tracking-wide">{title}</h3>
+        <p className="text-xl md:text-3xl tracking-wider leading-relaxed">{text}</p>
+      </motion.div>
     </section>
   );
 };

@@ -1,0 +1,46 @@
+{
+  "language": "fr",
+  "heroTitleTop": "Notre",
+  "heroTitleBottom": "Histoire",
+  "heroImage": "/images/velas1.webp",
+  "heroImageAlt": "Bougie ronde Sherry Berry Lifestyle",
+  "quote": "La lumière peut naître, même lorsque le monde semble s’éteindre.",
+  "points": [
+    {
+      "title": "Une flamme qui a tenu bon",
+      "text": "Sherry Berry Lifestyle est née d’une flamme intérieure qui a refusé de s’éteindre. Loin de ma famille, j’ai compris que le chez-soi est aussi un sens, pas seulement un lieu.",
+      "image": "/images/velas6.webp",
+      "imageAlt": "Flamme de bougie symbolisant un nouveau départ"
+    },
+    {
+      "title": "Les bougies comme refuge",
+      "text": "Dans chaque parfum je retrouvais mes racines et, dans chaque flamme, un symbole d’espoir. Allumer une bougie est devenu mon rituel sacré et l’étincelle qui a donné vie à la marque.",
+      "image": "/images/herovela2.webp",
+      "imageAlt": "Bougie parfumée qui me relie à mes racines"
+    },
+    {
+      "title": "Le Canada, terre d’accueil",
+      "text": "J’y ai découvert la beauté de la diversité et la magie de chaque saison : le blanc paisible de l’hiver, l’or de l’automne, la renaissance de l’été et la promesse du printemps. Le Canada m’a offert une nouvelle voix et un foyer.",
+      "image": "/images/velas3.webp",
+      "imageAlt": "Bougie inspirée des paysages canadiens"
+    },
+    {
+      "title": "Une marque porteuse de sens",
+      "text": "Sherry Berry Lifestyle est la manifestation de ce voyage : des bougies créées avec amour, foi et intention pour t’accompagner dans tes moments de réflexion et rappeler que la lumière renaît toujours.",
+      "image": "/images/velas5.webp",
+      "imageAlt": "Bougie artisanale créée avec intention"
+    },
+    {
+      "title": "Construire en famille",
+      "text": "Avec mon mari et mes enfants, nous continuons d’allumer des bougies qui réchauffent les maisons et les cœurs, car dans un monde en chaos, partager la lumière et l’espoir est un acte d’amour.",
+      "image": "/images/velas7.webp",
+      "imageAlt": "Lueur chaleureuse qui rassemble la famille"
+    },
+    {
+      "title": "Bien plus que des bougies",
+      "text": "Sherry Berry Lifestyle est un symbole de résilience, de gratitude et de foyer. Une invitation à t’arrêter, respirer et laisser ta lumière intérieure transformer n’importe quel lieu en refuge.",
+      "image": "/images/velas10.webp",
+      "imageAlt": "Collection de bougies qui incarne résilience et gratitude"
+    }
+  ]
+}

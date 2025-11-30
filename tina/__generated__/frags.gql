@@ -35,6 +35,23 @@ fragment HomeParts on Home {
   trustCtaLabel
 }
 
+fragment AboutParts on About {
+  __typename
+  language
+  heroTitleTop
+  heroTitleBottom
+  heroImage
+  heroImageAlt
+  quote
+  points {
+    __typename
+    title
+    text
+    image
+    imageAlt
+  }
+}
+
 fragment SectionsParts on Sections {
   __typename
   language

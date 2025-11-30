@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import type { AboutStoryPoint } from "@/shared/i18n/aboutContent";
 import { AboutPoints, StraightLine } from ".";
 
 type ShapeType =
@@ -22,70 +23,51 @@ const shapes: ShapeType[] = [
   "pentagon",
 ];
 
-const listaHistoria = [
-  {
-    image: "/images/velas1.webp",
-    texto: "Our began when ...",
-  },
-  {
-    image: "/images/velas2.webp",
-    texto: "Our story continues with...",
-  },
-  {
-    image: "/images/velas3.webp",
-    texto: "Our story continues with...",
-  },
-  {
-    image: "/images/velas4.webp",
-    texto: "Our story takes a new turn...",
-  },
-  {
-    image: "/images/velas4.webp",
-    texto: "Our story takes a new turn...",
-  },
-  {
-    image: "/images/velas4.webp",
-    texto: "Our story takes a new turn...",
-  },
-];
+type AboutListPointsProps = {
+  points: AboutStoryPoint[];
+};
 
-export const AboutListPoints = () => {
+export const AboutListPoints = ({ points }: AboutListPointsProps) => {
+  const LineWrapper = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+    return (
+      <div
+        ref={ref}
+        className="relative py-20 flex justify-center"
+      >
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={
+            isInView
+              ? { height: "16rem", opacity: 1 }
+              : { height: 0, opacity: 0 }
+          }
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="absolute bottom-auto"
+        >
+          <StraightLine className="h-64" />
+        </motion.div>
+      </div>
+    );
+  };
+
   return (
     <>
-      {listaHistoria.map(({ image, texto }, index) => {
-        const LineWrapper = () => {
-          const ref = useRef(null);
-          const isInView = useInView(ref, { once: true, amount: 0.3 });
-
-          return (
-            <div
-              ref={ref}
-              className="relative py-20 flex justify-center"
-              key={`line-${index}`}
-            >
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={
-                  isInView
-                    ? { height: "16rem", opacity: 1 }
-                    : { height: 0, opacity: 0 }
-                }
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="absolute bottom-auto"
-              >
-                <StraightLine className="h-64" />
-              </motion.div>
-            </div>
-          );
-        };
-
-        // Obtener la forma según el índice (oscila entre las formas disponibles)
+      {points.map(({ image, text, title, imageAlt }, index) => {
         const shape = shapes[index % shapes.length];
 
         return (
-          <div key={`point-${index}`} className="">
+          <div key={`point-${index}`}>
             {index > 0 && <LineWrapper />}
-            <AboutPoints image={image} texto={texto} shape={shape} />
+            <AboutPoints
+              image={image}
+              imageAlt={imageAlt}
+              title={title}
+              text={text}
+              shape={shape}
+            />
           </div>
         );
       })}

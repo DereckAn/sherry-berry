@@ -1,0 +1,46 @@
+{
+  "language": "es",
+  "heroTitleTop": "Nuestra",
+  "heroTitleBottom": "Historia",
+  "heroImage": "/images/velas1.webp",
+  "heroImageAlt": "Vela redonda de Sherry Berry Lifestyle",
+  "quote": "La luz también se crea, incluso cuando el mundo parece apagarse.",
+  "points": [
+    {
+      "title": "Una chispa que no se apagó",
+      "text": "Sherry Berry Lifestyle nació de una llama interior que se negó a apagarse. Lejos de casa y de mi familia, descubrí que el hogar es también un propósito, no solo una dirección.",
+      "image": "/images/velas6.webp",
+      "imageAlt": "Vela encendida representando un nuevo comienzo"
+    },
+    {
+      "title": "Las velas como refugio",
+      "text": "En cada fragancia encontré un pedacito de mis raíces y en cada llama un símbolo de esperanza. Encender una vela se volvió mi ritual sagrado y la chispa que dio vida a la marca.",
+      "image": "/images/herovela2.webp",
+      "imageAlt": "Vela aromática que conecta con las raíces"
+    },
+    {
+      "title": "Canadá, tierra que abraza",
+      "text": "Aquí aprendí la belleza de la diversidad y la magia de cada estación: el blanco sereno del invierno, el dorado del otoño, el renacer del verano y la promesa de la primavera. Canadá me dio un nuevo hogar y una nueva voz.",
+      "image": "/images/velas3.webp",
+      "imageAlt": "Vela inspirada en los paisajes de Canadá"
+    },
+    {
+      "title": "Una marca con propósito",
+      "text": "Sherry Berry Lifestyle es la manifestación de ese viaje: velas creadas con amor, fe y propósito para acompañarte en tus momentos de reflexión y recordarte que la luz siempre puede renacer.",
+      "image": "/images/velas5.webp",
+      "imageAlt": "Vela artesanal creada con propósito"
+    },
+    {
+      "title": "Construyendo en familia",
+      "text": "Junto a mi esposo y mis hijos seguimos encendiendo luces que abrigan hogares y corazones, porque en un mundo de caos compartir luz y esperanza es un acto de amor.",
+      "image": "/images/velas7.webp",
+      "imageAlt": "Llama cálida que une a la familia"
+    },
+    {
+      "title": "Más que velas",
+      "text": "Sherry Berry Lifestyle es un símbolo de resiliencia, gratitud y hogar. Una invitación a detenerte, respirar y dejar que tu luz interior convierta cualquier lugar en tu refugio.",
+      "image": "/images/velas10.webp",
+      "imageAlt": "Conjunto de velas que simboliza resiliencia y gratitud"
+    }
+  ]
+}

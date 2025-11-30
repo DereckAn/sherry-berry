@@ -1,0 +1,46 @@
+{
+  "language": "en",
+  "heroTitleTop": "Our",
+  "heroTitleBottom": "Story",
+  "heroImage": "/images/velas1.webp",
+  "heroImageAlt": "Round Sherry Berry Lifestyle candle",
+  "quote": "Light can be created, even when the world feels dark.",
+  "points": [
+    {
+      "title": "A spark that stayed lit",
+      "text": "Sherry Berry Lifestyle was born from an inner flame that refused to fade. Far from home and family, I learned that home can be a purpose as much as a place.",
+      "image": "/images/velas6.webp",
+      "imageAlt": "Candle flame symbolizing a new beginning"
+    },
+    {
+      "title": "Candles as refuge",
+      "text": "In every fragrance I found a piece of my roots and in every flame a symbol of hope. Lighting a candle became a sacred ritual and the spark that brought this brand to life.",
+      "image": "/images/herovela2.webp",
+      "imageAlt": "Scented candle connecting back to my roots"
+    },
+    {
+      "title": "Canada, where the light grew",
+      "text": "Here I discovered the beauty of diversity and the magic of each season—the calm white of winter, autumn gold, summer’s rebirth, and spring’s promise. Canada gave me a new home and voice.",
+      "image": "/images/velas3.webp",
+      "imageAlt": "Candle glowing with a backdrop inspired by Canada"
+    },
+    {
+      "title": "A purpose-driven brand",
+      "text": "Sherry Berry Lifestyle reflects that journey: candles crafted with love, faith, and purpose to accompany your moments of reflection and remind you that light always returns.",
+      "image": "/images/velas5.webp",
+      "imageAlt": "Handcrafted candle made with intention"
+    },
+    {
+      "title": "Building with family",
+      "text": "Alongside my husband and children, we keep lighting candles that warm both homes and hearts, because in a chaotic world sharing light and hope is an act of love.",
+      "image": "/images/velas7.webp",
+      "imageAlt": "Warm candlelight shared at home"
+    },
+    {
+      "title": "More than candles",
+      "text": "Sherry Berry Lifestyle is a symbol of resilience, gratitude, and belonging—an invitation to pause, breathe, and let your inner light turn any place into home.",
+      "image": "/images/velas10.webp",
+      "imageAlt": "Collection of candles representing resilience and gratitude"
+    }
+  ]
+}

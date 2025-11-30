@@ -56,12 +56,15 @@ type Query {
   document(collection: String, relativePath: String): DocumentNode!
   home(relativePath: String): Home!
   homeConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: HomeFilter): HomeConnection!
+  about(relativePath: String): About!
+  aboutConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AboutFilter): AboutConnection!
   sections(relativePath: String): Sections!
   sectionsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SectionsFilter): SectionsConnection!
 }
 
 input DocumentFilter {
   home: HomeFilter
+  about: AboutFilter
   sections: SectionsFilter
 }
 
@@ -88,7 +91,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Home | Sections | Folder
+union DocumentNode = Home | About | Sections | Folder
 
 type HomeFeaturedProducts {
   id: String!
@@ -197,6 +200,54 @@ type HomeConnection implements Connection {
   edges: [HomeConnectionEdges]
 }
 
+type AboutPoints {
+  title: String!
+  text: String!
+  image: String!
+  imageAlt: String!
+}
+
+type About implements Node & Document {
+  language: String!
+  heroTitleTop: String!
+  heroTitleBottom: String!
+  heroImage: String!
+  heroImageAlt: String!
+  quote: String!
+  points: [AboutPoints]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input AboutPointsFilter {
+  title: StringFilter
+  text: StringFilter
+  image: StringFilter
+  imageAlt: StringFilter
+}
+
+input AboutFilter {
+  language: StringFilter
+  heroTitleTop: StringFilter
+  heroTitleBottom: StringFilter
+  heroImage: StringFilter
+  heroImageAlt: StringFilter
+  quote: StringFilter
+  points: AboutPointsFilter
+}
+
+type AboutConnectionEdges {
+  cursor: String!
+  node: About
+}
+
+type AboutConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [AboutConnectionEdges]
+}
+
 type Sections implements Node & Document {
   language: String!
   title: String!
@@ -239,18 +290,22 @@ type Mutation {
   createFolder(collection: String, relativePath: String!): DocumentNode!
   updateHome(relativePath: String!, params: HomeMutation!): Home!
   createHome(relativePath: String!, params: HomeMutation!): Home!
+  updateAbout(relativePath: String!, params: AboutMutation!): About!
+  createAbout(relativePath: String!, params: AboutMutation!): About!
   updateSections(relativePath: String!, params: SectionsMutation!): Sections!
   createSections(relativePath: String!, params: SectionsMutation!): Sections!
 }
 
 input DocumentUpdateMutation {
   home: HomeMutation
+  about: AboutMutation
   sections: SectionsMutation
   relativePath: String
 }
 
 input DocumentMutation {
   home: HomeMutation
+  about: AboutMutation
   sections: SectionsMutation
 }
 
@@ -290,6 +345,23 @@ input HomeMutation {
   trustTitle: String
   trustSubtitle: String
   trustCtaLabel: String
+}
+
+input AboutPointsMutation {
+  title: String
+  text: String
+  image: String
+  imageAlt: String
+}
+
+input AboutMutation {
+  language: String
+  heroTitleTop: String
+  heroTitleBottom: String
+  heroImage: String
+  heroImageAlt: String
+  quote: String
+  points: [AboutPointsMutation]
 }
 
 input SectionsMutation {

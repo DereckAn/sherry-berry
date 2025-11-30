@@ -182,6 +182,92 @@ var config_default = defineConfig({
         ]
       },
       {
+        name: "about",
+        label: "About",
+        path: "content/about",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true
+          }
+        },
+        fields: [
+          {
+            name: "language",
+            label: "Language",
+            type: "string",
+            options: [
+              { value: "en", label: "English" },
+              { value: "es", label: "Espa\xF1ol" },
+              { value: "fr", label: "Fran\xE7ais" }
+            ],
+            required: true
+          },
+          {
+            name: "heroTitleTop",
+            label: "Hero Title Top",
+            type: "string",
+            required: true
+          },
+          {
+            name: "heroTitleBottom",
+            label: "Hero Title Bottom",
+            type: "string",
+            required: true
+          },
+          {
+            name: "heroImage",
+            label: "Hero Image",
+            type: "string",
+            required: true
+          },
+          {
+            name: "heroImageAlt",
+            label: "Hero Image Alt",
+            type: "string",
+            required: true
+          },
+          {
+            name: "quote",
+            label: "Quote",
+            type: "string",
+            ui: { component: "textarea" },
+            required: true
+          },
+          {
+            name: "points",
+            label: "Story Points",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.title || "Point" })
+            },
+            fields: [
+              { name: "title", label: "Title", type: "string", required: true },
+              {
+                name: "text",
+                label: "Text",
+                type: "string",
+                ui: { component: "textarea" },
+                required: true
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "string",
+                required: true
+              },
+              {
+                name: "imageAlt",
+                label: "Image Alt",
+                type: "string",
+                required: true
+              }
+            ]
+          }
+        ]
+      },
+      {
         name: "sections",
         label: "Sections",
         path: "content/sections",

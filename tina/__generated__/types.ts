@@ -84,6 +84,8 @@ export type Query = {
   document: DocumentNode;
   home: Home;
   homeConnection: HomeConnection;
+  about: About;
+  aboutConnection: AboutConnection;
   sections: Sections;
   sectionsConnection: SectionsConnection;
 };
@@ -125,6 +127,21 @@ export type QueryHomeConnectionArgs = {
 };
 
 
+export type QueryAboutArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAboutConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutFilter>;
+};
+
+
 export type QuerySectionsArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
@@ -141,6 +158,7 @@ export type QuerySectionsConnectionArgs = {
 
 export type DocumentFilter = {
   home?: InputMaybe<HomeFilter>;
+  about?: InputMaybe<AboutFilter>;
   sections?: InputMaybe<SectionsFilter>;
 };
 
@@ -181,7 +199,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Home | Sections | Folder;
+export type DocumentNode = Home | About | Sections | Folder;
 
 export type HomeFeaturedProducts = {
   __typename?: 'HomeFeaturedProducts';
@@ -295,6 +313,58 @@ export type HomeConnection = Connection & {
   edges?: Maybe<Array<Maybe<HomeConnectionEdges>>>;
 };
 
+export type AboutPoints = {
+  __typename?: 'AboutPoints';
+  title: Scalars['String']['output'];
+  text: Scalars['String']['output'];
+  image: Scalars['String']['output'];
+  imageAlt: Scalars['String']['output'];
+};
+
+export type About = Node & Document & {
+  __typename?: 'About';
+  language: Scalars['String']['output'];
+  heroTitleTop: Scalars['String']['output'];
+  heroTitleBottom: Scalars['String']['output'];
+  heroImage: Scalars['String']['output'];
+  heroImageAlt: Scalars['String']['output'];
+  quote: Scalars['String']['output'];
+  points?: Maybe<Array<Maybe<AboutPoints>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type AboutPointsFilter = {
+  title?: InputMaybe<StringFilter>;
+  text?: InputMaybe<StringFilter>;
+  image?: InputMaybe<StringFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+};
+
+export type AboutFilter = {
+  language?: InputMaybe<StringFilter>;
+  heroTitleTop?: InputMaybe<StringFilter>;
+  heroTitleBottom?: InputMaybe<StringFilter>;
+  heroImage?: InputMaybe<StringFilter>;
+  heroImageAlt?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  points?: InputMaybe<AboutPointsFilter>;
+};
+
+export type AboutConnectionEdges = {
+  __typename?: 'AboutConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<About>;
+};
+
+export type AboutConnection = Connection & {
+  __typename?: 'AboutConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<AboutConnectionEdges>>>;
+};
+
 export type Sections = Node & Document & {
   __typename?: 'Sections';
   language: Scalars['String']['output'];
@@ -341,6 +411,8 @@ export type Mutation = {
   createFolder: DocumentNode;
   updateHome: Home;
   createHome: Home;
+  updateAbout: About;
+  createAbout: About;
   updateSections: Sections;
   createSections: Sections;
 };
@@ -391,6 +463,18 @@ export type MutationCreateHomeArgs = {
 };
 
 
+export type MutationUpdateAboutArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutMutation;
+};
+
+
+export type MutationCreateAboutArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutMutation;
+};
+
+
 export type MutationUpdateSectionsArgs = {
   relativePath: Scalars['String']['input'];
   params: SectionsMutation;
@@ -404,12 +488,14 @@ export type MutationCreateSectionsArgs = {
 
 export type DocumentUpdateMutation = {
   home?: InputMaybe<HomeMutation>;
+  about?: InputMaybe<AboutMutation>;
   sections?: InputMaybe<SectionsMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
   home?: InputMaybe<HomeMutation>;
+  about?: InputMaybe<AboutMutation>;
   sections?: InputMaybe<SectionsMutation>;
 };
 
@@ -451,6 +537,23 @@ export type HomeMutation = {
   trustCtaLabel?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type AboutPointsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  text?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AboutMutation = {
+  language?: InputMaybe<Scalars['String']['input']>;
+  heroTitleTop?: InputMaybe<Scalars['String']['input']>;
+  heroTitleBottom?: InputMaybe<Scalars['String']['input']>;
+  heroImage?: InputMaybe<Scalars['String']['input']>;
+  heroImageAlt?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  points?: InputMaybe<Array<InputMaybe<AboutPointsMutation>>>;
+};
+
 export type SectionsMutation = {
   language?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
@@ -459,6 +562,8 @@ export type SectionsMutation = {
 };
 
 export type HomePartsFragment = { __typename: 'Home', language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null };
+
+export type AboutPartsFragment = { __typename: 'About', language: string, heroTitleTop: string, heroTitleBottom: string, heroImage: string, heroImageAlt: string, quote: string, points?: Array<{ __typename: 'AboutPoints', title: string, text: string, image: string, imageAlt: string } | null> | null };
 
 export type SectionsPartsFragment = { __typename: 'Sections', language: string, title: string, excerpt?: string | null, body?: any | null };
 
@@ -480,6 +585,25 @@ export type HomeConnectionQueryVariables = Exact<{
 
 
 export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null } | null } | null> | null } };
+
+export type AboutQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type AboutQuery = { __typename?: 'Query', about: { __typename: 'About', id: string, language: string, heroTitleTop: string, heroTitleBottom: string, heroImage: string, heroImageAlt: string, quote: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } };
+
+export type AboutConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutFilter>;
+}>;
+
+
+export type AboutConnectionQuery = { __typename?: 'Query', aboutConnection: { __typename?: 'AboutConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutConnectionEdges', cursor: string, node?: { __typename: 'About', id: string, language: string, heroTitleTop: string, heroTitleBottom: string, heroImage: string, heroImageAlt: string, quote: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } | null } | null> | null } };
 
 export type SectionsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -536,6 +660,24 @@ export const HomePartsFragmentDoc = gql`
   trustTitle
   trustSubtitle
   trustCtaLabel
+}
+    `;
+export const AboutPartsFragmentDoc = gql`
+    fragment AboutParts on About {
+  __typename
+  language
+  heroTitleTop
+  heroTitleBottom
+  heroImage
+  heroImageAlt
+  quote
+  points {
+    __typename
+    title
+    text
+    image
+    imageAlt
+  }
 }
     `;
 export const SectionsPartsFragmentDoc = gql`
@@ -604,6 +746,63 @@ export const HomeConnectionDocument = gql`
   }
 }
     ${HomePartsFragmentDoc}`;
+export const AboutDocument = gql`
+    query about($relativePath: String!) {
+  about(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutParts
+  }
+}
+    ${AboutPartsFragmentDoc}`;
+export const AboutConnectionDocument = gql`
+    query aboutConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutFilter) {
+  aboutConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutParts
+      }
+    }
+  }
+}
+    ${AboutPartsFragmentDoc}`;
 export const SectionsDocument = gql`
     query sections($relativePath: String!) {
   sections(relativePath: $relativePath) {
@@ -669,6 +868,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     homeConnection(variables?: HomeConnectionQueryVariables, options?: C): Promise<{data: HomeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeConnectionQueryVariables, query: string}> {
         return requester<{data: HomeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeConnectionQueryVariables, query: string}, HomeConnectionQueryVariables>(HomeConnectionDocument, variables, options);
+      },
+    about(variables: AboutQueryVariables, options?: C): Promise<{data: AboutQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQueryVariables, query: string}> {
+        return requester<{data: AboutQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQueryVariables, query: string}, AboutQueryVariables>(AboutDocument, variables, options);
+      },
+    aboutConnection(variables?: AboutConnectionQueryVariables, options?: C): Promise<{data: AboutConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutConnectionQueryVariables, query: string}> {
+        return requester<{data: AboutConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutConnectionQueryVariables, query: string}, AboutConnectionQueryVariables>(AboutConnectionDocument, variables, options);
       },
     sections(variables: SectionsQueryVariables, options?: C): Promise<{data: SectionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsQueryVariables, query: string}> {
         return requester<{data: SectionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsQueryVariables, query: string}, SectionsQueryVariables>(SectionsDocument, variables, options);
