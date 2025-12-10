@@ -78,17 +78,17 @@ export function Hero({ copy }: HeroProps) {
       ))}
 
       {/* Content overlay */}
-      <div className="absolute bottom-0 h-64 w-full md:px-28 text-white">
-        <h2 className="text-8xl select-none font-legquinne pointer-events-none">
+      <div className="absolute bottom-0 h-72 lg:h-64 w-full md:px-28 text-white px-5">
+        <h2 className="text-4xl md:text-6xl lg:text-8xl select-none font-legquinne pointer-events-none">
           {heroTitle}
         </h2>
-        <div className=" flex flex-row justify-between mt-6">
-          <p className="max-w-2xl font-antic tracking-wider text-xl">
+        <div className=" flex flex-col lg:flex-row justify-between mt-6 gap-5 ">
+          <p className="max-w-2xl font-antic tracking-wider text-md lg:text-xl">
             {heroSubtitle}
           </p>
           <Link
             href="/menu"
-            className="rounded-full py-3 px-5 bg-[#6A031E] hover:bg-[#91001A] transition-colors duration-300 text-sm h-fit"
+            className="rounded-full py-3 px-5 w-fit bg-[#6A031E] hover:bg-[#91001A] transition-colors duration-300 text-sm h-fit"
           >
             {heroCtaLabel}
           </Link>
