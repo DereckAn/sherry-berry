@@ -54,7 +54,7 @@ export function MenuOverlay({ isOpen, onClose, language }: MenuOverlayProps) {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Grid layout like the reference */}
-          <nav className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-24 max-w-5xl w-full px-8">
+          <nav className="grid grid-cols-1 md:grid-cols-2  md:gap-16 lg:gap-24 max-w-5xl w-full px-8">
             {items.map((item, index) => (
               <a
                 key={item.label}
@@ -67,8 +67,8 @@ export function MenuOverlay({ isOpen, onClose, language }: MenuOverlayProps) {
                   transitionDelay: isOpen ? `${index * 100 + 200}ms` : '0ms',
                 }}
               >
-                <div className="text-center md:text-left py-12 md:py-16 lg:py-20 border-t border-charcoal/20 hover:border-primary transition-colors">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-legquinne text-black group-hover:text-primary transition-colors">
+                <div className="text-center md:text-left py-12 md:py-16 lg:py-20 md:border-t border-charcoal/20 hover:border-primary transition-colors">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl  text-center  lg:text-start font-legquinne text-black group-hover:text-primary transition-colors">
                     {item.label}
                   </h2>
                 </div>

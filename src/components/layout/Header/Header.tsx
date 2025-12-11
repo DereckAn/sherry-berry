@@ -97,7 +97,7 @@ export function Header() {
                 aria-label={menuLabel}
               >
                 <svg
-                  className="w-5 h-5"
+                  className="size-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -122,11 +122,11 @@ export function Header() {
                     </>
                   )}
                 </svg>
-                <span
+                {/* <span
                   className={`font-rokkitt ${isMenuOpen ? "text-black" : ""}`}
                 >
                   {menuLabel}
-                </span>
+                </span> */}
               </button>
             </div>
           </div>

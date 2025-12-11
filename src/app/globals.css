@@ -5,8 +5,8 @@
   --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
 
   /* Extended container sizes (for max-w-*) */
-  --spacing-8xl: 88rem;  /* 1408px */
-  --spacing-9xl: 96rem;  /* 1536px */
+  --spacing-8xl: 88rem; /* 1408px */
+  --spacing-9xl: 96rem; /* 1536px */
   --spacing-10xl: 104rem; /* 1664px */
   --font-family-serif: Playfair Display, Georgia, serif;
   --font-josefin: "Josefin Sans", sans-serif;
@@ -19,7 +19,7 @@
   --color-sand: #e8e0d5;
   --color-taupe: #b5a393;
   --color-charcoal: #2d2d2d;
-  --color-black: #433C35;
+  --color-black: #433c35;
 
   /* Accent colors */
   --color-burgundy: #8b4049;
@@ -45,6 +45,9 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
 }
 
 body {
@@ -60,7 +63,6 @@ html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }
-
 
 /* Image defaults */
 img {

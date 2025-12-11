@@ -9,13 +9,13 @@ export function FeaturedProducts({ copy }: FeaturedProductsProps) {
   const { featuredTitle, featuredSubtitle, featuredProducts } = copy;
 
   return (
-    <section className="bg-cream grid grid-cols-2 lg:grid-cols-4 w-full">
+    <section className="grid grid-cols-2 lg:grid-cols-4 w-full border-2 my-10">
       {/* First card - Title card */}
-      <div className="bg-white p-8 lg:p-10 flex flex-col justify-center">
-        <h2 className="text-5xl sm:text-6xl lg:text-7xl font-sans font-black uppercase text-black leading-none mb-4">
+      <div className="p-4 lg:p-10 flex flex-col justify-center">
+        <h2 className="text-4xl sm:text-6xl lg:text-9xl font-legquinne uppercase text-black leading-none mb-4">
           {featuredTitle}
         </h2>
-        <p className="text-sm lg:text-base text-charcoal">
+        <p className="text-sm lg:text-base font-antic text-charcoal">
           {featuredSubtitle}
         </p>
       </div>
@@ -50,20 +50,6 @@ export function FeaturedProducts({ copy }: FeaturedProductsProps) {
                 ${product.price}
               </span>
             </div>
-
-            {/* Colors if available */}
-            {product.colors && product.colors.length > 0 && (
-              <div className="flex gap-2">
-                {product.colors.map((color, index) => (
-                  <button
-                    key={index}
-                    className="w-6 h-6 rounded-full border-2 border-charcoal/20 hover:border-primary transition-colors"
-                    style={{ backgroundColor: color }}
-                    aria-label={`Color ${index + 1}`}
-                  />
-                ))}
-              </div>
-            )}
 
             {/* Rating */}
             {product.rating && (
