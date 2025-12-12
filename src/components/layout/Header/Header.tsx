@@ -2,9 +2,11 @@
 
 import { LANGUAGE_OPTIONS, navDictionary } from "@/shared/i18n/dictionary";
 import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { useCartStore, useTotalItems } from "@/shared/store/cartStore";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import { Cart } from "../Cart";
 import { MenuOverlay } from "./MenuOverlay";
 
 export function Header() {
@@ -12,6 +14,12 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage } = useLanguage();
   const pathname = usePathname();
+
+  // Cart state
+  const isCartOpen = useCartStore((state) => state.isOpen);
+  const toggleCart = useCartStore((state) => state.toggleCart);
+  const closeCart = useCartStore((state) => state.closeCart);
+  const totalItems = useTotalItems();
 
   const isHomePage = pathname === "/";
   const isAboutPage = pathname === "/about";
@@ -30,6 +38,14 @@ export function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleCartToggle = () => {
+    // Close menu if open when opening cart
+    if (!isCartOpen && isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+    toggleCart();
   };
 
   useEffect(() => {
@@ -64,7 +80,7 @@ export function Header() {
             <div>
               <Link
                 href="/"
-                className={`text-xl lg:text-2xl font-serif font-normal transition-colors ${textColorClass}`}
+                className={`text-xl lg:text-3xl font-serif font-normal transition-colors ${textColorClass}`}
               >
                 Sherry Berry
               </Link>
@@ -89,6 +105,38 @@ export function Header() {
                   </option>
                 ))}
               </select>
+
+              {/* Cart Button */}
+              <button
+                onClick={handleCartToggle}
+                className={`relative flex items-center gap-2 hover:text-primary transition-colors ${textColorClass}`}
+                aria-label="Abrir carrito"
+              >
+                <svg
+                  className="size-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M19.5 22a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m-10 0a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"
+                    />
+                    <path d="M5 4h17l-2 11H7zm0 0c-.167-.667-1-2-3-2m18 13H5.23c-1.784 0-2.73.781-2.73 2s.946 2 2.73 2H19.5" />
+                  </g>
+                </svg>
+                {/* Badge with item count */}
+                {totalItems > 0 && (
+                  <span className="absolute -top-2 -right-2 size-5 flex items-center justify-center bg-primary text-white text-xs font-medium rounded-full">
+                    {totalItems > 9 ? "9+" : totalItems}
+                  </span>
+                )}
+              </button>
 
               {/* Menu Button */}
               <button
@@ -132,6 +180,9 @@ export function Header() {
           </div>
         </div>
       </header>
+
+      {/* Cart Overlay */}
+      <Cart isOpen={isCartOpen} onClose={closeCart} />
 
       {/* Menu Overlay */}
       <MenuOverlay

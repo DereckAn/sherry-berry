@@ -1,9 +1,12 @@
-export const menuItems = [
+import type { Product } from "../types/cart";
+
+export const menuItems: Product[] = [
   {
     id: "mountain-air",
     title: "Mountain Air | Lata Pintada",
     variant: "Colección esencial",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/nvela.png",
   },
   {
@@ -11,6 +14,7 @@ export const menuItems = [
     title: "The Vineyard | Lata Pintada",
     variant: "Edición floral",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas2.webp",
   },
   {
@@ -18,6 +22,7 @@ export const menuItems = [
     title: "Laundry Day | Lata Pintada",
     variant: "Notas frescas",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas3.webp",
   },
   {
@@ -25,6 +30,7 @@ export const menuItems = [
     title: "Hey Beautiful | Lata Pintada",
     variant: "Colección floral",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas4.webp",
   },
   {
@@ -32,6 +38,7 @@ export const menuItems = [
     title: "Tobacco Flower | Lata Pintada",
     variant: "Blend especiado",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas5.webp",
   },
   {
@@ -39,6 +46,7 @@ export const menuItems = [
     title: "Lakehouse | Lata Pintada",
     variant: "Notas acuáticas",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas6.webp",
   },
   {
@@ -46,6 +54,7 @@ export const menuItems = [
     title: "Alpine Meadow | Lata Pintada",
     variant: "Herbal & verde",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas7.webp",
   },
   {
@@ -53,6 +62,7 @@ export const menuItems = [
     title: "Wild Prairie | Lata Pintada",
     variant: "Colección botánica",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas8.webp",
   },
   {
@@ -60,6 +70,7 @@ export const menuItems = [
     title: "Cedar Grove | Lata Pintada",
     variant: "Notas amaderadas",
     price: "$32.00 CAD",
+    priceValue: 32.0,
     image: "/images/velas9.webp",
   },
 ];

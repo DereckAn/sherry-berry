@@ -14,7 +14,7 @@ export function CTASection({ copy }: CTASectionProps) {
   const { ctaTitle, ctaParagraphs, ctaBullets, ctaButtonLabel, ctaImageAlt } = copy;
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24">
       <Container size="lg">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
@@ -33,10 +33,10 @@ export function CTASection({ copy }: CTASectionProps) {
 
           {/* Content */}
           <div className="order-1 lg:order-2 space-y-6">
-            <h2 className="text-4xl sm:text-5xl font-serif text-black leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-legquinne leading-tight">
               {ctaTitle}
             </h2>
-            <div className="space-y-4 text-lg text-charcoal leading-relaxed">
+            <div className="space-y-4 text-lg text-charcoal leading-relaxed font-antic">
               {ctaParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -45,7 +45,7 @@ export function CTASection({ copy }: CTASectionProps) {
             {/* Features list */}
             <ul className="space-y-3 py-4">
               {ctaBullets.map((bullet) => (
-                <li key={bullet} className="flex items-start gap-3">
+                <li key={bullet} className="flex items-start gap-3 font-rokkitt">
                   <span className="text-primary mt-1">✓</span>
                   <span className="text-charcoal">{bullet}</span>
                 </li>
@@ -53,7 +53,7 @@ export function CTASection({ copy }: CTASectionProps) {
             </ul>
 
             <div className="pt-4">
-              <Button variant="primary" size="lg">
+              <Button variant="primary" className="rounded-full px-3 py-2">
                 {ctaButtonLabel}
               </Button>
             </div>

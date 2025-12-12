@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme { 
+@theme {
   /* Typography */
   --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
 
@@ -40,6 +40,9 @@
 
   /* Transitions */
   --transition-duration: 200ms;
+
+  /* Extended breakpoints */
+  --breakpoint-3xl: 120rem; /* 1920px */
 }
 /* Base styles */
 html {
