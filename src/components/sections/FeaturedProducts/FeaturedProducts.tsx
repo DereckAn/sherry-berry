@@ -9,7 +9,7 @@ export function FeaturedProducts({ copy }: FeaturedProductsProps) {
   const { featuredTitle, featuredSubtitle, featuredProducts } = copy;
 
   return (
-    <section className="grid grid-cols-2 lg:grid-cols-4 w-full border-2 my-10">
+    <section className="grid grid-cols-2 lg:grid-cols-4 w-full my-10">
       {/* First card - Title card */}
       <div className="p-4 lg:p-10 flex flex-col justify-center">
         <h2 className="text-4xl sm:text-6xl lg:text-9xl font-legquinne uppercase text-black leading-none mb-4">
@@ -40,20 +40,21 @@ export function FeaturedProducts({ copy }: FeaturedProductsProps) {
           </div>
 
           {/* Product info */}
-          <div className="space-y-3 px-10">
+          <div className="space-y-3 px-3 md:px-8 py-5 font-legquinne">
             {/* Name and price */}
-            <div className="flex items-start justify-between gap-2">
-              <h3 className="font-serif text-lg text-black group-hover:text-primary transition-colors">
+            <div className="flex items-start justify-between gap-2 ">
+              <h3 className="text-md md:text-2xl font-semibold group-hover:text-primary transition-colors">
                 {product.name}
               </h3>
-              <span className="text-lg font-medium text-charcoal whitespace-nowrap">
+              <span className="text-md md:text-2xl font-josefin text-charcoal whitespace-nowrap">
                 ${product.price}
               </span>
+
             </div>
 
             {/* Rating */}
             {product.rating && (
-              <div className="flex items-center gap-1 text-sm text-charcoal">
+              <div className="flex items-center gap-1 text-md tracking-widest font-bold text-charcoal">
                 <span className="text-gold">★</span>
                 <span className="font-medium">{product.rating}</span>
               </div>
