@@ -13,9 +13,10 @@
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.25",
-    "next": "16.0.8",
+    "next": "16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "react-lite-youtube-embed": "^3.3.3",
     "zustand": "^5.0.9"
   },
   "devDependencies": {
@@ -26,7 +27,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
-    "eslint-config-next": "16.0.1",
+    "eslint-config-next": "16.0.10",
     "tailwindcss": "^4.1.17",
     "tinacms": "^2.10.1",
     "typescript": "^5.9.3"

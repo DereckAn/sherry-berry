@@ -65,8 +65,8 @@ export const AboutPoints = ({
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         className="flex flex-col gap-3 max-w-3xl text-center"
       >
-        <h3 className="text-lg md:text-2xl font-semibold tracking-wide">{title}</h3>
-        <p className="text-xl md:text-3xl tracking-wider leading-relaxed">{text}</p>
+        <h3 className="text-lg md:text-2xl font-rokkitt tracking-wide">{title}</h3>
+        <p className="text-xl md:text-3xl font-legquinne tracking-wider leading-relaxed">{text}</p>
       </motion.div>
     </section>
   );

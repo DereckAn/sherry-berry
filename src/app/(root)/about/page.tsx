@@ -15,7 +15,7 @@ const AboutPage = () => {
   const storyPoints = ABOUT_STORY_POINTS[language];
 
   return (
-    <main className="bg-[#66CBEB] pb-72">
+    <main className="bg-[#66CBEB30] pb-72">
       <AboutHero
         titleTop={hero.titleTop}
         titleBottom={hero.titleBottom}

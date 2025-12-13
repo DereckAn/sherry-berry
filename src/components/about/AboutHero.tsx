@@ -24,7 +24,7 @@ export const AboutHero = ({
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-9xl xl:text-[200px] font-bold text-center tracking-wider relative z-10 -mb-10 lg:mb-[-60px]"
+        className="text-9xl xl:text-[200px] text-center tracking-wider relative z-10 -mb-10 lg:mb-[-60px]"
       >
         {titleTop}
       </motion.h1>
@@ -47,7 +47,7 @@ export const AboutHero = ({
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-        className="text-9xl xl:text-[200px] font-bold text-center tracking-wider relative z-10 mt-[-60px] lg:mt-[-90px]"
+        className="text-9xl xl:text-[200px] text-center tracking-wider relative z-10 mt-[-60px] lg:mt-[-90px]"
       >
         {titleBottom}
       </motion.h2>
