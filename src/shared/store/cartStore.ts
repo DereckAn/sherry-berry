@@ -76,6 +76,7 @@ function validateProduct(product: Product): Product | null {
     id: product.id.trim(),
     title: product.title.slice(0, 200).trim(),
     variant: product.variant.slice(0, 100).trim(),
+    description: product.description.slice(0, 500).trim(),
     price: product.price.slice(0, 50).trim(),
     priceValue: Math.abs(product.priceValue),
     image: product.image.slice(0, 500).trim(),

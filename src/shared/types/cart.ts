@@ -20,6 +20,7 @@ export interface Product {
   id: string;
   title: string;
   variant: string;
+  description: string; // Product description for dialog
   price: string; // Display price with currency (e.g., "$32.00 CAD")
   priceValue: number; // Numeric price for calculations
   image: string;
@@ -110,6 +111,8 @@ export function isValidCartItem(item: unknown): item is CartItem {
     obj.title.length <= 200 &&
     typeof obj.variant === "string" &&
     obj.variant.length <= 100 &&
+    typeof obj.description === "string" &&
+    obj.description.length <= 500 &&
     typeof obj.price === "string" &&
     obj.price.length <= 50 &&
     isValidPrice(obj.priceValue as number) &&
