@@ -1,0 +1,27 @@
+{
+  "title": "Bougies de luxe pour votre intérieur",
+  "subtitle": "Bougies artisanales, ingrédients naturels, ambiance chaleureuse pour chaque pièce.",
+  "ctaLabel": "Découvrir la collection",
+  "images": [
+    {
+      "url": "/images/herocandel.webp",
+      "alt": "Bougies artisanales ambiance 1"
+    },
+    {
+      "url": "/images/herovela2.webp",
+      "alt": "Bougies artisanales ambiance 2"
+    },
+    {
+      "url": "/images/herovela3.webp",
+      "alt": "Bougies artisanales ambiance 3"
+    },
+    {
+      "url": "/images/herovela4.webp",
+      "alt": "Bougies artisanales ambiance 4"
+    },
+    {
+      "url": "/images/velas5.webp",
+      "alt": "Bougies artisanales ambiance 5"
+    }
+  ]
+}

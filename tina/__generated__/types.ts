@@ -82,10 +82,22 @@ export type Query = {
   collections: Array<Collection>;
   node: Node;
   document: DocumentNode;
-  home: Home;
-  homeConnection: HomeConnection;
-  about: About;
-  aboutConnection: AboutConnection;
+  homeHero: HomeHero;
+  homeHeroConnection: HomeHeroConnection;
+  homeFeaturedProducts: HomeFeaturedProducts;
+  homeFeaturedProductsConnection: HomeFeaturedProductsConnection;
+  homeProjects: HomeProjects;
+  homeProjectsConnection: HomeProjectsConnection;
+  homeCta: HomeCta;
+  homeCtaConnection: HomeCtaConnection;
+  homeTrustBanner: HomeTrustBanner;
+  homeTrustBannerConnection: HomeTrustBannerConnection;
+  aboutHero: AboutHero;
+  aboutHeroConnection: AboutHeroConnection;
+  aboutQuote: AboutQuote;
+  aboutQuoteConnection: AboutQuoteConnection;
+  aboutStoryPoints: AboutStoryPoints;
+  aboutStoryPointsConnection: AboutStoryPointsConnection;
   sections: Sections;
   sectionsConnection: SectionsConnection;
 };
@@ -112,33 +124,123 @@ export type QueryDocumentArgs = {
 };
 
 
-export type QueryHomeArgs = {
+export type QueryHomeHeroArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-export type QueryHomeConnectionArgs = {
+export type QueryHomeHeroConnectionArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<HomeFilter>;
+  filter?: InputMaybe<HomeHeroFilter>;
 };
 
 
-export type QueryAboutArgs = {
+export type QueryHomeFeaturedProductsArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-export type QueryAboutConnectionArgs = {
+export type QueryHomeFeaturedProductsConnectionArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<AboutFilter>;
+  filter?: InputMaybe<HomeFeaturedProductsFilter>;
+};
+
+
+export type QueryHomeProjectsArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryHomeProjectsConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeProjectsFilter>;
+};
+
+
+export type QueryHomeCtaArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryHomeCtaConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeCtaFilter>;
+};
+
+
+export type QueryHomeTrustBannerArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryHomeTrustBannerConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeTrustBannerFilter>;
+};
+
+
+export type QueryAboutHeroArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAboutHeroConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutHeroFilter>;
+};
+
+
+export type QueryAboutQuoteArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAboutQuoteConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutQuoteFilter>;
+};
+
+
+export type QueryAboutStoryPointsArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAboutStoryPointsConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutStoryPointsFilter>;
 };
 
 
@@ -157,8 +259,14 @@ export type QuerySectionsConnectionArgs = {
 };
 
 export type DocumentFilter = {
-  home?: InputMaybe<HomeFilter>;
-  about?: InputMaybe<AboutFilter>;
+  homeHero?: InputMaybe<HomeHeroFilter>;
+  homeFeaturedProducts?: InputMaybe<HomeFeaturedProductsFilter>;
+  homeProjects?: InputMaybe<HomeProjectsFilter>;
+  homeCta?: InputMaybe<HomeCtaFilter>;
+  homeTrustBanner?: InputMaybe<HomeTrustBannerFilter>;
+  aboutHero?: InputMaybe<AboutHeroFilter>;
+  aboutQuote?: InputMaybe<AboutQuoteFilter>;
+  aboutStoryPoints?: InputMaybe<AboutStoryPointsFilter>;
   sections?: InputMaybe<SectionsFilter>;
 };
 
@@ -199,47 +307,20 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Home | About | Sections | Folder;
+export type DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | Sections | Folder;
 
-export type HomeFeaturedProducts = {
-  __typename?: 'HomeFeaturedProducts';
-  id: Scalars['String']['output'];
-  name: Scalars['String']['output'];
-  price: Scalars['Float']['output'];
-  image: Scalars['String']['output'];
-  colors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  rating?: Maybe<Scalars['Float']['output']>;
-};
-
-export type HomeProjectsItems = {
-  __typename?: 'HomeProjectsItems';
-  id: Scalars['Float']['output'];
-  title: Scalars['String']['output'];
-  image: Scalars['String']['output'];
+export type HomeHeroImages = {
+  __typename?: 'HomeHeroImages';
+  url: Scalars['String']['output'];
   alt: Scalars['String']['output'];
 };
 
-export type Home = Node & Document & {
-  __typename?: 'Home';
-  language: Scalars['String']['output'];
-  heroTitle: Scalars['String']['output'];
-  heroSubtitle: Scalars['String']['output'];
-  heroCtaLabel: Scalars['String']['output'];
-  featuredTitle: Scalars['String']['output'];
-  featuredSubtitle: Scalars['String']['output'];
-  featuredProducts?: Maybe<Array<Maybe<HomeFeaturedProducts>>>;
-  projectsTitle: Scalars['String']['output'];
-  projectsDescription: Scalars['String']['output'];
-  projectsCtaLabel: Scalars['String']['output'];
-  projectsItems?: Maybe<Array<Maybe<HomeProjectsItems>>>;
-  ctaTitle: Scalars['String']['output'];
-  ctaParagraphs: Array<Scalars['String']['output']>;
-  ctaBullets: Array<Scalars['String']['output']>;
-  ctaButtonLabel: Scalars['String']['output'];
-  ctaImageAlt: Scalars['String']['output'];
-  trustTitle: Scalars['String']['output'];
-  trustSubtitle: Scalars['String']['output'];
-  trustCtaLabel: Scalars['String']['output'];
+export type HomeHero = Node & Document & {
+  __typename?: 'HomeHero';
+  title: Scalars['String']['output'];
+  subtitle: Scalars['String']['output'];
+  ctaLabel: Scalars['String']['output'];
+  images?: Maybe<Array<Maybe<HomeHeroImages>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -252,6 +333,58 @@ export type StringFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type ImageFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type HomeHeroImagesFilter = {
+  url?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
+export type HomeHeroFilter = {
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
+  ctaLabel?: InputMaybe<StringFilter>;
+  images?: InputMaybe<HomeHeroImagesFilter>;
+};
+
+export type HomeHeroConnectionEdges = {
+  __typename?: 'HomeHeroConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<HomeHero>;
+};
+
+export type HomeHeroConnection = Connection & {
+  __typename?: 'HomeHeroConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<HomeHeroConnectionEdges>>>;
+};
+
+export type HomeFeaturedProductsProducts = {
+  __typename?: 'HomeFeaturedProductsProducts';
+  id: Scalars['String']['output'];
+  name: Scalars['String']['output'];
+  price: Scalars['Float']['output'];
+  image: Scalars['String']['output'];
+  colors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  rating?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeFeaturedProducts = Node & Document & {
+  __typename?: 'HomeFeaturedProducts';
+  title: Scalars['String']['output'];
+  subtitle: Scalars['String']['output'];
+  products?: Maybe<Array<Maybe<HomeFeaturedProductsProducts>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
 export type NumberFilter = {
   lt?: InputMaybe<Scalars['Float']['input']>;
   lte?: InputMaybe<Scalars['Float']['input']>;
@@ -262,107 +395,238 @@ export type NumberFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
 };
 
-export type HomeFeaturedProductsFilter = {
+export type HomeFeaturedProductsProductsFilter = {
   id?: InputMaybe<StringFilter>;
   name?: InputMaybe<StringFilter>;
   price?: InputMaybe<NumberFilter>;
-  image?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
   colors?: InputMaybe<StringFilter>;
   rating?: InputMaybe<NumberFilter>;
+};
+
+export type HomeFeaturedProductsFilter = {
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
+  products?: InputMaybe<HomeFeaturedProductsProductsFilter>;
+};
+
+export type HomeFeaturedProductsConnectionEdges = {
+  __typename?: 'HomeFeaturedProductsConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<HomeFeaturedProducts>;
+};
+
+export type HomeFeaturedProductsConnection = Connection & {
+  __typename?: 'HomeFeaturedProductsConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<HomeFeaturedProductsConnectionEdges>>>;
+};
+
+export type HomeProjectsItems = {
+  __typename?: 'HomeProjectsItems';
+  id: Scalars['Float']['output'];
+  title: Scalars['String']['output'];
+  image: Scalars['String']['output'];
+  alt: Scalars['String']['output'];
+};
+
+export type HomeProjects = Node & Document & {
+  __typename?: 'HomeProjects';
+  title: Scalars['String']['output'];
+  description: Scalars['String']['output'];
+  ctaLabel: Scalars['String']['output'];
+  items?: Maybe<Array<Maybe<HomeProjectsItems>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
 };
 
 export type HomeProjectsItemsFilter = {
   id?: InputMaybe<NumberFilter>;
   title?: InputMaybe<StringFilter>;
-  image?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
   alt?: InputMaybe<StringFilter>;
 };
 
-export type HomeFilter = {
-  language?: InputMaybe<StringFilter>;
-  heroTitle?: InputMaybe<StringFilter>;
-  heroSubtitle?: InputMaybe<StringFilter>;
-  heroCtaLabel?: InputMaybe<StringFilter>;
-  featuredTitle?: InputMaybe<StringFilter>;
-  featuredSubtitle?: InputMaybe<StringFilter>;
-  featuredProducts?: InputMaybe<HomeFeaturedProductsFilter>;
-  projectsTitle?: InputMaybe<StringFilter>;
-  projectsDescription?: InputMaybe<StringFilter>;
-  projectsCtaLabel?: InputMaybe<StringFilter>;
-  projectsItems?: InputMaybe<HomeProjectsItemsFilter>;
-  ctaTitle?: InputMaybe<StringFilter>;
-  ctaParagraphs?: InputMaybe<StringFilter>;
-  ctaBullets?: InputMaybe<StringFilter>;
-  ctaButtonLabel?: InputMaybe<StringFilter>;
-  ctaImageAlt?: InputMaybe<StringFilter>;
-  trustTitle?: InputMaybe<StringFilter>;
-  trustSubtitle?: InputMaybe<StringFilter>;
-  trustCtaLabel?: InputMaybe<StringFilter>;
+export type HomeProjectsFilter = {
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+  ctaLabel?: InputMaybe<StringFilter>;
+  items?: InputMaybe<HomeProjectsItemsFilter>;
 };
 
-export type HomeConnectionEdges = {
-  __typename?: 'HomeConnectionEdges';
+export type HomeProjectsConnectionEdges = {
+  __typename?: 'HomeProjectsConnectionEdges';
   cursor: Scalars['String']['output'];
-  node?: Maybe<Home>;
+  node?: Maybe<HomeProjects>;
 };
 
-export type HomeConnection = Connection & {
-  __typename?: 'HomeConnection';
+export type HomeProjectsConnection = Connection & {
+  __typename?: 'HomeProjectsConnection';
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<HomeConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<HomeProjectsConnectionEdges>>>;
 };
 
-export type AboutPoints = {
-  __typename?: 'AboutPoints';
+export type HomeCta = Node & Document & {
+  __typename?: 'HomeCta';
+  title: Scalars['String']['output'];
+  paragraphs: Array<Scalars['String']['output']>;
+  bullets: Array<Scalars['String']['output']>;
+  buttonLabel: Scalars['String']['output'];
+  image: Scalars['String']['output'];
+  imageAlt: Scalars['String']['output'];
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type HomeCtaFilter = {
+  title?: InputMaybe<StringFilter>;
+  paragraphs?: InputMaybe<StringFilter>;
+  bullets?: InputMaybe<StringFilter>;
+  buttonLabel?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+};
+
+export type HomeCtaConnectionEdges = {
+  __typename?: 'HomeCtaConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<HomeCta>;
+};
+
+export type HomeCtaConnection = Connection & {
+  __typename?: 'HomeCtaConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<HomeCtaConnectionEdges>>>;
+};
+
+export type HomeTrustBanner = Node & Document & {
+  __typename?: 'HomeTrustBanner';
+  title: Scalars['String']['output'];
+  subtitle: Scalars['String']['output'];
+  ctaLabel: Scalars['String']['output'];
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type HomeTrustBannerFilter = {
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
+  ctaLabel?: InputMaybe<StringFilter>;
+};
+
+export type HomeTrustBannerConnectionEdges = {
+  __typename?: 'HomeTrustBannerConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<HomeTrustBanner>;
+};
+
+export type HomeTrustBannerConnection = Connection & {
+  __typename?: 'HomeTrustBannerConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<HomeTrustBannerConnectionEdges>>>;
+};
+
+export type AboutHero = Node & Document & {
+  __typename?: 'AboutHero';
+  titleTop: Scalars['String']['output'];
+  titleBottom: Scalars['String']['output'];
+  image: Scalars['String']['output'];
+  imageAlt: Scalars['String']['output'];
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type AboutHeroFilter = {
+  titleTop?: InputMaybe<StringFilter>;
+  titleBottom?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+};
+
+export type AboutHeroConnectionEdges = {
+  __typename?: 'AboutHeroConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<AboutHero>;
+};
+
+export type AboutHeroConnection = Connection & {
+  __typename?: 'AboutHeroConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<AboutHeroConnectionEdges>>>;
+};
+
+export type AboutQuote = Node & Document & {
+  __typename?: 'AboutQuote';
+  quote: Scalars['String']['output'];
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type AboutQuoteFilter = {
+  quote?: InputMaybe<StringFilter>;
+};
+
+export type AboutQuoteConnectionEdges = {
+  __typename?: 'AboutQuoteConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<AboutQuote>;
+};
+
+export type AboutQuoteConnection = Connection & {
+  __typename?: 'AboutQuoteConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<AboutQuoteConnectionEdges>>>;
+};
+
+export type AboutStoryPointsPoints = {
+  __typename?: 'AboutStoryPointsPoints';
   title: Scalars['String']['output'];
   text: Scalars['String']['output'];
   image: Scalars['String']['output'];
   imageAlt: Scalars['String']['output'];
 };
 
-export type About = Node & Document & {
-  __typename?: 'About';
-  language: Scalars['String']['output'];
-  heroTitleTop: Scalars['String']['output'];
-  heroTitleBottom: Scalars['String']['output'];
-  heroImage: Scalars['String']['output'];
-  heroImageAlt: Scalars['String']['output'];
-  quote: Scalars['String']['output'];
-  points?: Maybe<Array<Maybe<AboutPoints>>>;
+export type AboutStoryPoints = Node & Document & {
+  __typename?: 'AboutStoryPoints';
+  points?: Maybe<Array<Maybe<AboutStoryPointsPoints>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
 };
 
-export type AboutPointsFilter = {
+export type AboutStoryPointsPointsFilter = {
   title?: InputMaybe<StringFilter>;
   text?: InputMaybe<StringFilter>;
-  image?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
   imageAlt?: InputMaybe<StringFilter>;
 };
 
-export type AboutFilter = {
-  language?: InputMaybe<StringFilter>;
-  heroTitleTop?: InputMaybe<StringFilter>;
-  heroTitleBottom?: InputMaybe<StringFilter>;
-  heroImage?: InputMaybe<StringFilter>;
-  heroImageAlt?: InputMaybe<StringFilter>;
-  quote?: InputMaybe<StringFilter>;
-  points?: InputMaybe<AboutPointsFilter>;
+export type AboutStoryPointsFilter = {
+  points?: InputMaybe<AboutStoryPointsPointsFilter>;
 };
 
-export type AboutConnectionEdges = {
-  __typename?: 'AboutConnectionEdges';
+export type AboutStoryPointsConnectionEdges = {
+  __typename?: 'AboutStoryPointsConnectionEdges';
   cursor: Scalars['String']['output'];
-  node?: Maybe<About>;
+  node?: Maybe<AboutStoryPoints>;
 };
 
-export type AboutConnection = Connection & {
-  __typename?: 'AboutConnection';
+export type AboutStoryPointsConnection = Connection & {
+  __typename?: 'AboutStoryPointsConnection';
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<AboutConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<AboutStoryPointsConnectionEdges>>>;
 };
 
 export type Sections = Node & Document & {
@@ -409,10 +673,22 @@ export type Mutation = {
   deleteDocument: DocumentNode;
   createDocument: DocumentNode;
   createFolder: DocumentNode;
-  updateHome: Home;
-  createHome: Home;
-  updateAbout: About;
-  createAbout: About;
+  updateHomeHero: HomeHero;
+  createHomeHero: HomeHero;
+  updateHomeFeaturedProducts: HomeFeaturedProducts;
+  createHomeFeaturedProducts: HomeFeaturedProducts;
+  updateHomeProjects: HomeProjects;
+  createHomeProjects: HomeProjects;
+  updateHomeCta: HomeCta;
+  createHomeCta: HomeCta;
+  updateHomeTrustBanner: HomeTrustBanner;
+  createHomeTrustBanner: HomeTrustBanner;
+  updateAboutHero: AboutHero;
+  createAboutHero: AboutHero;
+  updateAboutQuote: AboutQuote;
+  createAboutQuote: AboutQuote;
+  updateAboutStoryPoints: AboutStoryPoints;
+  createAboutStoryPoints: AboutStoryPoints;
   updateSections: Sections;
   createSections: Sections;
 };
@@ -451,27 +727,99 @@ export type MutationCreateFolderArgs = {
 };
 
 
-export type MutationUpdateHomeArgs = {
+export type MutationUpdateHomeHeroArgs = {
   relativePath: Scalars['String']['input'];
-  params: HomeMutation;
+  params: HomeHeroMutation;
 };
 
 
-export type MutationCreateHomeArgs = {
+export type MutationCreateHomeHeroArgs = {
   relativePath: Scalars['String']['input'];
-  params: HomeMutation;
+  params: HomeHeroMutation;
 };
 
 
-export type MutationUpdateAboutArgs = {
+export type MutationUpdateHomeFeaturedProductsArgs = {
   relativePath: Scalars['String']['input'];
-  params: AboutMutation;
+  params: HomeFeaturedProductsMutation;
 };
 
 
-export type MutationCreateAboutArgs = {
+export type MutationCreateHomeFeaturedProductsArgs = {
   relativePath: Scalars['String']['input'];
-  params: AboutMutation;
+  params: HomeFeaturedProductsMutation;
+};
+
+
+export type MutationUpdateHomeProjectsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeProjectsMutation;
+};
+
+
+export type MutationCreateHomeProjectsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeProjectsMutation;
+};
+
+
+export type MutationUpdateHomeCtaArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeCtaMutation;
+};
+
+
+export type MutationCreateHomeCtaArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeCtaMutation;
+};
+
+
+export type MutationUpdateHomeTrustBannerArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeTrustBannerMutation;
+};
+
+
+export type MutationCreateHomeTrustBannerArgs = {
+  relativePath: Scalars['String']['input'];
+  params: HomeTrustBannerMutation;
+};
+
+
+export type MutationUpdateAboutHeroArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutHeroMutation;
+};
+
+
+export type MutationCreateAboutHeroArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutHeroMutation;
+};
+
+
+export type MutationUpdateAboutQuoteArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutQuoteMutation;
+};
+
+
+export type MutationCreateAboutQuoteArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutQuoteMutation;
+};
+
+
+export type MutationUpdateAboutStoryPointsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutStoryPointsMutation;
+};
+
+
+export type MutationCreateAboutStoryPointsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AboutStoryPointsMutation;
 };
 
 
@@ -487,25 +835,55 @@ export type MutationCreateSectionsArgs = {
 };
 
 export type DocumentUpdateMutation = {
-  home?: InputMaybe<HomeMutation>;
-  about?: InputMaybe<AboutMutation>;
+  homeHero?: InputMaybe<HomeHeroMutation>;
+  homeFeaturedProducts?: InputMaybe<HomeFeaturedProductsMutation>;
+  homeProjects?: InputMaybe<HomeProjectsMutation>;
+  homeCta?: InputMaybe<HomeCtaMutation>;
+  homeTrustBanner?: InputMaybe<HomeTrustBannerMutation>;
+  aboutHero?: InputMaybe<AboutHeroMutation>;
+  aboutQuote?: InputMaybe<AboutQuoteMutation>;
+  aboutStoryPoints?: InputMaybe<AboutStoryPointsMutation>;
   sections?: InputMaybe<SectionsMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
-  home?: InputMaybe<HomeMutation>;
-  about?: InputMaybe<AboutMutation>;
+  homeHero?: InputMaybe<HomeHeroMutation>;
+  homeFeaturedProducts?: InputMaybe<HomeFeaturedProductsMutation>;
+  homeProjects?: InputMaybe<HomeProjectsMutation>;
+  homeCta?: InputMaybe<HomeCtaMutation>;
+  homeTrustBanner?: InputMaybe<HomeTrustBannerMutation>;
+  aboutHero?: InputMaybe<AboutHeroMutation>;
+  aboutQuote?: InputMaybe<AboutQuoteMutation>;
+  aboutStoryPoints?: InputMaybe<AboutStoryPointsMutation>;
   sections?: InputMaybe<SectionsMutation>;
 };
 
-export type HomeFeaturedProductsMutation = {
+export type HomeHeroImagesMutation = {
+  url?: InputMaybe<Scalars['String']['input']>;
+  alt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeHeroMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
+  ctaLabel?: InputMaybe<Scalars['String']['input']>;
+  images?: InputMaybe<Array<InputMaybe<HomeHeroImagesMutation>>>;
+};
+
+export type HomeFeaturedProductsProductsMutation = {
   id?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
   price?: InputMaybe<Scalars['Float']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
   colors?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   rating?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeFeaturedProductsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
+  products?: InputMaybe<Array<InputMaybe<HomeFeaturedProductsProductsMutation>>>;
 };
 
 export type HomeProjectsItemsMutation = {
@@ -515,43 +893,48 @@ export type HomeProjectsItemsMutation = {
   alt?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type HomeMutation = {
-  language?: InputMaybe<Scalars['String']['input']>;
-  heroTitle?: InputMaybe<Scalars['String']['input']>;
-  heroSubtitle?: InputMaybe<Scalars['String']['input']>;
-  heroCtaLabel?: InputMaybe<Scalars['String']['input']>;
-  featuredTitle?: InputMaybe<Scalars['String']['input']>;
-  featuredSubtitle?: InputMaybe<Scalars['String']['input']>;
-  featuredProducts?: InputMaybe<Array<InputMaybe<HomeFeaturedProductsMutation>>>;
-  projectsTitle?: InputMaybe<Scalars['String']['input']>;
-  projectsDescription?: InputMaybe<Scalars['String']['input']>;
-  projectsCtaLabel?: InputMaybe<Scalars['String']['input']>;
-  projectsItems?: InputMaybe<Array<InputMaybe<HomeProjectsItemsMutation>>>;
-  ctaTitle?: InputMaybe<Scalars['String']['input']>;
-  ctaParagraphs?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  ctaBullets?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  ctaButtonLabel?: InputMaybe<Scalars['String']['input']>;
-  ctaImageAlt?: InputMaybe<Scalars['String']['input']>;
-  trustTitle?: InputMaybe<Scalars['String']['input']>;
-  trustSubtitle?: InputMaybe<Scalars['String']['input']>;
-  trustCtaLabel?: InputMaybe<Scalars['String']['input']>;
+export type HomeProjectsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  ctaLabel?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<HomeProjectsItemsMutation>>>;
 };
 
-export type AboutPointsMutation = {
+export type HomeCtaMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  paragraphs?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  bullets?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  buttonLabel?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type HomeTrustBannerMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
+  ctaLabel?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AboutHeroMutation = {
+  titleTop?: InputMaybe<Scalars['String']['input']>;
+  titleBottom?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AboutQuoteMutation = {
+  quote?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AboutStoryPointsPointsMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   text?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
   imageAlt?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type AboutMutation = {
-  language?: InputMaybe<Scalars['String']['input']>;
-  heroTitleTop?: InputMaybe<Scalars['String']['input']>;
-  heroTitleBottom?: InputMaybe<Scalars['String']['input']>;
-  heroImage?: InputMaybe<Scalars['String']['input']>;
-  heroImageAlt?: InputMaybe<Scalars['String']['input']>;
-  quote?: InputMaybe<Scalars['String']['input']>;
-  points?: InputMaybe<Array<InputMaybe<AboutPointsMutation>>>;
+export type AboutStoryPointsMutation = {
+  points?: InputMaybe<Array<InputMaybe<AboutStoryPointsPointsMutation>>>;
 };
 
 export type SectionsMutation = {
@@ -561,49 +944,175 @@ export type SectionsMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type HomePartsFragment = { __typename: 'Home', language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null };
+export type HomeHeroPartsFragment = { __typename: 'HomeHero', title: string, subtitle: string, ctaLabel: string, images?: Array<{ __typename: 'HomeHeroImages', url: string, alt: string } | null> | null };
 
-export type AboutPartsFragment = { __typename: 'About', language: string, heroTitleTop: string, heroTitleBottom: string, heroImage: string, heroImageAlt: string, quote: string, points?: Array<{ __typename: 'AboutPoints', title: string, text: string, image: string, imageAlt: string } | null> | null };
+export type HomeFeaturedProductsPartsFragment = { __typename: 'HomeFeaturedProducts', title: string, subtitle: string, products?: Array<{ __typename: 'HomeFeaturedProductsProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null };
+
+export type HomeProjectsPartsFragment = { __typename: 'HomeProjects', title: string, description: string, ctaLabel: string, items?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null };
+
+export type HomeCtaPartsFragment = { __typename: 'HomeCta', title: string, paragraphs: Array<string>, bullets: Array<string>, buttonLabel: string, image: string, imageAlt: string };
+
+export type HomeTrustBannerPartsFragment = { __typename: 'HomeTrustBanner', title: string, subtitle: string, ctaLabel: string };
+
+export type AboutHeroPartsFragment = { __typename: 'AboutHero', titleTop: string, titleBottom: string, image: string, imageAlt: string };
+
+export type AboutQuotePartsFragment = { __typename: 'AboutQuote', quote: string };
+
+export type AboutStoryPointsPartsFragment = { __typename: 'AboutStoryPoints', points?: Array<{ __typename: 'AboutStoryPointsPoints', title: string, text: string, image: string, imageAlt: string } | null> | null };
 
 export type SectionsPartsFragment = { __typename: 'Sections', language: string, title: string, excerpt?: string | null, body?: any | null };
 
-export type HomeQueryVariables = Exact<{
+export type HomeHeroQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null } };
+export type HomeHeroQuery = { __typename?: 'Query', homeHero: { __typename: 'HomeHero', id: string, title: string, subtitle: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, images?: Array<{ __typename: 'HomeHeroImages', url: string, alt: string } | null> | null } };
 
-export type HomeConnectionQueryVariables = Exact<{
+export type HomeHeroConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<HomeFilter>;
+  filter?: InputMaybe<HomeHeroFilter>;
 }>;
 
 
-export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, language: string, heroTitle: string, heroSubtitle: string, heroCtaLabel: string, featuredTitle: string, featuredSubtitle: string, projectsTitle: string, projectsDescription: string, projectsCtaLabel: string, ctaTitle: string, ctaParagraphs: Array<string>, ctaBullets: Array<string>, ctaButtonLabel: string, ctaImageAlt: string, trustTitle: string, trustSubtitle: string, trustCtaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, featuredProducts?: Array<{ __typename: 'HomeFeaturedProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null, projectsItems?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null } | null } | null> | null } };
+export type HomeHeroConnectionQuery = { __typename?: 'Query', homeHeroConnection: { __typename?: 'HomeHeroConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeHeroConnectionEdges', cursor: string, node?: { __typename: 'HomeHero', id: string, title: string, subtitle: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, images?: Array<{ __typename: 'HomeHeroImages', url: string, alt: string } | null> | null } | null } | null> | null } };
 
-export type AboutQueryVariables = Exact<{
+export type HomeFeaturedProductsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type AboutQuery = { __typename?: 'Query', about: { __typename: 'About', id: string, language: string, heroTitleTop: string, heroTitleBottom: string, heroImage: string, heroImageAlt: string, quote: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } };
+export type HomeFeaturedProductsQuery = { __typename?: 'Query', homeFeaturedProducts: { __typename: 'HomeFeaturedProducts', id: string, title: string, subtitle: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, products?: Array<{ __typename: 'HomeFeaturedProductsProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null } };
 
-export type AboutConnectionQueryVariables = Exact<{
+export type HomeFeaturedProductsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<AboutFilter>;
+  filter?: InputMaybe<HomeFeaturedProductsFilter>;
 }>;
 
 
-export type AboutConnectionQuery = { __typename?: 'Query', aboutConnection: { __typename?: 'AboutConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutConnectionEdges', cursor: string, node?: { __typename: 'About', id: string, language: string, heroTitleTop: string, heroTitleBottom: string, heroImage: string, heroImageAlt: string, quote: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } | null } | null> | null } };
+export type HomeFeaturedProductsConnectionQuery = { __typename?: 'Query', homeFeaturedProductsConnection: { __typename?: 'HomeFeaturedProductsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeFeaturedProductsConnectionEdges', cursor: string, node?: { __typename: 'HomeFeaturedProducts', id: string, title: string, subtitle: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, products?: Array<{ __typename: 'HomeFeaturedProductsProducts', id: string, name: string, price: number, image: string, colors?: Array<string | null> | null, rating?: number | null } | null> | null } | null } | null> | null } };
+
+export type HomeProjectsQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type HomeProjectsQuery = { __typename?: 'Query', homeProjects: { __typename: 'HomeProjects', id: string, title: string, description: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, items?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null } };
+
+export type HomeProjectsConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeProjectsFilter>;
+}>;
+
+
+export type HomeProjectsConnectionQuery = { __typename?: 'Query', homeProjectsConnection: { __typename?: 'HomeProjectsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeProjectsConnectionEdges', cursor: string, node?: { __typename: 'HomeProjects', id: string, title: string, description: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, items?: Array<{ __typename: 'HomeProjectsItems', id: number, title: string, image: string, alt: string } | null> | null } | null } | null> | null } };
+
+export type HomeCtaQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type HomeCtaQuery = { __typename?: 'Query', homeCta: { __typename: 'HomeCta', id: string, title: string, paragraphs: Array<string>, bullets: Array<string>, buttonLabel: string, image: string, imageAlt: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type HomeCtaConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeCtaFilter>;
+}>;
+
+
+export type HomeCtaConnectionQuery = { __typename?: 'Query', homeCtaConnection: { __typename?: 'HomeCtaConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeCtaConnectionEdges', cursor: string, node?: { __typename: 'HomeCta', id: string, title: string, paragraphs: Array<string>, bullets: Array<string>, buttonLabel: string, image: string, imageAlt: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
+export type HomeTrustBannerQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type HomeTrustBannerQuery = { __typename?: 'Query', homeTrustBanner: { __typename: 'HomeTrustBanner', id: string, title: string, subtitle: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type HomeTrustBannerConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<HomeTrustBannerFilter>;
+}>;
+
+
+export type HomeTrustBannerConnectionQuery = { __typename?: 'Query', homeTrustBannerConnection: { __typename?: 'HomeTrustBannerConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeTrustBannerConnectionEdges', cursor: string, node?: { __typename: 'HomeTrustBanner', id: string, title: string, subtitle: string, ctaLabel: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
+export type AboutHeroQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type AboutHeroQuery = { __typename?: 'Query', aboutHero: { __typename: 'AboutHero', id: string, titleTop: string, titleBottom: string, image: string, imageAlt: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type AboutHeroConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutHeroFilter>;
+}>;
+
+
+export type AboutHeroConnectionQuery = { __typename?: 'Query', aboutHeroConnection: { __typename?: 'AboutHeroConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutHeroConnectionEdges', cursor: string, node?: { __typename: 'AboutHero', id: string, titleTop: string, titleBottom: string, image: string, imageAlt: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
+export type AboutQuoteQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type AboutQuoteQuery = { __typename?: 'Query', aboutQuote: { __typename: 'AboutQuote', id: string, quote: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type AboutQuoteConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutQuoteFilter>;
+}>;
+
+
+export type AboutQuoteConnectionQuery = { __typename?: 'Query', aboutQuoteConnection: { __typename?: 'AboutQuoteConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutQuoteConnectionEdges', cursor: string, node?: { __typename: 'AboutQuote', id: string, quote: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
+export type AboutStoryPointsQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type AboutStoryPointsQuery = { __typename?: 'Query', aboutStoryPoints: { __typename: 'AboutStoryPoints', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutStoryPointsPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } };
+
+export type AboutStoryPointsConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AboutStoryPointsFilter>;
+}>;
+
+
+export type AboutStoryPointsConnectionQuery = { __typename?: 'Query', aboutStoryPointsConnection: { __typename?: 'AboutStoryPointsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutStoryPointsConnectionEdges', cursor: string, node?: { __typename: 'AboutStoryPoints', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutStoryPointsPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } | null } | null> | null } };
 
 export type SectionsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -624,16 +1133,25 @@ export type SectionsConnectionQueryVariables = Exact<{
 
 export type SectionsConnectionQuery = { __typename?: 'Query', sectionsConnection: { __typename?: 'SectionsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SectionsConnectionEdges', cursor: string, node?: { __typename: 'Sections', id: string, language: string, title: string, excerpt?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
-export const HomePartsFragmentDoc = gql`
-    fragment HomeParts on Home {
+export const HomeHeroPartsFragmentDoc = gql`
+    fragment HomeHeroParts on HomeHero {
   __typename
-  language
-  heroTitle
-  heroSubtitle
-  heroCtaLabel
-  featuredTitle
-  featuredSubtitle
-  featuredProducts {
+  title
+  subtitle
+  ctaLabel
+  images {
+    __typename
+    url
+    alt
+  }
+}
+    `;
+export const HomeFeaturedProductsPartsFragmentDoc = gql`
+    fragment HomeFeaturedProductsParts on HomeFeaturedProducts {
+  __typename
+  title
+  subtitle
+  products {
     __typename
     id
     name
@@ -642,35 +1160,60 @@ export const HomePartsFragmentDoc = gql`
     colors
     rating
   }
-  projectsTitle
-  projectsDescription
-  projectsCtaLabel
-  projectsItems {
+}
+    `;
+export const HomeProjectsPartsFragmentDoc = gql`
+    fragment HomeProjectsParts on HomeProjects {
+  __typename
+  title
+  description
+  ctaLabel
+  items {
     __typename
     id
     title
     image
     alt
   }
-  ctaTitle
-  ctaParagraphs
-  ctaBullets
-  ctaButtonLabel
-  ctaImageAlt
-  trustTitle
-  trustSubtitle
-  trustCtaLabel
 }
     `;
-export const AboutPartsFragmentDoc = gql`
-    fragment AboutParts on About {
+export const HomeCtaPartsFragmentDoc = gql`
+    fragment HomeCtaParts on HomeCta {
   __typename
-  language
-  heroTitleTop
-  heroTitleBottom
-  heroImage
-  heroImageAlt
+  title
+  paragraphs
+  bullets
+  buttonLabel
+  image
+  imageAlt
+}
+    `;
+export const HomeTrustBannerPartsFragmentDoc = gql`
+    fragment HomeTrustBannerParts on HomeTrustBanner {
+  __typename
+  title
+  subtitle
+  ctaLabel
+}
+    `;
+export const AboutHeroPartsFragmentDoc = gql`
+    fragment AboutHeroParts on AboutHero {
+  __typename
+  titleTop
+  titleBottom
+  image
+  imageAlt
+}
+    `;
+export const AboutQuotePartsFragmentDoc = gql`
+    fragment AboutQuoteParts on AboutQuote {
+  __typename
   quote
+}
+    `;
+export const AboutStoryPointsPartsFragmentDoc = gql`
+    fragment AboutStoryPointsParts on AboutStoryPoints {
+  __typename
   points {
     __typename
     title
@@ -689,9 +1232,9 @@ export const SectionsPartsFragmentDoc = gql`
   body
 }
     `;
-export const HomeDocument = gql`
-    query home($relativePath: String!) {
-  home(relativePath: $relativePath) {
+export const HomeHeroDocument = gql`
+    query homeHero($relativePath: String!) {
+  homeHero(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -704,13 +1247,13 @@ export const HomeDocument = gql`
       }
       id
     }
-    ...HomeParts
+    ...HomeHeroParts
   }
 }
-    ${HomePartsFragmentDoc}`;
-export const HomeConnectionDocument = gql`
-    query homeConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeFilter) {
-  homeConnection(
+    ${HomeHeroPartsFragmentDoc}`;
+export const HomeHeroConnectionDocument = gql`
+    query homeHeroConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeHeroFilter) {
+  homeHeroConnection(
     before: $before
     after: $after
     first: $first
@@ -740,15 +1283,15 @@ export const HomeConnectionDocument = gql`
           }
           id
         }
-        ...HomeParts
+        ...HomeHeroParts
       }
     }
   }
 }
-    ${HomePartsFragmentDoc}`;
-export const AboutDocument = gql`
-    query about($relativePath: String!) {
-  about(relativePath: $relativePath) {
+    ${HomeHeroPartsFragmentDoc}`;
+export const HomeFeaturedProductsDocument = gql`
+    query homeFeaturedProducts($relativePath: String!) {
+  homeFeaturedProducts(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -761,13 +1304,13 @@ export const AboutDocument = gql`
       }
       id
     }
-    ...AboutParts
+    ...HomeFeaturedProductsParts
   }
 }
-    ${AboutPartsFragmentDoc}`;
-export const AboutConnectionDocument = gql`
-    query aboutConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutFilter) {
-  aboutConnection(
+    ${HomeFeaturedProductsPartsFragmentDoc}`;
+export const HomeFeaturedProductsConnectionDocument = gql`
+    query homeFeaturedProductsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeFeaturedProductsFilter) {
+  homeFeaturedProductsConnection(
     before: $before
     after: $after
     first: $first
@@ -797,12 +1340,354 @@ export const AboutConnectionDocument = gql`
           }
           id
         }
-        ...AboutParts
+        ...HomeFeaturedProductsParts
       }
     }
   }
 }
-    ${AboutPartsFragmentDoc}`;
+    ${HomeFeaturedProductsPartsFragmentDoc}`;
+export const HomeProjectsDocument = gql`
+    query homeProjects($relativePath: String!) {
+  homeProjects(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...HomeProjectsParts
+  }
+}
+    ${HomeProjectsPartsFragmentDoc}`;
+export const HomeProjectsConnectionDocument = gql`
+    query homeProjectsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeProjectsFilter) {
+  homeProjectsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...HomeProjectsParts
+      }
+    }
+  }
+}
+    ${HomeProjectsPartsFragmentDoc}`;
+export const HomeCtaDocument = gql`
+    query homeCta($relativePath: String!) {
+  homeCta(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...HomeCtaParts
+  }
+}
+    ${HomeCtaPartsFragmentDoc}`;
+export const HomeCtaConnectionDocument = gql`
+    query homeCtaConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeCtaFilter) {
+  homeCtaConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...HomeCtaParts
+      }
+    }
+  }
+}
+    ${HomeCtaPartsFragmentDoc}`;
+export const HomeTrustBannerDocument = gql`
+    query homeTrustBanner($relativePath: String!) {
+  homeTrustBanner(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...HomeTrustBannerParts
+  }
+}
+    ${HomeTrustBannerPartsFragmentDoc}`;
+export const HomeTrustBannerConnectionDocument = gql`
+    query homeTrustBannerConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeTrustBannerFilter) {
+  homeTrustBannerConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...HomeTrustBannerParts
+      }
+    }
+  }
+}
+    ${HomeTrustBannerPartsFragmentDoc}`;
+export const AboutHeroDocument = gql`
+    query aboutHero($relativePath: String!) {
+  aboutHero(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutHeroParts
+  }
+}
+    ${AboutHeroPartsFragmentDoc}`;
+export const AboutHeroConnectionDocument = gql`
+    query aboutHeroConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutHeroFilter) {
+  aboutHeroConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutHeroParts
+      }
+    }
+  }
+}
+    ${AboutHeroPartsFragmentDoc}`;
+export const AboutQuoteDocument = gql`
+    query aboutQuote($relativePath: String!) {
+  aboutQuote(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutQuoteParts
+  }
+}
+    ${AboutQuotePartsFragmentDoc}`;
+export const AboutQuoteConnectionDocument = gql`
+    query aboutQuoteConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutQuoteFilter) {
+  aboutQuoteConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutQuoteParts
+      }
+    }
+  }
+}
+    ${AboutQuotePartsFragmentDoc}`;
+export const AboutStoryPointsDocument = gql`
+    query aboutStoryPoints($relativePath: String!) {
+  aboutStoryPoints(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutStoryPointsParts
+  }
+}
+    ${AboutStoryPointsPartsFragmentDoc}`;
+export const AboutStoryPointsConnectionDocument = gql`
+    query aboutStoryPointsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutStoryPointsFilter) {
+  aboutStoryPointsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutStoryPointsParts
+      }
+    }
+  }
+}
+    ${AboutStoryPointsPartsFragmentDoc}`;
 export const SectionsDocument = gql`
     query sections($relativePath: String!) {
   sections(relativePath: $relativePath) {
@@ -863,17 +1748,53 @@ export const SectionsConnectionDocument = gql`
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      home(variables: HomeQueryVariables, options?: C): Promise<{data: HomeQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeQueryVariables, query: string}> {
-        return requester<{data: HomeQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeQueryVariables, query: string}, HomeQueryVariables>(HomeDocument, variables, options);
+      homeHero(variables: HomeHeroQueryVariables, options?: C): Promise<{data: HomeHeroQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeHeroQueryVariables, query: string}> {
+        return requester<{data: HomeHeroQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeHeroQueryVariables, query: string}, HomeHeroQueryVariables>(HomeHeroDocument, variables, options);
       },
-    homeConnection(variables?: HomeConnectionQueryVariables, options?: C): Promise<{data: HomeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeConnectionQueryVariables, query: string}> {
-        return requester<{data: HomeConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeConnectionQueryVariables, query: string}, HomeConnectionQueryVariables>(HomeConnectionDocument, variables, options);
+    homeHeroConnection(variables?: HomeHeroConnectionQueryVariables, options?: C): Promise<{data: HomeHeroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeHeroConnectionQueryVariables, query: string}> {
+        return requester<{data: HomeHeroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeHeroConnectionQueryVariables, query: string}, HomeHeroConnectionQueryVariables>(HomeHeroConnectionDocument, variables, options);
       },
-    about(variables: AboutQueryVariables, options?: C): Promise<{data: AboutQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQueryVariables, query: string}> {
-        return requester<{data: AboutQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQueryVariables, query: string}, AboutQueryVariables>(AboutDocument, variables, options);
+    homeFeaturedProducts(variables: HomeFeaturedProductsQueryVariables, options?: C): Promise<{data: HomeFeaturedProductsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeFeaturedProductsQueryVariables, query: string}> {
+        return requester<{data: HomeFeaturedProductsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeFeaturedProductsQueryVariables, query: string}, HomeFeaturedProductsQueryVariables>(HomeFeaturedProductsDocument, variables, options);
       },
-    aboutConnection(variables?: AboutConnectionQueryVariables, options?: C): Promise<{data: AboutConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutConnectionQueryVariables, query: string}> {
-        return requester<{data: AboutConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutConnectionQueryVariables, query: string}, AboutConnectionQueryVariables>(AboutConnectionDocument, variables, options);
+    homeFeaturedProductsConnection(variables?: HomeFeaturedProductsConnectionQueryVariables, options?: C): Promise<{data: HomeFeaturedProductsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeFeaturedProductsConnectionQueryVariables, query: string}> {
+        return requester<{data: HomeFeaturedProductsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeFeaturedProductsConnectionQueryVariables, query: string}, HomeFeaturedProductsConnectionQueryVariables>(HomeFeaturedProductsConnectionDocument, variables, options);
+      },
+    homeProjects(variables: HomeProjectsQueryVariables, options?: C): Promise<{data: HomeProjectsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeProjectsQueryVariables, query: string}> {
+        return requester<{data: HomeProjectsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeProjectsQueryVariables, query: string}, HomeProjectsQueryVariables>(HomeProjectsDocument, variables, options);
+      },
+    homeProjectsConnection(variables?: HomeProjectsConnectionQueryVariables, options?: C): Promise<{data: HomeProjectsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeProjectsConnectionQueryVariables, query: string}> {
+        return requester<{data: HomeProjectsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeProjectsConnectionQueryVariables, query: string}, HomeProjectsConnectionQueryVariables>(HomeProjectsConnectionDocument, variables, options);
+      },
+    homeCta(variables: HomeCtaQueryVariables, options?: C): Promise<{data: HomeCtaQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeCtaQueryVariables, query: string}> {
+        return requester<{data: HomeCtaQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeCtaQueryVariables, query: string}, HomeCtaQueryVariables>(HomeCtaDocument, variables, options);
+      },
+    homeCtaConnection(variables?: HomeCtaConnectionQueryVariables, options?: C): Promise<{data: HomeCtaConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeCtaConnectionQueryVariables, query: string}> {
+        return requester<{data: HomeCtaConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeCtaConnectionQueryVariables, query: string}, HomeCtaConnectionQueryVariables>(HomeCtaConnectionDocument, variables, options);
+      },
+    homeTrustBanner(variables: HomeTrustBannerQueryVariables, options?: C): Promise<{data: HomeTrustBannerQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeTrustBannerQueryVariables, query: string}> {
+        return requester<{data: HomeTrustBannerQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeTrustBannerQueryVariables, query: string}, HomeTrustBannerQueryVariables>(HomeTrustBannerDocument, variables, options);
+      },
+    homeTrustBannerConnection(variables?: HomeTrustBannerConnectionQueryVariables, options?: C): Promise<{data: HomeTrustBannerConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeTrustBannerConnectionQueryVariables, query: string}> {
+        return requester<{data: HomeTrustBannerConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: HomeTrustBannerConnectionQueryVariables, query: string}, HomeTrustBannerConnectionQueryVariables>(HomeTrustBannerConnectionDocument, variables, options);
+      },
+    aboutHero(variables: AboutHeroQueryVariables, options?: C): Promise<{data: AboutHeroQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutHeroQueryVariables, query: string}> {
+        return requester<{data: AboutHeroQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutHeroQueryVariables, query: string}, AboutHeroQueryVariables>(AboutHeroDocument, variables, options);
+      },
+    aboutHeroConnection(variables?: AboutHeroConnectionQueryVariables, options?: C): Promise<{data: AboutHeroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutHeroConnectionQueryVariables, query: string}> {
+        return requester<{data: AboutHeroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutHeroConnectionQueryVariables, query: string}, AboutHeroConnectionQueryVariables>(AboutHeroConnectionDocument, variables, options);
+      },
+    aboutQuote(variables: AboutQuoteQueryVariables, options?: C): Promise<{data: AboutQuoteQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQuoteQueryVariables, query: string}> {
+        return requester<{data: AboutQuoteQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQuoteQueryVariables, query: string}, AboutQuoteQueryVariables>(AboutQuoteDocument, variables, options);
+      },
+    aboutQuoteConnection(variables?: AboutQuoteConnectionQueryVariables, options?: C): Promise<{data: AboutQuoteConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQuoteConnectionQueryVariables, query: string}> {
+        return requester<{data: AboutQuoteConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutQuoteConnectionQueryVariables, query: string}, AboutQuoteConnectionQueryVariables>(AboutQuoteConnectionDocument, variables, options);
+      },
+    aboutStoryPoints(variables: AboutStoryPointsQueryVariables, options?: C): Promise<{data: AboutStoryPointsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsQueryVariables, query: string}> {
+        return requester<{data: AboutStoryPointsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsQueryVariables, query: string}, AboutStoryPointsQueryVariables>(AboutStoryPointsDocument, variables, options);
+      },
+    aboutStoryPointsConnection(variables?: AboutStoryPointsConnectionQueryVariables, options?: C): Promise<{data: AboutStoryPointsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsConnectionQueryVariables, query: string}> {
+        return requester<{data: AboutStoryPointsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsConnectionQueryVariables, query: string}, AboutStoryPointsConnectionQueryVariables>(AboutStoryPointsConnectionDocument, variables, options);
       },
     sections(variables: SectionsQueryVariables, options?: C): Promise<{data: SectionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsQueryVariables, query: string}> {
         return requester<{data: SectionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsQueryVariables, query: string}, SectionsQueryVariables>(SectionsDocument, variables, options);

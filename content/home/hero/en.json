@@ -1,0 +1,27 @@
+{
+  "title": "Luxury candles for your home",
+  "subtitle": "Handcrafted candles made with natural ingredients to create a cozy atmosphere in your home.",
+  "ctaLabel": "Explore our collection",
+  "images": [
+    {
+      "url": "/images/herocandel.webp",
+      "alt": "Artisan candles ambiance 1"
+    },
+    {
+      "url": "/images/herovela2.webp",
+      "alt": "Artisan candles ambiance 2"
+    },
+    {
+      "url": "/images/herovela3.webp",
+      "alt": "Artisan candles ambiance 3"
+    },
+    {
+      "url": "/images/herovela4.webp",
+      "alt": "Artisan candles ambiance 4"
+    },
+    {
+      "url": "/images/velas5.webp",
+      "alt": "Artisan candles ambiance 5"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
-query home($relativePath: String!) {
-  home(relativePath: $relativePath) {
+query homeHero($relativePath: String!) {
+  homeHero(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -12,12 +12,12 @@ query home($relativePath: String!) {
       }
       id
     }
-    ...HomeParts
+    ...HomeHeroParts
   }
 }
 
-query homeConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeFilter) {
-  homeConnection(
+query homeHeroConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeHeroFilter) {
+  homeHeroConnection(
     before: $before
     after: $after
     first: $first
@@ -47,14 +47,14 @@ query homeConnection($before: String, $after: String, $first: Float, $last: Floa
           }
           id
         }
-        ...HomeParts
+        ...HomeHeroParts
       }
     }
   }
 }
 
-query about($relativePath: String!) {
-  about(relativePath: $relativePath) {
+query homeFeaturedProducts($relativePath: String!) {
+  homeFeaturedProducts(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -67,12 +67,12 @@ query about($relativePath: String!) {
       }
       id
     }
-    ...AboutParts
+    ...HomeFeaturedProductsParts
   }
 }
 
-query aboutConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutFilter) {
-  aboutConnection(
+query homeFeaturedProductsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeFeaturedProductsFilter) {
+  homeFeaturedProductsConnection(
     before: $before
     after: $after
     first: $first
@@ -102,7 +102,337 @@ query aboutConnection($before: String, $after: String, $first: Float, $last: Flo
           }
           id
         }
-        ...AboutParts
+        ...HomeFeaturedProductsParts
+      }
+    }
+  }
+}
+
+query homeProjects($relativePath: String!) {
+  homeProjects(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...HomeProjectsParts
+  }
+}
+
+query homeProjectsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeProjectsFilter) {
+  homeProjectsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...HomeProjectsParts
+      }
+    }
+  }
+}
+
+query homeCta($relativePath: String!) {
+  homeCta(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...HomeCtaParts
+  }
+}
+
+query homeCtaConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeCtaFilter) {
+  homeCtaConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...HomeCtaParts
+      }
+    }
+  }
+}
+
+query homeTrustBanner($relativePath: String!) {
+  homeTrustBanner(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...HomeTrustBannerParts
+  }
+}
+
+query homeTrustBannerConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeTrustBannerFilter) {
+  homeTrustBannerConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...HomeTrustBannerParts
+      }
+    }
+  }
+}
+
+query aboutHero($relativePath: String!) {
+  aboutHero(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutHeroParts
+  }
+}
+
+query aboutHeroConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutHeroFilter) {
+  aboutHeroConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutHeroParts
+      }
+    }
+  }
+}
+
+query aboutQuote($relativePath: String!) {
+  aboutQuote(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutQuoteParts
+  }
+}
+
+query aboutQuoteConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutQuoteFilter) {
+  aboutQuoteConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutQuoteParts
+      }
+    }
+  }
+}
+
+query aboutStoryPoints($relativePath: String!) {
+  aboutStoryPoints(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AboutStoryPointsParts
+  }
+}
+
+query aboutStoryPointsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutStoryPointsFilter) {
+  aboutStoryPointsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AboutStoryPointsParts
       }
     }
   }

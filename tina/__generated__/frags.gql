@@ -1,12 +1,20 @@
-fragment HomeParts on Home {
+fragment HomeHeroParts on HomeHero {
   __typename
-  language
-  heroTitle
-  heroSubtitle
-  heroCtaLabel
-  featuredTitle
-  featuredSubtitle
-  featuredProducts {
+  title
+  subtitle
+  ctaLabel
+  images {
+    __typename
+    url
+    alt
+  }
+}
+
+fragment HomeFeaturedProductsParts on HomeFeaturedProducts {
+  __typename
+  title
+  subtitle
+  products {
     __typename
     id
     name
@@ -15,34 +23,54 @@ fragment HomeParts on Home {
     colors
     rating
   }
-  projectsTitle
-  projectsDescription
-  projectsCtaLabel
-  projectsItems {
+}
+
+fragment HomeProjectsParts on HomeProjects {
+  __typename
+  title
+  description
+  ctaLabel
+  items {
     __typename
     id
     title
     image
     alt
   }
-  ctaTitle
-  ctaParagraphs
-  ctaBullets
-  ctaButtonLabel
-  ctaImageAlt
-  trustTitle
-  trustSubtitle
-  trustCtaLabel
 }
 
-fragment AboutParts on About {
+fragment HomeCtaParts on HomeCta {
   __typename
-  language
-  heroTitleTop
-  heroTitleBottom
-  heroImage
-  heroImageAlt
+  title
+  paragraphs
+  bullets
+  buttonLabel
+  image
+  imageAlt
+}
+
+fragment HomeTrustBannerParts on HomeTrustBanner {
+  __typename
+  title
+  subtitle
+  ctaLabel
+}
+
+fragment AboutHeroParts on AboutHero {
+  __typename
+  titleTop
+  titleBottom
+  image
+  imageAlt
+}
+
+fragment AboutQuoteParts on AboutQuote {
+  __typename
   quote
+}
+
+fragment AboutStoryPointsParts on AboutStoryPoints {
+  __typename
   points {
     __typename
     title

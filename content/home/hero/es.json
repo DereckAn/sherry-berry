@@ -1,0 +1,27 @@
+{
+  "title": "Velas de lujo para tu hogar",
+  "subtitle": "Velas artesanales con ingredientes naturales para crear un ambiente acogedor en tu casa.",
+  "ctaLabel": "Explora la colección",
+  "images": [
+    {
+      "url": "/images/herocandel.webp",
+      "alt": "Velas artesanales ambiente 1"
+    },
+    {
+      "url": "/images/herovela2.webp",
+      "alt": "Velas artesanales ambiente 2"
+    },
+    {
+      "url": "/images/herovela3.webp",
+      "alt": "Velas artesanales ambiente 3"
+    },
+    {
+      "url": "/images/herovela4.webp",
+      "alt": "Velas artesanales ambiente 4"
+    },
+    {
+      "url": "/images/velas5.webp",
+      "alt": "Velas artesanales ambiente 5"
+    }
+  ]
+}

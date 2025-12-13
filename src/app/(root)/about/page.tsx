@@ -1,24 +1,29 @@
 "use client";
 
 import { AboutHero, AboutListPoints } from "@/components/about";
-import { ABOUT_CONTENT } from "@/shared/i18n/aboutContent";
 import { useLanguage } from "@/shared/i18n/LanguageProvider";
-import { useMemo } from "react";
+import {
+  ABOUT_HERO,
+  ABOUT_QUOTE,
+  ABOUT_STORY_POINTS,
+} from "@/shared/i18n/content";
 
 const AboutPage = () => {
   const { language } = useLanguage();
-  const copy = useMemo(() => ABOUT_CONTENT[language], [language]);
+  const hero = ABOUT_HERO[language];
+  const quote = ABOUT_QUOTE[language];
+  const storyPoints = ABOUT_STORY_POINTS[language];
 
   return (
     <main className="bg-[#66CBEB] pb-72">
       <AboutHero
-        titleTop={copy.heroTitleTop}
-        titleBottom={copy.heroTitleBottom}
-        image={copy.heroImage}
-        imageAlt={copy.heroImageAlt}
-        quote={copy.quote}
+        titleTop={hero.titleTop}
+        titleBottom={hero.titleBottom}
+        image={hero.image}
+        imageAlt={hero.imageAlt}
+        quote={quote.quote}
       />
-      <AboutListPoints points={copy.points} />
+      <AboutListPoints points={storyPoints.points} />
     </main>
   );
 };

@@ -16,69 +16,98 @@ export default defineConfig({
   media: {
     tina: {
       publicFolder: "public",
-      mediaRoot: "uploads",
+      mediaRoot: "images",
     },
   },
   schema: {
     collections: [
+      // ============================================
+      // HOME PAGE SECTIONS
+      // ============================================
       {
-        name: "home",
-        label: "Home",
-        path: "content/home",
+        name: "homeHero",
+        label: "Home → Hero",
+        path: "content/home/hero",
         format: "json",
         ui: {
           filename: {
             readonly: true,
           },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
         },
         fields: [
           {
-            name: "language",
-            label: "Language",
-            type: "string",
-            options: [
-              { value: "en", label: "English" },
-              { value: "es", label: "Español" },
-              { value: "fr", label: "Français" },
-            ],
-            required: true,
-          },
-          {
-            name: "heroTitle",
-            label: "Hero Title",
+            name: "title",
+            label: "Title",
             type: "string",
             required: true,
           },
           {
-            name: "heroSubtitle",
-            label: "Hero Subtitle",
+            name: "subtitle",
+            label: "Subtitle",
             type: "string",
             required: true,
+            ui: { component: "textarea" },
+          },
+          {
+            name: "ctaLabel",
+            label: "CTA Button Label",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "images",
+            label: "Hero Images (Carousel)",
+            type: "object",
+            list: true,
             ui: {
-              component: "textarea",
+              itemProps: (item) => ({ label: item?.alt || "Image" }),
             },
+            fields: [
+              { name: "url", label: "Image", type: "image", required: true },
+              {
+                name: "alt",
+                label: "Alt Text",
+                type: "string",
+                required: true,
+              },
+            ],
           },
+        ],
+      },
+      {
+        name: "homeFeaturedProducts",
+        label: "Home → Featured Products",
+        path: "content/home/featured-products",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true,
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
           {
-            name: "heroCtaLabel",
-            label: "Hero CTA Label",
+            name: "title",
+            label: "Section Title",
             type: "string",
             required: true,
           },
           {
-            name: "featuredTitle",
-            label: "Featured Title",
+            name: "subtitle",
+            label: "Section Subtitle",
             type: "string",
             required: true,
           },
           {
-            name: "featuredSubtitle",
-            label: "Featured Subtitle",
-            type: "string",
-            required: true,
-          },
-          {
-            name: "featuredProducts",
-            label: "Featured Products",
+            name: "products",
+            label: "Products",
             type: "object",
             list: true,
             ui: {
@@ -88,38 +117,55 @@ export default defineConfig({
               { name: "id", label: "ID", type: "string", required: true },
               { name: "name", label: "Name", type: "string", required: true },
               { name: "price", label: "Price", type: "number", required: true },
-              { name: "image", label: "Image", type: "string", required: true },
+              { name: "image", label: "Image", type: "image", required: true },
               {
                 name: "colors",
-                label: "Colors",
+                label: "Colors (hex)",
                 type: "string",
                 list: true,
               },
               { name: "rating", label: "Rating", type: "number" },
             ],
           },
+        ],
+      },
+      {
+        name: "homeProjects",
+        label: "Home → Projects",
+        path: "content/home/projects",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true,
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
           {
-            name: "projectsTitle",
-            label: "Projects Title",
+            name: "title",
+            label: "Section Title",
             type: "string",
             required: true,
           },
           {
-            name: "projectsDescription",
-            label: "Projects Description",
+            name: "description",
+            label: "Description",
             type: "string",
+            required: true,
             ui: { component: "textarea" },
-            required: true,
           },
           {
-            name: "projectsCtaLabel",
-            label: "Projects CTA Label",
+            name: "ctaLabel",
+            label: "CTA Button Label",
             type: "string",
             required: true,
           },
           {
-            name: "projectsItems",
-            label: "Projects Items",
+            name: "items",
+            label: "Project Items",
             type: "object",
             list: true,
             ui: {
@@ -128,116 +174,192 @@ export default defineConfig({
             fields: [
               { name: "id", label: "ID", type: "number", required: true },
               { name: "title", label: "Title", type: "string", required: true },
-              { name: "image", label: "Image", type: "string", required: true },
-              { name: "alt", label: "Alt Text", type: "string", required: true },
+              { name: "image", label: "Image", type: "image", required: true },
+              {
+                name: "alt",
+                label: "Alt Text",
+                type: "string",
+                required: true,
+              },
             ],
           },
+        ],
+      },
+      {
+        name: "homeCta",
+        label: "Home → CTA Section",
+        path: "content/home/cta",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true,
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
           {
-            name: "ctaTitle",
-            label: "CTA Title",
+            name: "title",
+            label: "Title",
             type: "string",
             required: true,
           },
           {
-            name: "ctaParagraphs",
-            label: "CTA Paragraphs",
+            name: "paragraphs",
+            label: "Paragraphs",
             type: "string",
             list: true,
+            required: true,
             ui: { component: "textarea" },
-            required: true,
           },
           {
-            name: "ctaBullets",
-            label: "CTA Bullets",
+            name: "bullets",
+            label: "Bullet Points",
             type: "string",
             list: true,
             required: true,
           },
           {
-            name: "ctaButtonLabel",
-            label: "CTA Button Label",
+            name: "buttonLabel",
+            label: "Button Label",
             type: "string",
             required: true,
           },
           {
-            name: "ctaImageAlt",
-            label: "CTA Image Alt",
-            type: "string",
+            name: "image",
+            label: "Image",
+            type: "image",
             required: true,
           },
           {
-            name: "trustTitle",
-            label: "Trust Title",
-            type: "string",
-            required: true,
-          },
-          {
-            name: "trustSubtitle",
-            label: "Trust Subtitle",
-            type: "string",
-            required: true,
-          },
-          {
-            name: "trustCtaLabel",
-            label: "Trust CTA Label",
+            name: "imageAlt",
+            label: "Image Alt Text",
             type: "string",
             required: true,
           },
         ],
       },
       {
-        name: "about",
-        label: "About",
-        path: "content/about",
+        name: "homeTrustBanner",
+        label: "Home → Trust Banner",
+        path: "content/home/trust-banner",
         format: "json",
         ui: {
           filename: {
             readonly: true,
           },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
         },
         fields: [
           {
-            name: "language",
-            label: "Language",
-            type: "string",
-            options: [
-              { value: "en", label: "English" },
-              { value: "es", label: "Español" },
-              { value: "fr", label: "Français" },
-            ],
-            required: true,
-          },
-          {
-            name: "heroTitleTop",
-            label: "Hero Title Top",
+            name: "title",
+            label: "Title",
             type: "string",
             required: true,
           },
           {
-            name: "heroTitleBottom",
-            label: "Hero Title Bottom",
+            name: "subtitle",
+            label: "Subtitle",
             type: "string",
             required: true,
           },
           {
-            name: "heroImage",
+            name: "ctaLabel",
+            label: "CTA Button Label",
+            type: "string",
+            required: true,
+          },
+        ],
+      },
+
+      // ============================================
+      // ABOUT PAGE SECTIONS
+      // ============================================
+      {
+        name: "aboutHero",
+        label: "About → Hero",
+        path: "content/about/hero",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true,
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            name: "titleTop",
+            label: "Title (Top Line)",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "titleBottom",
+            label: "Title (Bottom Line)",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "image",
             label: "Hero Image",
-            type: "string",
+            type: "image",
             required: true,
           },
           {
-            name: "heroImageAlt",
-            label: "Hero Image Alt",
+            name: "imageAlt",
+            label: "Image Alt Text",
             type: "string",
             required: true,
           },
+        ],
+      },
+      {
+        name: "aboutQuote",
+        label: "About → Quote",
+        path: "content/about/quote",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true,
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
           {
             name: "quote",
-            label: "Quote",
+            label: "Quote Text",
             type: "string",
-            ui: { component: "textarea" },
             required: true,
+            ui: { component: "textarea" },
           },
+        ],
+      },
+      {
+        name: "aboutStoryPoints",
+        label: "About → Story Points",
+        path: "content/about/story-points",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true,
+          },
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
           {
             name: "points",
             label: "Story Points",
@@ -252,18 +374,13 @@ export default defineConfig({
                 name: "text",
                 label: "Text",
                 type: "string",
+                required: true,
                 ui: { component: "textarea" },
-                required: true,
               },
-              {
-                name: "image",
-                label: "Image",
-                type: "string",
-                required: true,
-              },
+              { name: "image", label: "Image", type: "image", required: true },
               {
                 name: "imageAlt",
-                label: "Image Alt",
+                label: "Image Alt Text",
                 type: "string",
                 required: true,
               },
@@ -271,9 +388,13 @@ export default defineConfig({
           },
         ],
       },
+
+      // ============================================
+      // SHARED SECTIONS (MDX)
+      // ============================================
       {
         name: "sections",
-        label: "Sections",
+        label: "Shared Sections",
         path: "content/sections",
         format: "mdx",
         fields: [

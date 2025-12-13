@@ -1,10 +1,4 @@
 {
-  "language": "en",
-  "heroTitleTop": "Our",
-  "heroTitleBottom": "Story",
-  "heroImage": "/images/velas1.webp",
-  "heroImageAlt": "Round Sherry Berry Lifestyle candle",
-  "quote": "Light can be created, even when the world feels dark.",
   "points": [
     {
       "title": "A spark that stayed lit",
@@ -20,7 +14,7 @@
     },
     {
       "title": "Canada, where the light grew",
-      "text": "Here I discovered the beauty of diversity and the magic of each season—the calm white of winter, autumn gold, summer’s rebirth, and spring’s promise. Canada gave me a new home and voice.",
+      "text": "Here I discovered the beauty of diversity and the magic of each season—the calm white of winter, autumn gold, summer's rebirth, and spring's promise. Canada gave me a new home and voice.",
       "image": "/images/velas3.webp",
       "imageAlt": "Candle glowing with a backdrop inspired by Canada"
     },

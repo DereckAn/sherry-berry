@@ -1,0 +1,29 @@
+{
+  "title": "Meilleures ventes",
+  "subtitle": "Nos pièces les plus appréciées, perfectionnées pour vous.",
+  "products": [
+    {
+      "id": "1",
+      "name": "Lavande Calme",
+      "price": 24.99,
+      "image": "/images/velas8.webp",
+      "colors": ["#8B4049", "#2D2D2D", "#D4AF37"],
+      "rating": 4.9
+    },
+    {
+      "id": "2",
+      "name": "Vanille Classique",
+      "price": 22.99,
+      "image": "/images/velas9.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "name": "Forêt de Pins",
+      "price": 26.99,
+      "image": "/images/velas10.webp",
+      "colors": ["#2D5016", "#8B4049"],
+      "rating": 4.7
+    }
+  ]
+}

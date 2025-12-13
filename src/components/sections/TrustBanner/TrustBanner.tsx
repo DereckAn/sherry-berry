@@ -1,13 +1,13 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
-import type { HomeContent } from "@/shared/i18n/homeContent";
+import type { HomeTrustBannerContent } from "@/shared/i18n/content";
 
 type TrustBannerProps = {
-  copy: Pick<HomeContent, "trustTitle" | "trustSubtitle" | "trustCtaLabel">;
+  content: HomeTrustBannerContent;
 };
 
-export function TrustBanner({ copy }: TrustBannerProps) {
-  const { trustTitle, trustSubtitle, trustCtaLabel } = copy;
+export function TrustBanner({ content }: TrustBannerProps) {
+  const { title, subtitle, ctaLabel } = content;
 
   return (
     <section className="py-24 sm:py-32 lg:py-40 ">
@@ -15,10 +15,10 @@ export function TrustBanner({ copy }: TrustBannerProps) {
         <div className="mx-auto text-center space-y-8 sm:space-y-12">
           {/* Main Heading */}
           <h2 className="text-5xl sm:text-5xl md:text-5xl lg:text-8xl font-legquinne md:text-nowrap text-black leading-tight px-4">
-            {trustTitle}
+            {title}
             <br />
             <span className="italic font-light text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 sm:mt-4 block">
-              {trustSubtitle}
+              {subtitle}
             </span>
           </h2>
 
@@ -29,7 +29,7 @@ export function TrustBanner({ copy }: TrustBannerProps) {
               size="lg"
               className="uppercase tracking-[0.2em] text-xs sm:text-sm px-8 sm:px-12 py-4 sm:py-5 rounded-full border-2 hover:bg-black transition-all duration-300"
             >
-              {trustCtaLabel}
+              {ctaLabel}
             </Button>
           </div>
         </div>

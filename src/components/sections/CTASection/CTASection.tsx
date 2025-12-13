@@ -1,17 +1,14 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
+import type { HomeCtaContent } from "@/shared/i18n/content";
 import Image from "next/image";
-import type { HomeContent } from "@/shared/i18n/homeContent";
 
 type CTASectionProps = {
-  copy: Pick<
-    HomeContent,
-    "ctaTitle" | "ctaParagraphs" | "ctaBullets" | "ctaButtonLabel" | "ctaImageAlt"
-  >;
+  content: HomeCtaContent;
 };
 
-export function CTASection({ copy }: CTASectionProps) {
-  const { ctaTitle, ctaParagraphs, ctaBullets, ctaButtonLabel, ctaImageAlt } = copy;
+export function CTASection({ content }: CTASectionProps) {
+  const { title, paragraphs, bullets, buttonLabel, image, imageAlt } = content;
 
   return (
     <section className="py-24">
@@ -19,11 +16,10 @@ export function CTASection({ copy }: CTASectionProps) {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="order-2 lg:order-1">
-            {/* Placeholder - Replace with actual image */}
             <div className="relative aspect-4/5">
               <Image
-                src="/images/vela11.webp"
-                alt={ctaImageAlt}
+                src={image}
+                alt={imageAlt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -34,18 +30,21 @@ export function CTASection({ copy }: CTASectionProps) {
           {/* Content */}
           <div className="order-1 lg:order-2 space-y-6">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-legquinne leading-tight">
-              {ctaTitle}
+              {title}
             </h2>
             <div className="space-y-4 text-lg text-charcoal leading-relaxed font-antic">
-              {ctaParagraphs.map((paragraph) => (
+              {paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
 
             {/* Features list */}
             <ul className="space-y-3 py-4">
-              {ctaBullets.map((bullet) => (
-                <li key={bullet} className="flex items-start gap-3 font-rokkitt">
+              {bullets.map((bullet) => (
+                <li
+                  key={bullet}
+                  className="flex items-start gap-3 font-rokkitt"
+                >
                   <span className="text-primary mt-1">✓</span>
                   <span className="text-charcoal">{bullet}</span>
                 </li>
@@ -54,7 +53,7 @@ export function CTASection({ copy }: CTASectionProps) {
 
             <div className="pt-4">
               <Button variant="primary" className="rounded-full px-3 py-2">
-                {ctaButtonLabel}
+                {buttonLabel}
               </Button>
             </div>
           </div>

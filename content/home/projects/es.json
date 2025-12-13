@@ -1,0 +1,49 @@
+{
+  "title": "Nuestro proceso",
+  "description": "Desde el inicio, trabajamos con profesionales del diseño para crear piezas que trascienden el tiempo y las tendencias.",
+  "ctaLabel": "Ver todos los proyectos",
+  "items": [
+    {
+      "id": 1,
+      "title": "LAVANDA TRANQUILA",
+      "image": "/images/velas1.webp",
+      "alt": "Proyecto vela lavanda"
+    },
+    {
+      "id": 2,
+      "title": "ESENCIA DE VAINILLA",
+      "image": "/images/velas2.webp",
+      "alt": "Proyecto vela vainilla"
+    },
+    {
+      "id": 3,
+      "title": "BRISA CÍTRICA",
+      "image": "/images/velas3.webp",
+      "alt": "Proyecto vela cítrica"
+    },
+    {
+      "id": 4,
+      "title": "NIEBLA DE BOSQUE",
+      "image": "/images/velas4.webp",
+      "alt": "Proyecto vela bosque"
+    },
+    {
+      "id": 5,
+      "title": "JARDÍN DE ROSAS",
+      "image": "/images/velas5.webp",
+      "alt": "Proyecto vela rosas"
+    },
+    {
+      "id": 6,
+      "title": "OLA DEL OCÉANO",
+      "image": "/images/herocandel.webp",
+      "alt": "Proyecto vela océano"
+    },
+    {
+      "id": 7,
+      "title": "NOCHES ÁMBAR",
+      "image": "/images/herocandel.webp",
+      "alt": "Proyecto vela ámbar"
+    }
+  ]
+}

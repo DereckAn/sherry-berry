@@ -1,0 +1,29 @@
+{
+  "title": "Best Sellers",
+  "subtitle": "Our most loved pieces, perfected for you.",
+  "products": [
+    {
+      "id": "1",
+      "name": "Calm Lavender",
+      "price": 24.99,
+      "image": "/images/velas8.webp",
+      "colors": ["#8B4049", "#2D2D2D", "#D4AF37"],
+      "rating": 4.9
+    },
+    {
+      "id": "2",
+      "name": "Classic Vanilla",
+      "price": 22.99,
+      "image": "/images/velas9.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "name": "Pine Forest",
+      "price": 26.99,
+      "image": "/images/velas10.webp",
+      "colors": ["#2D5016", "#8B4049"],
+      "rating": 4.7
+    }
+  ]
+}

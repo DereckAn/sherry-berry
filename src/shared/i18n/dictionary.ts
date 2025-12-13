@@ -1,6 +1,10 @@
 export type Language = "en" | "es" | "fr";
 
-export const LANGUAGE_OPTIONS: { code: Language; label: string; name: string }[] = [
+export const LANGUAGE_OPTIONS: {
+  code: Language;
+  label: string;
+  name: string;
+}[] = [
   { code: "en", label: "EN", name: "English" },
   { code: "es", label: "ES", name: "Español" },
   { code: "fr", label: "FR", name: "Français" },
@@ -18,10 +22,10 @@ export const navDictionary: Record<
   en: {
     menuButton: "Menu",
     items: [
+      { label: "Home", href: "/" },
       { label: "Menu", href: "/menu" },
       { label: "About Us", href: "/about" },
       { label: "Our Art", href: "/our-art" },
-      { label: "Blog", href: "/blog" },
     ],
     privacy: "Privacy",
     terms: "Terms",
@@ -29,10 +33,10 @@ export const navDictionary: Record<
   es: {
     menuButton: "Menú",
     items: [
+      { label: "Inicio", href: "/" },
       { label: "Menú", href: "/menu" },
       { label: "Sobre nosotros", href: "/about" },
       { label: "Nuestro arte", href: "/our-art" },
-      { label: "Blog", href: "/blog" },
     ],
     privacy: "Privacidad",
     terms: "Términos",
@@ -40,10 +44,10 @@ export const navDictionary: Record<
   fr: {
     menuButton: "Menu",
     items: [
+      { label: "Accueil", href: "/" },
       { label: "Menu", href: "/menu" },
       { label: "À propos", href: "/about" },
       { label: "Notre art", href: "/our-art" },
-      { label: "Blog", href: "/blog" },
     ],
     privacy: "Confidentialité",
     terms: "Conditions",

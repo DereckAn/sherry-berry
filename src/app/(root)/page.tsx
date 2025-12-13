@@ -2,29 +2,33 @@
 
 import { Footer } from "@/components/layout/Footer";
 import { CTASection } from "@/components/sections/CTASection";
+import { DetaislsCandles } from "@/components/sections/Details";
 import { FeaturedProducts } from "@/components/sections/FeaturedProducts";
 import { Hero } from "@/components/sections/Hero";
+import { Ingredients } from "@/components/sections/Ingredients";
 import { Projects } from "@/components/sections/Projects";
 import { TrustBanner } from "@/components/sections/TrustBanner";
-import { HOME_CONTENT } from "@/shared/i18n/homeContent";
 import { useLanguage } from "@/shared/i18n/LanguageProvider";
-import { DetaislsCandles } from "@/components/sections/Details";
-import { useMemo } from "react";
-import { Ingredients } from "@/components/sections/Ingredients";
+import {
+  HOME_CTA,
+  HOME_FEATURED_PRODUCTS,
+  HOME_HERO,
+  HOME_PROJECTS,
+  HOME_TRUST_BANNER,
+} from "@/shared/i18n/content";
 
 export default function HomePage() {
   const { language } = useLanguage();
-  const copy = useMemo(() => HOME_CONTENT[language], [language]);
 
   return (
     <main>
-      <Hero copy={copy} />
+      <Hero content={HOME_HERO[language]} />
       <DetaislsCandles />
-      <TrustBanner copy={copy} />
+      <TrustBanner content={HOME_TRUST_BANNER[language]} />
       <Ingredients />
-      <FeaturedProducts copy={copy} />
-      <Projects copy={copy} />
-      <CTASection copy={copy} />
+      <FeaturedProducts content={HOME_FEATURED_PRODUCTS[language]} />
+      <Projects content={HOME_PROJECTS[language]} />
+      <CTASection content={HOME_CTA[language]} />
       <Footer />
     </main>
   );

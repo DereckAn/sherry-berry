@@ -1,0 +1,49 @@
+{
+  "title": "Notre processus",
+  "description": "Depuis le début, nous collaborons avec des professionnels du design pour créer des pièces qui traversent le temps et les tendances.",
+  "ctaLabel": "Voir tous les projets",
+  "items": [
+    {
+      "id": 1,
+      "title": "RÊVES DE LAVANDE",
+      "image": "/images/velas1.webp",
+      "alt": "Projet bougie lavande"
+    },
+    {
+      "id": 2,
+      "title": "ESSENCE DE VANILLE",
+      "image": "/images/velas2.webp",
+      "alt": "Projet bougie vanille"
+    },
+    {
+      "id": 3,
+      "title": "BRISE D'AGRUMES",
+      "image": "/images/velas3.webp",
+      "alt": "Projet bougie agrumes"
+    },
+    {
+      "id": 4,
+      "title": "BRUME DE FORÊT",
+      "image": "/images/velas4.webp",
+      "alt": "Projet bougie forêt"
+    },
+    {
+      "id": 5,
+      "title": "JARDIN DE ROSES",
+      "image": "/images/velas5.webp",
+      "alt": "Projet bougie roses"
+    },
+    {
+      "id": 6,
+      "title": "VAGUE OCÉANE",
+      "image": "/images/herocandel.webp",
+      "alt": "Projet bougie océan"
+    },
+    {
+      "id": 7,
+      "title": "NUITS AMBRÉES",
+      "image": "/images/herocandel.webp",
+      "alt": "Projet bougie ambre"
+    }
+  ]
+}

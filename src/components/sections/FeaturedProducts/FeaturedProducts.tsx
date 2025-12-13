@@ -1,27 +1,27 @@
-import type { HomeContent } from "@/shared/i18n/homeContent";
+import type { HomeFeaturedProductsContent } from "@/shared/i18n/content";
 import Image from "next/image";
 
 type FeaturedProductsProps = {
-  copy: Pick<HomeContent, "featuredTitle" | "featuredSubtitle" | "featuredProducts">;
+  content: HomeFeaturedProductsContent;
 };
 
-export function FeaturedProducts({ copy }: FeaturedProductsProps) {
-  const { featuredTitle, featuredSubtitle, featuredProducts } = copy;
+export function FeaturedProducts({ content }: FeaturedProductsProps) {
+  const { title, subtitle, products } = content;
 
   return (
     <section className="grid grid-cols-2 lg:grid-cols-4 w-full my-10">
       {/* First card - Title card */}
       <div className="p-4 lg:p-10 flex flex-col justify-center">
         <h2 className="text-4xl sm:text-6xl lg:text-7xl 3xl:text-8xl font-legquinne uppercase text-black leading-none mb-4">
-          {featuredTitle}
+          {title}
         </h2>
         <p className="text-sm lg:text-base font-antic text-charcoal">
-          {featuredSubtitle}
+          {subtitle}
         </p>
       </div>
 
       {/* Product cards */}
-      {featuredProducts.map((product) => (
+      {products.map((product) => (
         <div key={product.id} className="group">
           {/* Image container */}
           <div className="relative aspect-square bg-sand mb-4 overflow-hidden ">
@@ -49,7 +49,6 @@ export function FeaturedProducts({ copy }: FeaturedProductsProps) {
               <span className="text-md md:text-2xl font-josefin text-charcoal whitespace-nowrap">
                 ${product.price}
               </span>
-
             </div>
 
             {/* Rating */}

@@ -1,8 +1,8 @@
 "use client";
 
+import type { StoryPoint } from "@/shared/i18n/content";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import type { AboutStoryPoint } from "@/shared/i18n/aboutContent";
 import { AboutPoints, StraightLine } from ".";
 
 type ShapeType =
@@ -24,7 +24,7 @@ const shapes: ShapeType[] = [
 ];
 
 type AboutListPointsProps = {
-  points: AboutStoryPoint[];
+  points: StoryPoint[];
 };
 
 export const AboutListPoints = ({ points }: AboutListPointsProps) => {
@@ -33,10 +33,7 @@ export const AboutListPoints = ({ points }: AboutListPointsProps) => {
     const isInView = useInView(ref, { once: true, amount: 0.3 });
 
     return (
-      <div
-        ref={ref}
-        className="relative py-20 flex justify-center"
-      >
+      <div ref={ref} className="relative py-20 flex justify-center">
         <motion.div
           initial={{ height: 0, opacity: 0 }}
           animate={

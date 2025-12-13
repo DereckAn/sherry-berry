@@ -1,19 +1,16 @@
 "use client";
 
+import type { HomeProjectsContent } from "@/shared/i18n/content";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import type { HomeContent } from "@/shared/i18n/homeContent";
 
 type ProjectsProps = {
-  copy: Pick<
-    HomeContent,
-    "projectsTitle" | "projectsDescription" | "projectsCtaLabel" | "projectsItems"
-  >;
+  content: HomeProjectsContent;
 };
 
-export function Projects({ copy }: ProjectsProps) {
+export function Projects({ content }: ProjectsProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     loop: true,
@@ -47,7 +44,7 @@ export function Projects({ copy }: ProjectsProps) {
     };
   }, [emblaApi, onSelect]);
 
-  const { projectsTitle, projectsDescription, projectsCtaLabel, projectsItems } = copy;
+  const { title, description, ctaLabel, items } = content;
 
   return (
     <section className="section bg-[#E5DDD5] py-16 lg:py-24">
@@ -56,18 +53,18 @@ export function Projects({ copy }: ProjectsProps) {
         <div className="lg:w-[800px] lg:min-w-[400px] px-6 lg:pl-12 space-y-6 flex flex-col justify-between">
           <div className="space-y-6">
             <h2 className="font-legquinne text-6xl lg:text-9xl text-black">
-              {projectsTitle}
+              {title}
             </h2>
 
             <p className="text-black/80 text-base lg:text-lg leading-relaxed ">
-              {projectsDescription}
+              {description}
             </p>
 
             <Link
               href="/our-art"
               className="inline-block bg-black text-white px-8 py-3 rounded-full hover:bg-black transition-colors duration-300"
             >
-              {projectsCtaLabel}
+              {ctaLabel}
             </Link>
           </div>
 
@@ -123,13 +120,13 @@ export function Projects({ copy }: ProjectsProps) {
           {/* Counter - Desktop only */}
           <div className="hidden lg:block absolute top-6 right-16 z-10 text-black text-sm font-medium">
             {String(currentIndex + 1).padStart(2, "0")} /{" "}
-            {String(projectsItems.length).padStart(2, "0")}
+            {String(items.length).padStart(2, "0")}
           </div>
 
           {/* Embla Carousel */}
           <div className="overflow-hidden pl-6 lg:pl-0" ref={emblaRef}>
             <div className="flex gap-4 lg:gap-6">
-              {projectsItems.map((project) => (
+              {items.map((project) => (
                 <div
                   key={project.id}
                   className="relative group cursor-pointer flex-[0_0_85%] md:flex-[0_0_calc(60%-12px)]"
