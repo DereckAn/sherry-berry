@@ -1,9 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
-import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import { useEffect, useRef, useState } from "react";
 
 interface VideoMorphProps {
   videoId: string;
@@ -73,6 +71,15 @@ const VideoMorph = ({
 
   const scale = useTransform(scrollYProgress, [0, 0.3, 0.6], [1, 0.95, 0.85]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <section ref={containerRef} className="relative h-[400vh]">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col md:flex-row items-center justify-center">
@@ -80,7 +87,7 @@ const VideoMorph = ({
           style={{
             borderRadius,
             scale,
-            x
+            x: isMobile ? 0 : x,
           }}
           className="relative overflow-hidden flex items-center justify-center"
         >
@@ -93,13 +100,12 @@ const VideoMorph = ({
           >
             <div className="absolute inset-0 overflow-hidden">
               <div className="w-full h-full video-morph-container">
-                <LiteYouTubeEmbed
-                  id={videoId}
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1`}
                   title={title}
-                  poster="maxresdefault"
-                  webp
-                  noCookie
-                  params="autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1"
+                  allow="autoplay"
+                  allowFullScreen
+                  className="w-full h-full absolute inset-0 border-0"
                 />
               </div>
             </div>
@@ -114,13 +120,12 @@ const VideoMorph = ({
           >
             <div className="absolute inset-0 overflow-hidden">
               <div className="w-full h-full video-morph-container">
-                <LiteYouTubeEmbed
-                  id={videoId}
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1`}
                   title={title}
-                  poster="maxresdefault"
-                  webp
-                  noCookie
-                  params="autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1"
+                  allow="autoplay"
+                  allowFullScreen
+                  className="w-full h-full absolute inset-0 border-0"
                 />
               </div>
             </div>

@@ -16,7 +16,6 @@
     "next": "16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "react-lite-youtube-embed": "^3.3.3",
     "zustand": "^5.0.9"
   },
   "devDependencies": {
