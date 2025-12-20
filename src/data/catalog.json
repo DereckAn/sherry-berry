@@ -1,0 +1,1910 @@
+{
+  "response": {
+    "objects": [
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-16T00:38:07.54Z",
+        "itemData": {
+          "name": "Sherry Berry Bouquet  ",
+          "description": "Handcrafted soy wax candle designed as a delicate floral bouquet. Featuring sculpted wax flowers in soft blush and ivory tones, this piece is both decorative and functional.\n\n✨ Customizable colors & fragrance\n✨ Available in gold or silver container\n✨ Made with natural soy wax\n\nFragrance options:\n• Strawberry & Sandalwood\n• Pine & Berries\n• Peonies & Roses\n• Jasmine\n\nPerfect as a gift or a statement piece for any space.",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-16T00:38:07.54Z",
+              "itemVariationData": {
+                "itemId": "CIK6TNZ7ASGKCGXJR5HK65PG",
+                "name": "Regular",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "6800",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "6M5XI37MN6ENRND3J6TPE62P",
+              "updatedAt": "2025-12-20T06:44:35.958Z",
+              "version": "1766213075958",
+              "isDeleted": false,
+              "catalogV1Ids": [
+                {
+                  "catalogV1Id": "3EI7LGKN72SSRQIIPXDYJQ63",
+                  "locationId": "L75Y7F7KGFPVM"
+                }
+              ],
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "WUISZOJK5IBJA6DFOQBMYXKT"
+          ],
+          "descriptionHtml": "Handcrafted soy wax candle designed as a delicate floral bouquet. Featuring sculpted wax flowers in soft blush and ivory tones, this piece is both decorative and functional.<br><br>✨ Customizable colors &amp; fragrance<br>✨ Available in gold or silver container<br>✨ Made with natural soy wax<br><br>Fragrance options:<br>• Strawberry &amp; Sandalwood<br>• Pine &amp; Berries<br>• Peonies &amp; Roses<br>• Jasmine<br><br>Perfect as a gift or a statement piece for any space.",
+          "descriptionPlaintext": "Handcrafted soy wax candle designed as a delicate floral bouquet. Featuring sculpted wax flowers in soft blush and ivory tones, this piece is both decorative and functional.\n\n✨ Customizable colors & fragrance\n✨ Available in gold or silver container\n✨ Made with natural soy wax\n\nFragrance options:\n• Strawberry & Sandalwood\n• Pine & Berries\n• Peonies & Roses\n• Jasmine\n\nPerfect as a gift or a statement piece for any space.",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "CIK6TNZ7ASGKCGXJR5HK65PG",
+        "updatedAt": "2025-12-20T06:44:35.958Z",
+        "version": "1766213075958",
+        "isDeleted": false,
+        "catalogV1Ids": [
+          {
+            "catalogV1Id": "AK3N4QDXYKTIRHS4PWII7HPG",
+            "locationId": "L75Y7F7KGFPVM"
+          }
+        ],
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-16T01:00:25.097Z",
+        "itemData": {
+          "name": "Cookie Waxmelt Set",
+          "description": "Christmas Cookies Wax Melt Set\n\nA charming set of handcrafted soy wax melts inspired by classic iced Christmas cookies. Beautifully detailed and presented in a gift-ready box, this set fills your space with a cozy and festive aroma.\n\n✨ Made with natural soy wax\n✨ Handcrafted, bakery-inspired design\n✨ Perfect for gifting or seasonal décor. \n\nYou can order it for any occasion and it adapts to the season or celebration.\n\n The aromas are: cookie, coffee, chocolate, and bread. It may include some fresh seasonal aromas depending on availability.",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-16T01:00:25.097Z",
+              "itemVariationData": {
+                "itemId": "GIILJPAT5QGQTOAPI6HKDACB",
+                "name": "Regular",
+                "sku": "9267049",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "4500",
+                  "currency": "CAD"
+                },
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "6N3FVSAT2KHJLGUKGOKJVELU",
+              "updatedAt": "2025-12-20T04:09:24.291Z",
+              "version": "1766203764291",
+              "isDeleted": false,
+              "catalogV1Ids": [
+                {
+                  "catalogV1Id": "HNHMSJYNWKYA4T7QDPVXPQLH",
+                  "locationId": "L75Y7F7KGFPVM"
+                }
+              ],
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "G6DUAMQQ4QXK7C2NMK22VKMZ"
+          ],
+          "descriptionHtml": "Christmas Cookies Wax Melt Set<br><br>A charming set of handcrafted soy wax melts inspired by classic iced Christmas cookies. Beautifully detailed and presented in a gift-ready box, this set fills your space with a cozy and festive aroma.<br><br>✨ Made with natural soy wax<br>✨ Handcrafted, bakery-inspired design<br>✨ Perfect for gifting or seasonal décor. <br><br>You can order it for any occasion and it adapts to the season or celebration.<br><br> The aromas are: cookie, coffee, chocolate, and bread. It may include some fresh seasonal aromas depending on availability.<br>",
+          "descriptionPlaintext": "Christmas Cookies Wax Melt Set\n\nA charming set of handcrafted soy wax melts inspired by classic iced Christmas cookies. Beautifully detailed and presented in a gift-ready box, this set fills your space with a cozy and festive aroma.\n\n✨ Made with natural soy wax\n✨ Handcrafted, bakery-inspired design\n✨ Perfect for gifting or seasonal décor. \n\nYou can order it for any occasion and it adapts to the season or celebration.\n\n The aromas are: cookie, coffee, chocolate, and bread. It may include some fresh seasonal aromas depending on availability.",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "GIILJPAT5QGQTOAPI6HKDACB",
+        "updatedAt": "2025-12-20T04:09:24.291Z",
+        "version": "1766203764291",
+        "isDeleted": false,
+        "catalogV1Ids": [
+          {
+            "catalogV1Id": "VAA2B6ORBFR3UJVAJ3XDVYVX",
+            "locationId": "L75Y7F7KGFPVM"
+          }
+        ],
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-16T01:10:09.658Z",
+        "itemData": {
+          "name": "Sweet Dreams Waxmelts Box",
+          "description": "Sweet Dreams Wax Melts Box\nHandcrafted soy wax melts inspired by festive sweets, presented in a charming cardboard gift box. Designed for wax warmers, they fill your space with a warm, cozy holiday aroma.\n\nScents: Sandalwood, Peony, Strawberry, Roses, Orange & Pine.\n\n✨ Handmade\n✨ Soy wax\n✨ Gift-ready packaging\n*** Burner is not included.",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-16T01:10:09.658Z",
+              "itemVariationData": {
+                "itemId": "DYJ7K5CX3BCHNRIUA5H6TE5L",
+                "name": "Regular",
+                "sku": "6365471",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "1500",
+                  "currency": "CAD"
+                },
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "6GFZUJGXX2FLBC5FBZQNLUBX",
+              "updatedAt": "2025-12-20T06:47:33.908Z",
+              "version": "1766213253908",
+              "isDeleted": false,
+              "catalogV1Ids": [
+                {
+                  "catalogV1Id": "43WJLPAIEM673IHSSTCP3WJC",
+                  "locationId": "L75Y7F7KGFPVM"
+                }
+              ],
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "2ABKTOKNDJHGWGTV7CWG7O2I"
+          ],
+          "descriptionHtml": "<b>Sweet Dreams Wax Melts Box</b><br>Handcrafted soy wax melts inspired by festive sweets, presented in a charming cardboard gift box. Designed for wax warmers, they fill your space with a warm, cozy holiday aroma.<br><br>Scents: Sandalwood, Peony, Strawberry, Roses, Orange &amp; Pine.<br><br>✨ Handmade<br>✨ Soy wax<br>✨ Gift-ready packaging<br>*** Burner is not included. ",
+          "descriptionPlaintext": "Sweet Dreams Wax Melts Box\nHandcrafted soy wax melts inspired by festive sweets, presented in a charming cardboard gift box. Designed for wax warmers, they fill your space with a warm, cozy holiday aroma.\n\nScents: Sandalwood, Peony, Strawberry, Roses, Orange & Pine.\n\n✨ Handmade\n✨ Soy wax\n✨ Gift-ready packaging\n*** Burner is not included.",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "DYJ7K5CX3BCHNRIUA5H6TE5L",
+        "updatedAt": "2025-12-20T06:47:33.908Z",
+        "version": "1766213253908",
+        "isDeleted": false,
+        "catalogV1Ids": [
+          {
+            "catalogV1Id": "R7LSNNYDXOJXZ5BRUBPW7UNT",
+            "locationId": "L75Y7F7KGFPVM"
+          }
+        ],
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-16T01:35:39.476Z",
+        "itemData": {
+          "name": "Snowflakes & Winter Glow",
+          "description": "Snowflakes & Winter Glow\n\nHandcrafted soy wax pieces featuring elegant snowflake designs inspired by the warmth of the winter season. Available individually or as curated sets, with customizable colors and fragrances.\n\n✨ Handmade with natural soy wax\n✨ Four festive designs\n✨ Custom-made, gift-ready pieces",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-16T01:35:39.476Z",
+              "itemVariationData": {
+                "itemId": "5ZX2B4GGZ7KHI2C6GH2OE6K6",
+                "name": "Regular",
+                "sku": "588177L",
+                "ordinal": 0,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "1000",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "RUH44BDXYMPUU4TGZP5N2IB7",
+              "updatedAt": "2025-12-20T06:45:37.094Z",
+              "version": "1766213137094",
+              "isDeleted": false,
+              "catalogV1Ids": [
+                {
+                  "catalogV1Id": "NBTFPMM62WB3PSCMVOOZZHQM",
+                  "locationId": "L75Y7F7KGFPVM"
+                }
+              ],
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            },
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-16T01:35:39.476Z",
+              "itemVariationData": {
+                "itemId": "5ZX2B4GGZ7KHI2C6GH2OE6K6",
+                "name": "Winter Glow Set",
+                "sku": "3 pieces per set",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "2800",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "YZN2Q3XBVJ4RVZYKYV22DBRB",
+              "updatedAt": "2025-12-20T06:45:37.094Z",
+              "version": "1766213137094",
+              "isDeleted": false,
+              "catalogV1Ids": [
+                {
+                  "catalogV1Id": "GXDMPBAMDSZ2Q4SPEMY6J5KD",
+                  "locationId": "L75Y7F7KGFPVM"
+                }
+              ],
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "F7T6FM4XXS7PKR2JJQIB2AN6"
+          ],
+          "descriptionHtml": "<b>Snowflakes &amp; Winter Glow</b><br><br>Handcrafted soy wax pieces featuring elegant snowflake designs inspired by the warmth of the winter season. Available individually or as curated sets, with customizable colors and fragrances.<br><br>✨ Handmade with natural soy wax<br>✨ Four festive designs<br>✨ Custom-made, gift-ready pieces<br>",
+          "descriptionPlaintext": "Snowflakes & Winter Glow\n\nHandcrafted soy wax pieces featuring elegant snowflake designs inspired by the warmth of the winter season. Available individually or as curated sets, with customizable colors and fragrances.\n\n✨ Handmade with natural soy wax\n✨ Four festive designs\n✨ Custom-made, gift-ready pieces",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "5ZX2B4GGZ7KHI2C6GH2OE6K6",
+        "updatedAt": "2025-12-20T06:45:37.094Z",
+        "version": "1766213137094",
+        "isDeleted": false,
+        "catalogV1Ids": [
+          {
+            "catalogV1Id": "V72OTKEC4XEMWVWN5WFKK3JT",
+            "locationId": "L75Y7F7KGFPVM"
+          }
+        ],
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T05:32:53.829Z",
+        "itemData": {
+          "name": "Winter Blossom Waxmelts Bars ",
+          "description": "Winter Blossom Bars are handcrafted wax melt bars with a soft floral and sweet holiday aroma.\nBlending notes inspired by Mexican Christmas and Winter Storm, they create a fresh, elegant winter atmosphere—light, cozy, and uplifting.\n\n✨ Available individually or as a set of 3 bars.\n🕯️ Hand-poured with love using soy wax.\n*** Limited seasonal edition",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T05:32:53.829Z",
+              "itemVariationData": {
+                "itemId": "EY7HUYYA7Y4RR6J2NU7TNIBU",
+                "name": "Regular",
+                "sku": "629085L",
+                "ordinal": 0,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "800",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "QWWW5YW42VV7B4ENJIH2Q6TR",
+              "updatedAt": "2025-12-20T06:48:29.539Z",
+              "version": "1766213309539",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            },
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T05:32:53.829Z",
+              "itemVariationData": {
+                "itemId": "EY7HUYYA7Y4RR6J2NU7TNIBU",
+                "name": "Set  of 3 pieces",
+                "sku": "E852526",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "2200",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "CWHHDHZHO2HMNQRUTY3NLNS7",
+              "updatedAt": "2025-12-20T06:48:29.539Z",
+              "version": "1766213309539",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "TEKZTXMUIX6GSG5TJMSFZWQD"
+          ],
+          "descriptionHtml": "<b>Winter Blossom Bars</b> are handcrafted wax melt bars with a soft floral and sweet holiday aroma.<br>Blending notes inspired by Mexican Christmas and Winter Storm, they create a fresh, elegant winter atmosphere—light, cozy, and uplifting.<br><br>✨ Available individually or as a set of 3 bars.<br>🕯️ Hand-poured with love using soy wax.<br>*** Limited seasonal edition",
+          "descriptionPlaintext": "Winter Blossom Bars are handcrafted wax melt bars with a soft floral and sweet holiday aroma.\nBlending notes inspired by Mexican Christmas and Winter Storm, they create a fresh, elegant winter atmosphere—light, cozy, and uplifting.\n\n✨ Available individually or as a set of 3 bars.\n🕯️ Hand-poured with love using soy wax.\n*** Limited seasonal edition",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "EY7HUYYA7Y4RR6J2NU7TNIBU",
+        "updatedAt": "2025-12-20T06:48:29.539Z",
+        "version": "1766213309539",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T05:43:54.806Z",
+        "itemData": {
+          "name": "Magic of Christmas Gift Box ",
+          "description": "Magic of Christmas Gift Box is a handcrafted holiday wax set made to elevate your space.\nThis box includes 350 grams of scented wax in assorted shapes, paired with a hand-painted and sealed plaster tray, carefully finished by hand.\n\n✨ Thoughtfully arranged and ready to gift.\n🕯️ Made with love using soy wax.\n*** Limited seasonal edition",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T05:43:54.806Z",
+              "itemVariationData": {
+                "itemId": "BGLT35GABER5S2NIQ5CBTPX6",
+                "name": "Regular",
+                "sku": "673998Q",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "6000",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "ZPB7EURKF6T3XRHQY3XOUQUS",
+              "updatedAt": "2025-12-20T05:44:56.935Z",
+              "version": "1766209496935",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "XF6EJIBVIX3W6ZIQBB233GKC"
+          ],
+          "descriptionHtml": "<b>Magic of Christmas Gift Box</b> is a handcrafted holiday wax set made to elevate your space.<br>This box includes 350 grams of scented wax in assorted shapes, paired with a hand-painted and sealed plaster tray, carefully finished by hand.<br><br>✨ Thoughtfully arranged and ready to gift.<br>🕯️ Made with love using soy wax.<br>*** Limited seasonal edition",
+          "descriptionPlaintext": "Magic of Christmas Gift Box is a handcrafted holiday wax set made to elevate your space.\nThis box includes 350 grams of scented wax in assorted shapes, paired with a hand-painted and sealed plaster tray, carefully finished by hand.\n\n✨ Thoughtfully arranged and ready to gift.\n🕯️ Made with love using soy wax.\n*** Limited seasonal edition",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "BGLT35GABER5S2NIQ5CBTPX6",
+        "updatedAt": "2025-12-20T05:44:56.935Z",
+        "version": "1766209496935",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T06:00:09.323Z",
+        "itemData": {
+          "name": "Custom Shell Candle ",
+          "description": "Custom Shell Candle \nThis handcrafted shell-shaped candle is designed for weddings, baptisms, and special celebrations.\nEach candle is made to order with approximately 90 grams of soy wax, carefully finished and presented in a clear gift box, perfect as a meaningful keepsake.\n\n✨ Made on demand\n📦 Orders are shipped 5-7 days after purchase is processed.\nSome custom pieces may require additional time to complete. If so, we will notify you with an updated shipping date.\n\nAvailable scents (subject to availability)\n• Cinnamon\n• Lavender\n• Blueberries\n• Orange\n• Jasmine\n• Winter Storm\n\nAvailable colors\n• White\n• Pearl\n• Beige\n\nAll personalized and made-to-order items are final sale.\nOrders cannot be canceled, returned, or refunded once production has begun.",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T06:00:09.323Z",
+              "itemVariationData": {
+                "itemId": "WMCZ6XLHBDVPANHDSFAPIZB6",
+                "name": "Regular",
+                "sku": "4194550",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "2400",
+                  "currency": "CAD"
+                },
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "KVRXZS4MMRF7TM2MYURQ7OMA",
+              "updatedAt": "2025-12-20T06:14:08.554Z",
+              "version": "1766211248554",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "DPSRF3XKGTBKWK3FTZXANIHZ"
+          ],
+          "descriptionHtml": "<b><i>Custom Shell Candle </i></b><br>This handcrafted shell-shaped candle is designed for weddings, baptisms, and special celebrations.<br>Each candle is made to order with approximately 90 grams of soy wax, carefully finished and presented in a clear gift box, perfect as a meaningful keepsake.<br><br>✨ Made on demand<br>📦 Orders are shipped 5-7 days after purchase is processed.<br><u>Some custom pieces may require additional time to complete. If so, we will notify you with an updated shipping date.</u><br><br>Available scents (subject to availability)<br>• Cinnamon<br>• Lavender<br>• Blueberries<br>• Orange<br>• Jasmine<br>• Winter Storm<br><br>Available colors<br>• White<br>• Pearl<br>• Beige<br><br>All personalized and made-to-order items are final sale.<br>Orders cannot be canceled, returned, or refunded once production has begun.<br><br>",
+          "descriptionPlaintext": "Custom Shell Candle \nThis handcrafted shell-shaped candle is designed for weddings, baptisms, and special celebrations.\nEach candle is made to order with approximately 90 grams of soy wax, carefully finished and presented in a clear gift box, perfect as a meaningful keepsake.\n\n✨ Made on demand\n📦 Orders are shipped 5-7 days after purchase is processed.\nSome custom pieces may require additional time to complete. If so, we will notify you with an updated shipping date.\n\nAvailable scents (subject to availability)\n• Cinnamon\n• Lavender\n• Blueberries\n• Orange\n• Jasmine\n• Winter Storm\n\nAvailable colors\n• White\n• Pearl\n• Beige\n\nAll personalized and made-to-order items are final sale.\nOrders cannot be canceled, returned, or refunded once production has begun.",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "WMCZ6XLHBDVPANHDSFAPIZB6",
+        "updatedAt": "2025-12-20T06:14:08.554Z",
+        "version": "1766211248554",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T06:30:28.698Z",
+        "itemData": {
+          "name": "Holiday Hearth Candle ",
+          "description": "Holiday Hearth Candle – 8 oz\nHoliday Hearth is a handcrafted soy candle that brings the warmth of the holidays into your home.\nThis cozy seasonal blend features notes of Christmas Cookie, Old Fashion Christmas, and Salted Caramel Eggnog, creating a rich, sweet, and comforting holiday atmosphere.\n\nPoured into an elegant amber glass jar with a gold lid, this candle is perfect for winter nights, festive décor, or thoughtful gifting.\n\n✨ Hand-poured with love\n🕯️ Clean-burning soy wax\n🎄 Seasonal holiday blend\n🎁 Beautifully presented, ideal for gifting\nLimited seasonal edition!",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T06:30:28.698Z",
+              "itemVariationData": {
+                "itemId": "4YLDJWJ4UUJHVPJ2CGDBU4OA",
+                "name": "Regular",
+                "sku": "321270X",
+                "ordinal": 0,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "2600",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "IOINDVQEZEOHFH2HXKLVIYR6",
+              "updatedAt": "2025-12-20T06:44:13.237Z",
+              "version": "1766213053237",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            },
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T06:30:28.698Z",
+              "itemVariationData": {
+                "itemId": "4YLDJWJ4UUJHVPJ2CGDBU4OA",
+                "name": "Set of 2",
+                "sku": "S944012",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "5000",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "GCUFJVWBESEAYXGJ7RAEQEDM",
+              "updatedAt": "2025-12-20T06:44:13.237Z",
+              "version": "1766213053237",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "HYX5CXFE4U2PF4YOLCY66VPX"
+          ],
+          "descriptionHtml": "<b>Holiday Hearth Candle – 8 oz</b><br>Holiday Hearth is a handcrafted soy candle that brings the warmth of the holidays into your home.<br>This cozy seasonal blend features notes of Christmas Cookie, Old Fashion Christmas, and Salted Caramel Eggnog, creating a rich, sweet, and comforting holiday atmosphere.<br><br>Poured into an elegant amber glass jar with a gold lid, this candle is perfect for winter nights, festive décor, or thoughtful gifting.<br><br>✨ Hand-poured with love<br>🕯️ Clean-burning soy wax<br>🎄 Seasonal holiday blend<br>🎁 Beautifully presented, ideal for gifting<br>Limited seasonal edition!<br>",
+          "descriptionPlaintext": "Holiday Hearth Candle – 8 oz\nHoliday Hearth is a handcrafted soy candle that brings the warmth of the holidays into your home.\nThis cozy seasonal blend features notes of Christmas Cookie, Old Fashion Christmas, and Salted Caramel Eggnog, creating a rich, sweet, and comforting holiday atmosphere.\n\nPoured into an elegant amber glass jar with a gold lid, this candle is perfect for winter nights, festive décor, or thoughtful gifting.\n\n✨ Hand-poured with love\n🕯️ Clean-burning soy wax\n🎄 Seasonal holiday blend\n🎁 Beautifully presented, ideal for gifting\nLimited seasonal edition!",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "4YLDJWJ4UUJHVPJ2CGDBU4OA",
+        "updatedAt": "2025-12-20T06:44:13.237Z",
+        "version": "1766213053237",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T06:42:22.349Z",
+        "itemData": {
+          "name": "Berry Delight Dessert Candles",
+          "description": "Berry Delight Dessert Candles\nThese handcrafted dessert-style candles are inspired by elegant celebration cakes and sweet moments.\nEach candle is carefully detailed and scented with a red berries fragrance, creating a fresh, fruity, and inviting aroma.\n\n✨ Beautifully decorated and perfect for special occasions, gifts, or décor.\n\n⸻\n\n📏 Available sizes\n\t•\tSmall dessert candle: approx. 45 g\n\t•\tLarge dessert candle: approx. 75 g\n\n🌸 Scent\n\t•\tRed Berries\n\nDecorative details may vary slightly as each piece is handmade.",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T06:42:22.349Z",
+              "itemVariationData": {
+                "itemId": "YTDT23LZLNYXCF6E2LOQJXLO",
+                "name": "Regular",
+                "sku": "C888672",
+                "ordinal": 0,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "1200",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "ARCXBEHWVFSPTN5XIFGQMPC6",
+              "updatedAt": "2025-12-20T06:42:25.554Z",
+              "version": "1766212945554",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            },
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T06:42:22.349Z",
+              "itemVariationData": {
+                "itemId": "YTDT23LZLNYXCF6E2LOQJXLO",
+                "name": "Large size",
+                "sku": "252861C",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "1800",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "YTUZJIMVGKZFY3POCEZYAYSE",
+              "updatedAt": "2025-12-20T06:42:25.554Z",
+              "version": "1766212945554",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "AREPECXXGR5IPSEUKROQ3ESY"
+          ],
+          "descriptionHtml": "<b>Berry Delight Dessert Candles</b><br>These handcrafted dessert-style candles are inspired by elegant celebration cakes and sweet moments.<br>Each candle is carefully detailed and scented with a red berries fragrance, creating a fresh, fruity, and inviting aroma.<br><br>✨ Beautifully decorated and perfect for special occasions, gifts, or décor.<br><br>⸻<br><br>📏 Available sizes<br>\t•\tSmall dessert candle: approx. 45 g<br>\t•\tLarge dessert candle: approx. 75 g<br><br>🌸 Scent<br>\t•\tRed Berries<br><br>Decorative details may vary slightly as each piece is handmade.",
+          "descriptionPlaintext": "Berry Delight Dessert Candles\nThese handcrafted dessert-style candles are inspired by elegant celebration cakes and sweet moments.\nEach candle is carefully detailed and scented with a red berries fragrance, creating a fresh, fruity, and inviting aroma.\n\n✨ Beautifully decorated and perfect for special occasions, gifts, or décor.\n\n⸻\n\n📏 Available sizes\n\t•\tSmall dessert candle: approx. 45 g\n\t•\tLarge dessert candle: approx. 75 g\n\n🌸 Scent\n\t•\tRed Berries\n\nDecorative details may vary slightly as each piece is handmade.",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "YTDT23LZLNYXCF6E2LOQJXLO",
+        "updatedAt": "2025-12-20T06:42:27.858Z",
+        "version": "1766212947858",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T07:04:29.563Z",
+        "itemData": {
+          "name": "Woodland Acorn Candle",
+          "description": "Woodland Acorn Candle is a handcrafted decorative candle inspired by nature and cozy seasonal moments.\nDesigned with an acorn-style top and a soft neutral base, this candle adds warmth and charm to any space, making it perfect for fall décor, winter styling, or thoughtful gifting.\n\n✨ Hand-poured with care\n🕯️ Made with soy wax\n🍂 Decorative and cozy seasonal piece\n❄️🍁 Winter and fall scents available. \nEach candle is handmade, so slight variations make every piece unique.\n\nSmall and Large sizes available\n(Different prices)",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T07:04:29.563Z",
+              "itemVariationData": {
+                "itemId": "QJ4YKRSNJU2F2FZIS5X4YVLO",
+                "name": "Regular",
+                "sku": "B424553",
+                "ordinal": 0,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "2400",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "ZKNYI7NDEBVGVC5BZY3264NY",
+              "updatedAt": "2025-12-20T07:04:33.177Z",
+              "version": "1766214273177",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            },
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T07:04:29.563Z",
+              "itemVariationData": {
+                "itemId": "QJ4YKRSNJU2F2FZIS5X4YVLO",
+                "name": "Small piece",
+                "sku": "N048716",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "1500",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "YZBW2OL4A6Q5K6LORSZYDEBL",
+              "updatedAt": "2025-12-20T07:04:33.177Z",
+              "version": "1766214273177",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "KWFOZ5JPPZTP5VOX6O4FAXEC"
+          ],
+          "descriptionHtml": "<b>Woodland Acorn Candle</b> is a handcrafted decorative candle inspired by nature and cozy seasonal moments.<br>Designed with an acorn-style top and a soft neutral base, this candle adds warmth and charm to any space, making it perfect for fall décor, winter styling, or thoughtful gifting.<br><br>✨ Hand-poured with care<br>🕯️ Made with soy wax<br>🍂 Decorative and cozy seasonal piece<br>❄️🍁 Winter and fall scents available. <br>Each candle is handmade, so slight variations make every piece unique.<br><br>Small and Large sizes available<br>(Different prices) <br>",
+          "descriptionPlaintext": "Woodland Acorn Candle is a handcrafted decorative candle inspired by nature and cozy seasonal moments.\nDesigned with an acorn-style top and a soft neutral base, this candle adds warmth and charm to any space, making it perfect for fall décor, winter styling, or thoughtful gifting.\n\n✨ Hand-poured with care\n🕯️ Made with soy wax\n🍂 Decorative and cozy seasonal piece\n❄️🍁 Winter and fall scents available. \nEach candle is handmade, so slight variations make every piece unique.\n\nSmall and Large sizes available\n(Different prices)",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "QJ4YKRSNJU2F2FZIS5X4YVLO",
+        "updatedAt": "2025-12-20T07:04:35.414Z",
+        "version": "1766214275414",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "CUSTOM_ATTRIBUTE_DEFINITION",
+        "created_at": "2025-12-14T01:35:18.92Z",
+        "customAttributeDefinitionData": {
+          "type": "STRING",
+          "name": "Ecom Storefront Classic Site ID",
+          "description": "Ecommerce bridge target storefront classic site ID. Used to create site-item associations after copying items.",
+          "sourceApplication": {
+            "applicationId": "sq0idp-w46nJ_NCNDMSOywaCY0mwA",
+            "name": "Square Online Store"
+          },
+          "allowedObjectTypes": [
+            "ITEM"
+          ],
+          "sellerVisibility": "SELLER_VISIBILITY_HIDDEN",
+          "appVisibility": "APP_VISIBILITY_HIDDEN",
+          "stringConfig": {
+            "enforceUniqueness": false
+          },
+          "key": "ecom_target_classic_site_id"
+        },
+        "id": "IO3TKBO4GTG6RLUG47KII66V",
+        "updatedAt": "2025-12-14T01:35:18.883Z",
+        "version": "1765676118883",
+        "isDeleted": false,
+        "presentAtAllLocations": true
+      },
+      {
+        "type": "CUSTOM_ATTRIBUTE_DEFINITION",
+        "created_at": "2025-12-14T01:35:19.13Z",
+        "customAttributeDefinitionData": {
+          "type": "BOOLEAN",
+          "name": "Ecom Gifting Enabled",
+          "description": "Enables the item to be sold as a gift on Square Online.",
+          "sourceApplication": {
+            "applicationId": "sq0idp-w46nJ_NCNDMSOywaCY0mwA",
+            "name": "Square Online Store"
+          },
+          "allowedObjectTypes": [
+            "ITEM"
+          ],
+          "sellerVisibility": "SELLER_VISIBILITY_READ_WRITE_VALUES",
+          "appVisibility": "APP_VISIBILITY_READ_WRITE_VALUES",
+          "key": "ecom_gifting_enabled"
+        },
+        "id": "USEDDUB5ZBSCMYJG5IC6SZQC",
+        "updatedAt": "2025-12-14T01:35:19.098Z",
+        "version": "1765676119098",
+        "isDeleted": false,
+        "presentAtAllLocations": true
+      },
+      {
+        "type": "QUICK_AMOUNTS_SETTINGS",
+        "created_at": "2025-03-25T05:57:51.872Z",
+        "quickAmountsSettingsData": {
+          "option": "DISABLED",
+          "eligibleForAutoAmounts": false
+        },
+        "id": "NUTXOY25CO5WCUGKJP5KW63S",
+        "updatedAt": "2025-03-25T05:57:51.836Z",
+        "version": "1742882271836",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      }
+    ]
+  },
+  "rawResponse": {
+    "headers": {},
+    "redirected": false,
+    "status": 200,
+    "statusText": "OK",
+    "type": "default",
+    "url": "https://connect.squareup.com/v2/catalog/list?cursor=&types="
+  },
+  "data": [
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-16T00:38:07.54Z",
+      "itemData": {
+        "name": "Sherry Berry Bouquet  ",
+        "description": "Handcrafted soy wax candle designed as a delicate floral bouquet. Featuring sculpted wax flowers in soft blush and ivory tones, this piece is both decorative and functional.\n\n✨ Customizable colors & fragrance\n✨ Available in gold or silver container\n✨ Made with natural soy wax\n\nFragrance options:\n• Strawberry & Sandalwood\n• Pine & Berries\n• Peonies & Roses\n• Jasmine\n\nPerfect as a gift or a statement piece for any space.",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-16T00:38:07.54Z",
+            "itemVariationData": {
+              "itemId": "CIK6TNZ7ASGKCGXJR5HK65PG",
+              "name": "Regular",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "6800",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "6M5XI37MN6ENRND3J6TPE62P",
+            "updatedAt": "2025-12-20T06:44:35.958Z",
+            "version": "1766213075958",
+            "isDeleted": false,
+            "catalogV1Ids": [
+              {
+                "catalogV1Id": "3EI7LGKN72SSRQIIPXDYJQ63",
+                "locationId": "L75Y7F7KGFPVM"
+              }
+            ],
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "WUISZOJK5IBJA6DFOQBMYXKT"
+        ],
+        "descriptionHtml": "Handcrafted soy wax candle designed as a delicate floral bouquet. Featuring sculpted wax flowers in soft blush and ivory tones, this piece is both decorative and functional.<br><br>✨ Customizable colors &amp; fragrance<br>✨ Available in gold or silver container<br>✨ Made with natural soy wax<br><br>Fragrance options:<br>• Strawberry &amp; Sandalwood<br>• Pine &amp; Berries<br>• Peonies &amp; Roses<br>• Jasmine<br><br>Perfect as a gift or a statement piece for any space.",
+        "descriptionPlaintext": "Handcrafted soy wax candle designed as a delicate floral bouquet. Featuring sculpted wax flowers in soft blush and ivory tones, this piece is both decorative and functional.\n\n✨ Customizable colors & fragrance\n✨ Available in gold or silver container\n✨ Made with natural soy wax\n\nFragrance options:\n• Strawberry & Sandalwood\n• Pine & Berries\n• Peonies & Roses\n• Jasmine\n\nPerfect as a gift or a statement piece for any space.",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "CIK6TNZ7ASGKCGXJR5HK65PG",
+      "updatedAt": "2025-12-20T06:44:35.958Z",
+      "version": "1766213075958",
+      "isDeleted": false,
+      "catalogV1Ids": [
+        {
+          "catalogV1Id": "AK3N4QDXYKTIRHS4PWII7HPG",
+          "locationId": "L75Y7F7KGFPVM"
+        }
+      ],
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-16T01:00:25.097Z",
+      "itemData": {
+        "name": "Cookie Waxmelt Set",
+        "description": "Christmas Cookies Wax Melt Set\n\nA charming set of handcrafted soy wax melts inspired by classic iced Christmas cookies. Beautifully detailed and presented in a gift-ready box, this set fills your space with a cozy and festive aroma.\n\n✨ Made with natural soy wax\n✨ Handcrafted, bakery-inspired design\n✨ Perfect for gifting or seasonal décor. \n\nYou can order it for any occasion and it adapts to the season or celebration.\n\n The aromas are: cookie, coffee, chocolate, and bread. It may include some fresh seasonal aromas depending on availability.",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-16T01:00:25.097Z",
+            "itemVariationData": {
+              "itemId": "GIILJPAT5QGQTOAPI6HKDACB",
+              "name": "Regular",
+              "sku": "9267049",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "4500",
+                "currency": "CAD"
+              },
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "6N3FVSAT2KHJLGUKGOKJVELU",
+            "updatedAt": "2025-12-20T04:09:24.291Z",
+            "version": "1766203764291",
+            "isDeleted": false,
+            "catalogV1Ids": [
+              {
+                "catalogV1Id": "HNHMSJYNWKYA4T7QDPVXPQLH",
+                "locationId": "L75Y7F7KGFPVM"
+              }
+            ],
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "G6DUAMQQ4QXK7C2NMK22VKMZ"
+        ],
+        "descriptionHtml": "Christmas Cookies Wax Melt Set<br><br>A charming set of handcrafted soy wax melts inspired by classic iced Christmas cookies. Beautifully detailed and presented in a gift-ready box, this set fills your space with a cozy and festive aroma.<br><br>✨ Made with natural soy wax<br>✨ Handcrafted, bakery-inspired design<br>✨ Perfect for gifting or seasonal décor. <br><br>You can order it for any occasion and it adapts to the season or celebration.<br><br> The aromas are: cookie, coffee, chocolate, and bread. It may include some fresh seasonal aromas depending on availability.<br>",
+        "descriptionPlaintext": "Christmas Cookies Wax Melt Set\n\nA charming set of handcrafted soy wax melts inspired by classic iced Christmas cookies. Beautifully detailed and presented in a gift-ready box, this set fills your space with a cozy and festive aroma.\n\n✨ Made with natural soy wax\n✨ Handcrafted, bakery-inspired design\n✨ Perfect for gifting or seasonal décor. \n\nYou can order it for any occasion and it adapts to the season or celebration.\n\n The aromas are: cookie, coffee, chocolate, and bread. It may include some fresh seasonal aromas depending on availability.",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "GIILJPAT5QGQTOAPI6HKDACB",
+      "updatedAt": "2025-12-20T04:09:24.291Z",
+      "version": "1766203764291",
+      "isDeleted": false,
+      "catalogV1Ids": [
+        {
+          "catalogV1Id": "VAA2B6ORBFR3UJVAJ3XDVYVX",
+          "locationId": "L75Y7F7KGFPVM"
+        }
+      ],
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-16T01:10:09.658Z",
+      "itemData": {
+        "name": "Sweet Dreams Waxmelts Box",
+        "description": "Sweet Dreams Wax Melts Box\nHandcrafted soy wax melts inspired by festive sweets, presented in a charming cardboard gift box. Designed for wax warmers, they fill your space with a warm, cozy holiday aroma.\n\nScents: Sandalwood, Peony, Strawberry, Roses, Orange & Pine.\n\n✨ Handmade\n✨ Soy wax\n✨ Gift-ready packaging\n*** Burner is not included.",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-16T01:10:09.658Z",
+            "itemVariationData": {
+              "itemId": "DYJ7K5CX3BCHNRIUA5H6TE5L",
+              "name": "Regular",
+              "sku": "6365471",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "1500",
+                "currency": "CAD"
+              },
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "6GFZUJGXX2FLBC5FBZQNLUBX",
+            "updatedAt": "2025-12-20T06:47:33.908Z",
+            "version": "1766213253908",
+            "isDeleted": false,
+            "catalogV1Ids": [
+              {
+                "catalogV1Id": "43WJLPAIEM673IHSSTCP3WJC",
+                "locationId": "L75Y7F7KGFPVM"
+              }
+            ],
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "2ABKTOKNDJHGWGTV7CWG7O2I"
+        ],
+        "descriptionHtml": "<b>Sweet Dreams Wax Melts Box</b><br>Handcrafted soy wax melts inspired by festive sweets, presented in a charming cardboard gift box. Designed for wax warmers, they fill your space with a warm, cozy holiday aroma.<br><br>Scents: Sandalwood, Peony, Strawberry, Roses, Orange &amp; Pine.<br><br>✨ Handmade<br>✨ Soy wax<br>✨ Gift-ready packaging<br>*** Burner is not included. ",
+        "descriptionPlaintext": "Sweet Dreams Wax Melts Box\nHandcrafted soy wax melts inspired by festive sweets, presented in a charming cardboard gift box. Designed for wax warmers, they fill your space with a warm, cozy holiday aroma.\n\nScents: Sandalwood, Peony, Strawberry, Roses, Orange & Pine.\n\n✨ Handmade\n✨ Soy wax\n✨ Gift-ready packaging\n*** Burner is not included.",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "DYJ7K5CX3BCHNRIUA5H6TE5L",
+      "updatedAt": "2025-12-20T06:47:33.908Z",
+      "version": "1766213253908",
+      "isDeleted": false,
+      "catalogV1Ids": [
+        {
+          "catalogV1Id": "R7LSNNYDXOJXZ5BRUBPW7UNT",
+          "locationId": "L75Y7F7KGFPVM"
+        }
+      ],
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-16T01:35:39.476Z",
+      "itemData": {
+        "name": "Snowflakes & Winter Glow",
+        "description": "Snowflakes & Winter Glow\n\nHandcrafted soy wax pieces featuring elegant snowflake designs inspired by the warmth of the winter season. Available individually or as curated sets, with customizable colors and fragrances.\n\n✨ Handmade with natural soy wax\n✨ Four festive designs\n✨ Custom-made, gift-ready pieces",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-16T01:35:39.476Z",
+            "itemVariationData": {
+              "itemId": "5ZX2B4GGZ7KHI2C6GH2OE6K6",
+              "name": "Regular",
+              "sku": "588177L",
+              "ordinal": 0,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "1000",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "RUH44BDXYMPUU4TGZP5N2IB7",
+            "updatedAt": "2025-12-20T06:45:37.094Z",
+            "version": "1766213137094",
+            "isDeleted": false,
+            "catalogV1Ids": [
+              {
+                "catalogV1Id": "NBTFPMM62WB3PSCMVOOZZHQM",
+                "locationId": "L75Y7F7KGFPVM"
+              }
+            ],
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          },
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-16T01:35:39.476Z",
+            "itemVariationData": {
+              "itemId": "5ZX2B4GGZ7KHI2C6GH2OE6K6",
+              "name": "Winter Glow Set",
+              "sku": "3 pieces per set",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "2800",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "YZN2Q3XBVJ4RVZYKYV22DBRB",
+            "updatedAt": "2025-12-20T06:45:37.094Z",
+            "version": "1766213137094",
+            "isDeleted": false,
+            "catalogV1Ids": [
+              {
+                "catalogV1Id": "GXDMPBAMDSZ2Q4SPEMY6J5KD",
+                "locationId": "L75Y7F7KGFPVM"
+              }
+            ],
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "F7T6FM4XXS7PKR2JJQIB2AN6"
+        ],
+        "descriptionHtml": "<b>Snowflakes &amp; Winter Glow</b><br><br>Handcrafted soy wax pieces featuring elegant snowflake designs inspired by the warmth of the winter season. Available individually or as curated sets, with customizable colors and fragrances.<br><br>✨ Handmade with natural soy wax<br>✨ Four festive designs<br>✨ Custom-made, gift-ready pieces<br>",
+        "descriptionPlaintext": "Snowflakes & Winter Glow\n\nHandcrafted soy wax pieces featuring elegant snowflake designs inspired by the warmth of the winter season. Available individually or as curated sets, with customizable colors and fragrances.\n\n✨ Handmade with natural soy wax\n✨ Four festive designs\n✨ Custom-made, gift-ready pieces",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "5ZX2B4GGZ7KHI2C6GH2OE6K6",
+      "updatedAt": "2025-12-20T06:45:37.094Z",
+      "version": "1766213137094",
+      "isDeleted": false,
+      "catalogV1Ids": [
+        {
+          "catalogV1Id": "V72OTKEC4XEMWVWN5WFKK3JT",
+          "locationId": "L75Y7F7KGFPVM"
+        }
+      ],
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T05:32:53.829Z",
+      "itemData": {
+        "name": "Winter Blossom Waxmelts Bars ",
+        "description": "Winter Blossom Bars are handcrafted wax melt bars with a soft floral and sweet holiday aroma.\nBlending notes inspired by Mexican Christmas and Winter Storm, they create a fresh, elegant winter atmosphere—light, cozy, and uplifting.\n\n✨ Available individually or as a set of 3 bars.\n🕯️ Hand-poured with love using soy wax.\n*** Limited seasonal edition",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T05:32:53.829Z",
+            "itemVariationData": {
+              "itemId": "EY7HUYYA7Y4RR6J2NU7TNIBU",
+              "name": "Regular",
+              "sku": "629085L",
+              "ordinal": 0,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "800",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "QWWW5YW42VV7B4ENJIH2Q6TR",
+            "updatedAt": "2025-12-20T06:48:29.539Z",
+            "version": "1766213309539",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          },
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T05:32:53.829Z",
+            "itemVariationData": {
+              "itemId": "EY7HUYYA7Y4RR6J2NU7TNIBU",
+              "name": "Set  of 3 pieces",
+              "sku": "E852526",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "2200",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "CWHHDHZHO2HMNQRUTY3NLNS7",
+            "updatedAt": "2025-12-20T06:48:29.539Z",
+            "version": "1766213309539",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "TEKZTXMUIX6GSG5TJMSFZWQD"
+        ],
+        "descriptionHtml": "<b>Winter Blossom Bars</b> are handcrafted wax melt bars with a soft floral and sweet holiday aroma.<br>Blending notes inspired by Mexican Christmas and Winter Storm, they create a fresh, elegant winter atmosphere—light, cozy, and uplifting.<br><br>✨ Available individually or as a set of 3 bars.<br>🕯️ Hand-poured with love using soy wax.<br>*** Limited seasonal edition",
+        "descriptionPlaintext": "Winter Blossom Bars are handcrafted wax melt bars with a soft floral and sweet holiday aroma.\nBlending notes inspired by Mexican Christmas and Winter Storm, they create a fresh, elegant winter atmosphere—light, cozy, and uplifting.\n\n✨ Available individually or as a set of 3 bars.\n🕯️ Hand-poured with love using soy wax.\n*** Limited seasonal edition",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "EY7HUYYA7Y4RR6J2NU7TNIBU",
+      "updatedAt": "2025-12-20T06:48:29.539Z",
+      "version": "1766213309539",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T05:43:54.806Z",
+      "itemData": {
+        "name": "Magic of Christmas Gift Box ",
+        "description": "Magic of Christmas Gift Box is a handcrafted holiday wax set made to elevate your space.\nThis box includes 350 grams of scented wax in assorted shapes, paired with a hand-painted and sealed plaster tray, carefully finished by hand.\n\n✨ Thoughtfully arranged and ready to gift.\n🕯️ Made with love using soy wax.\n*** Limited seasonal edition",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T05:43:54.806Z",
+            "itemVariationData": {
+              "itemId": "BGLT35GABER5S2NIQ5CBTPX6",
+              "name": "Regular",
+              "sku": "673998Q",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "6000",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "ZPB7EURKF6T3XRHQY3XOUQUS",
+            "updatedAt": "2025-12-20T05:44:56.935Z",
+            "version": "1766209496935",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "XF6EJIBVIX3W6ZIQBB233GKC"
+        ],
+        "descriptionHtml": "<b>Magic of Christmas Gift Box</b> is a handcrafted holiday wax set made to elevate your space.<br>This box includes 350 grams of scented wax in assorted shapes, paired with a hand-painted and sealed plaster tray, carefully finished by hand.<br><br>✨ Thoughtfully arranged and ready to gift.<br>🕯️ Made with love using soy wax.<br>*** Limited seasonal edition",
+        "descriptionPlaintext": "Magic of Christmas Gift Box is a handcrafted holiday wax set made to elevate your space.\nThis box includes 350 grams of scented wax in assorted shapes, paired with a hand-painted and sealed plaster tray, carefully finished by hand.\n\n✨ Thoughtfully arranged and ready to gift.\n🕯️ Made with love using soy wax.\n*** Limited seasonal edition",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "BGLT35GABER5S2NIQ5CBTPX6",
+      "updatedAt": "2025-12-20T05:44:56.935Z",
+      "version": "1766209496935",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T06:00:09.323Z",
+      "itemData": {
+        "name": "Custom Shell Candle ",
+        "description": "Custom Shell Candle \nThis handcrafted shell-shaped candle is designed for weddings, baptisms, and special celebrations.\nEach candle is made to order with approximately 90 grams of soy wax, carefully finished and presented in a clear gift box, perfect as a meaningful keepsake.\n\n✨ Made on demand\n📦 Orders are shipped 5-7 days after purchase is processed.\nSome custom pieces may require additional time to complete. If so, we will notify you with an updated shipping date.\n\nAvailable scents (subject to availability)\n• Cinnamon\n• Lavender\n• Blueberries\n• Orange\n• Jasmine\n• Winter Storm\n\nAvailable colors\n• White\n• Pearl\n• Beige\n\nAll personalized and made-to-order items are final sale.\nOrders cannot be canceled, returned, or refunded once production has begun.",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T06:00:09.323Z",
+            "itemVariationData": {
+              "itemId": "WMCZ6XLHBDVPANHDSFAPIZB6",
+              "name": "Regular",
+              "sku": "4194550",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "2400",
+                "currency": "CAD"
+              },
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "KVRXZS4MMRF7TM2MYURQ7OMA",
+            "updatedAt": "2025-12-20T06:14:08.554Z",
+            "version": "1766211248554",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "DPSRF3XKGTBKWK3FTZXANIHZ"
+        ],
+        "descriptionHtml": "<b><i>Custom Shell Candle </i></b><br>This handcrafted shell-shaped candle is designed for weddings, baptisms, and special celebrations.<br>Each candle is made to order with approximately 90 grams of soy wax, carefully finished and presented in a clear gift box, perfect as a meaningful keepsake.<br><br>✨ Made on demand<br>📦 Orders are shipped 5-7 days after purchase is processed.<br><u>Some custom pieces may require additional time to complete. If so, we will notify you with an updated shipping date.</u><br><br>Available scents (subject to availability)<br>• Cinnamon<br>• Lavender<br>• Blueberries<br>• Orange<br>• Jasmine<br>• Winter Storm<br><br>Available colors<br>• White<br>• Pearl<br>• Beige<br><br>All personalized and made-to-order items are final sale.<br>Orders cannot be canceled, returned, or refunded once production has begun.<br><br>",
+        "descriptionPlaintext": "Custom Shell Candle \nThis handcrafted shell-shaped candle is designed for weddings, baptisms, and special celebrations.\nEach candle is made to order with approximately 90 grams of soy wax, carefully finished and presented in a clear gift box, perfect as a meaningful keepsake.\n\n✨ Made on demand\n📦 Orders are shipped 5-7 days after purchase is processed.\nSome custom pieces may require additional time to complete. If so, we will notify you with an updated shipping date.\n\nAvailable scents (subject to availability)\n• Cinnamon\n• Lavender\n• Blueberries\n• Orange\n• Jasmine\n• Winter Storm\n\nAvailable colors\n• White\n• Pearl\n• Beige\n\nAll personalized and made-to-order items are final sale.\nOrders cannot be canceled, returned, or refunded once production has begun.",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "WMCZ6XLHBDVPANHDSFAPIZB6",
+      "updatedAt": "2025-12-20T06:14:08.554Z",
+      "version": "1766211248554",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T06:30:28.698Z",
+      "itemData": {
+        "name": "Holiday Hearth Candle ",
+        "description": "Holiday Hearth Candle – 8 oz\nHoliday Hearth is a handcrafted soy candle that brings the warmth of the holidays into your home.\nThis cozy seasonal blend features notes of Christmas Cookie, Old Fashion Christmas, and Salted Caramel Eggnog, creating a rich, sweet, and comforting holiday atmosphere.\n\nPoured into an elegant amber glass jar with a gold lid, this candle is perfect for winter nights, festive décor, or thoughtful gifting.\n\n✨ Hand-poured with love\n🕯️ Clean-burning soy wax\n🎄 Seasonal holiday blend\n🎁 Beautifully presented, ideal for gifting\nLimited seasonal edition!",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T06:30:28.698Z",
+            "itemVariationData": {
+              "itemId": "4YLDJWJ4UUJHVPJ2CGDBU4OA",
+              "name": "Regular",
+              "sku": "321270X",
+              "ordinal": 0,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "2600",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "IOINDVQEZEOHFH2HXKLVIYR6",
+            "updatedAt": "2025-12-20T06:44:13.237Z",
+            "version": "1766213053237",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          },
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T06:30:28.698Z",
+            "itemVariationData": {
+              "itemId": "4YLDJWJ4UUJHVPJ2CGDBU4OA",
+              "name": "Set of 2",
+              "sku": "S944012",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "5000",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "GCUFJVWBESEAYXGJ7RAEQEDM",
+            "updatedAt": "2025-12-20T06:44:13.237Z",
+            "version": "1766213053237",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "HYX5CXFE4U2PF4YOLCY66VPX"
+        ],
+        "descriptionHtml": "<b>Holiday Hearth Candle – 8 oz</b><br>Holiday Hearth is a handcrafted soy candle that brings the warmth of the holidays into your home.<br>This cozy seasonal blend features notes of Christmas Cookie, Old Fashion Christmas, and Salted Caramel Eggnog, creating a rich, sweet, and comforting holiday atmosphere.<br><br>Poured into an elegant amber glass jar with a gold lid, this candle is perfect for winter nights, festive décor, or thoughtful gifting.<br><br>✨ Hand-poured with love<br>🕯️ Clean-burning soy wax<br>🎄 Seasonal holiday blend<br>🎁 Beautifully presented, ideal for gifting<br>Limited seasonal edition!<br>",
+        "descriptionPlaintext": "Holiday Hearth Candle – 8 oz\nHoliday Hearth is a handcrafted soy candle that brings the warmth of the holidays into your home.\nThis cozy seasonal blend features notes of Christmas Cookie, Old Fashion Christmas, and Salted Caramel Eggnog, creating a rich, sweet, and comforting holiday atmosphere.\n\nPoured into an elegant amber glass jar with a gold lid, this candle is perfect for winter nights, festive décor, or thoughtful gifting.\n\n✨ Hand-poured with love\n🕯️ Clean-burning soy wax\n🎄 Seasonal holiday blend\n🎁 Beautifully presented, ideal for gifting\nLimited seasonal edition!",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "4YLDJWJ4UUJHVPJ2CGDBU4OA",
+      "updatedAt": "2025-12-20T06:44:13.237Z",
+      "version": "1766213053237",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T06:42:22.349Z",
+      "itemData": {
+        "name": "Berry Delight Dessert Candles",
+        "description": "Berry Delight Dessert Candles\nThese handcrafted dessert-style candles are inspired by elegant celebration cakes and sweet moments.\nEach candle is carefully detailed and scented with a red berries fragrance, creating a fresh, fruity, and inviting aroma.\n\n✨ Beautifully decorated and perfect for special occasions, gifts, or décor.\n\n⸻\n\n📏 Available sizes\n\t•\tSmall dessert candle: approx. 45 g\n\t•\tLarge dessert candle: approx. 75 g\n\n🌸 Scent\n\t•\tRed Berries\n\nDecorative details may vary slightly as each piece is handmade.",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T06:42:22.349Z",
+            "itemVariationData": {
+              "itemId": "YTDT23LZLNYXCF6E2LOQJXLO",
+              "name": "Regular",
+              "sku": "C888672",
+              "ordinal": 0,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "1200",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "ARCXBEHWVFSPTN5XIFGQMPC6",
+            "updatedAt": "2025-12-20T06:42:25.554Z",
+            "version": "1766212945554",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          },
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T06:42:22.349Z",
+            "itemVariationData": {
+              "itemId": "YTDT23LZLNYXCF6E2LOQJXLO",
+              "name": "Large size",
+              "sku": "252861C",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "1800",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "YTUZJIMVGKZFY3POCEZYAYSE",
+            "updatedAt": "2025-12-20T06:42:25.554Z",
+            "version": "1766212945554",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "AREPECXXGR5IPSEUKROQ3ESY"
+        ],
+        "descriptionHtml": "<b>Berry Delight Dessert Candles</b><br>These handcrafted dessert-style candles are inspired by elegant celebration cakes and sweet moments.<br>Each candle is carefully detailed and scented with a red berries fragrance, creating a fresh, fruity, and inviting aroma.<br><br>✨ Beautifully decorated and perfect for special occasions, gifts, or décor.<br><br>⸻<br><br>📏 Available sizes<br>\t•\tSmall dessert candle: approx. 45 g<br>\t•\tLarge dessert candle: approx. 75 g<br><br>🌸 Scent<br>\t•\tRed Berries<br><br>Decorative details may vary slightly as each piece is handmade.",
+        "descriptionPlaintext": "Berry Delight Dessert Candles\nThese handcrafted dessert-style candles are inspired by elegant celebration cakes and sweet moments.\nEach candle is carefully detailed and scented with a red berries fragrance, creating a fresh, fruity, and inviting aroma.\n\n✨ Beautifully decorated and perfect for special occasions, gifts, or décor.\n\n⸻\n\n📏 Available sizes\n\t•\tSmall dessert candle: approx. 45 g\n\t•\tLarge dessert candle: approx. 75 g\n\n🌸 Scent\n\t•\tRed Berries\n\nDecorative details may vary slightly as each piece is handmade.",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "YTDT23LZLNYXCF6E2LOQJXLO",
+      "updatedAt": "2025-12-20T06:42:27.858Z",
+      "version": "1766212947858",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T07:04:29.563Z",
+      "itemData": {
+        "name": "Woodland Acorn Candle",
+        "description": "Woodland Acorn Candle is a handcrafted decorative candle inspired by nature and cozy seasonal moments.\nDesigned with an acorn-style top and a soft neutral base, this candle adds warmth and charm to any space, making it perfect for fall décor, winter styling, or thoughtful gifting.\n\n✨ Hand-poured with care\n🕯️ Made with soy wax\n🍂 Decorative and cozy seasonal piece\n❄️🍁 Winter and fall scents available. \nEach candle is handmade, so slight variations make every piece unique.\n\nSmall and Large sizes available\n(Different prices)",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T07:04:29.563Z",
+            "itemVariationData": {
+              "itemId": "QJ4YKRSNJU2F2FZIS5X4YVLO",
+              "name": "Regular",
+              "sku": "B424553",
+              "ordinal": 0,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "2400",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "ZKNYI7NDEBVGVC5BZY3264NY",
+            "updatedAt": "2025-12-20T07:04:33.177Z",
+            "version": "1766214273177",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          },
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T07:04:29.563Z",
+            "itemVariationData": {
+              "itemId": "QJ4YKRSNJU2F2FZIS5X4YVLO",
+              "name": "Small piece",
+              "sku": "N048716",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "1500",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "YZBW2OL4A6Q5K6LORSZYDEBL",
+            "updatedAt": "2025-12-20T07:04:33.177Z",
+            "version": "1766214273177",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "KWFOZ5JPPZTP5VOX6O4FAXEC"
+        ],
+        "descriptionHtml": "<b>Woodland Acorn Candle</b> is a handcrafted decorative candle inspired by nature and cozy seasonal moments.<br>Designed with an acorn-style top and a soft neutral base, this candle adds warmth and charm to any space, making it perfect for fall décor, winter styling, or thoughtful gifting.<br><br>✨ Hand-poured with care<br>🕯️ Made with soy wax<br>🍂 Decorative and cozy seasonal piece<br>❄️🍁 Winter and fall scents available. <br>Each candle is handmade, so slight variations make every piece unique.<br><br>Small and Large sizes available<br>(Different prices) <br>",
+        "descriptionPlaintext": "Woodland Acorn Candle is a handcrafted decorative candle inspired by nature and cozy seasonal moments.\nDesigned with an acorn-style top and a soft neutral base, this candle adds warmth and charm to any space, making it perfect for fall décor, winter styling, or thoughtful gifting.\n\n✨ Hand-poured with care\n🕯️ Made with soy wax\n🍂 Decorative and cozy seasonal piece\n❄️🍁 Winter and fall scents available. \nEach candle is handmade, so slight variations make every piece unique.\n\nSmall and Large sizes available\n(Different prices)",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "QJ4YKRSNJU2F2FZIS5X4YVLO",
+      "updatedAt": "2025-12-20T07:04:35.414Z",
+      "version": "1766214275414",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "CUSTOM_ATTRIBUTE_DEFINITION",
+      "created_at": "2025-12-14T01:35:18.92Z",
+      "customAttributeDefinitionData": {
+        "type": "STRING",
+        "name": "Ecom Storefront Classic Site ID",
+        "description": "Ecommerce bridge target storefront classic site ID. Used to create site-item associations after copying items.",
+        "sourceApplication": {
+          "applicationId": "sq0idp-w46nJ_NCNDMSOywaCY0mwA",
+          "name": "Square Online Store"
+        },
+        "allowedObjectTypes": [
+          "ITEM"
+        ],
+        "sellerVisibility": "SELLER_VISIBILITY_HIDDEN",
+        "appVisibility": "APP_VISIBILITY_HIDDEN",
+        "stringConfig": {
+          "enforceUniqueness": false
+        },
+        "key": "ecom_target_classic_site_id"
+      },
+      "id": "IO3TKBO4GTG6RLUG47KII66V",
+      "updatedAt": "2025-12-14T01:35:18.883Z",
+      "version": "1765676118883",
+      "isDeleted": false,
+      "presentAtAllLocations": true
+    },
+    {
+      "type": "CUSTOM_ATTRIBUTE_DEFINITION",
+      "created_at": "2025-12-14T01:35:19.13Z",
+      "customAttributeDefinitionData": {
+        "type": "BOOLEAN",
+        "name": "Ecom Gifting Enabled",
+        "description": "Enables the item to be sold as a gift on Square Online.",
+        "sourceApplication": {
+          "applicationId": "sq0idp-w46nJ_NCNDMSOywaCY0mwA",
+          "name": "Square Online Store"
+        },
+        "allowedObjectTypes": [
+          "ITEM"
+        ],
+        "sellerVisibility": "SELLER_VISIBILITY_READ_WRITE_VALUES",
+        "appVisibility": "APP_VISIBILITY_READ_WRITE_VALUES",
+        "key": "ecom_gifting_enabled"
+      },
+      "id": "USEDDUB5ZBSCMYJG5IC6SZQC",
+      "updatedAt": "2025-12-14T01:35:19.098Z",
+      "version": "1765676119098",
+      "isDeleted": false,
+      "presentAtAllLocations": true
+    },
+    {
+      "type": "QUICK_AMOUNTS_SETTINGS",
+      "created_at": "2025-03-25T05:57:51.872Z",
+      "quickAmountsSettingsData": {
+        "option": "DISABLED",
+        "eligibleForAutoAmounts": false
+      },
+      "id": "NUTXOY25CO5WCUGKJP5KW63S",
+      "updatedAt": "2025-03-25T05:57:51.836Z",
+      "version": "1742882271836",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    }
+  ]
+}
