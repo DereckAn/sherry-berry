@@ -797,7 +797,7 @@
                 "ordinal": 0,
                 "pricingType": "FIXED_PRICING",
                 "priceMoney": {
-                  "amount": "2400",
+                  "amount": "1800",
                   "currency": "CAD"
                 },
                 "locationOverrides": [
@@ -814,8 +814,8 @@
                 ]
               },
               "id": "ZKNYI7NDEBVGVC5BZY3264NY",
-              "updatedAt": "2025-12-20T07:04:33.177Z",
-              "version": "1766214273177",
+              "updatedAt": "2025-12-20T22:03:18.554Z",
+              "version": "1766268198554",
               "isDeleted": false,
               "presentAtAllLocations": false,
               "presentAtLocationIds": [
@@ -849,8 +849,8 @@
                 ]
               },
               "id": "YZBW2OL4A6Q5K6LORSZYDEBL",
-              "updatedAt": "2025-12-20T07:04:33.177Z",
-              "version": "1766214273177",
+              "updatedAt": "2025-12-20T22:03:18.554Z",
+              "version": "1766268198554",
               "isDeleted": false,
               "presentAtAllLocations": false,
               "presentAtLocationIds": [
@@ -873,8 +873,194 @@
           "isArchived": false
         },
         "id": "QJ4YKRSNJU2F2FZIS5X4YVLO",
-        "updatedAt": "2025-12-20T07:04:35.414Z",
-        "version": "1766214275414",
+        "updatedAt": "2025-12-20T22:03:18.554Z",
+        "version": "1766268198554",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T21:51:51.046Z",
+        "itemData": {
+          "name": "Lavender & Bougainvillea Ritual Set",
+          "description": "Lavender & Bougainvillea Ritual Set\n\nThis beautiful set includes two handcrafted candles, 8 oz each, poured in mason jar glass containers, designed to bring warmth, intention, and elegance to any space.\n\t•\t🌸 Lavender Scent: soft and calming, perfect for relaxation, self-care, and peaceful moments.\n\t•\t🌺 Mexican Bougainvillea Scent: a floral, vibrant fragrance inspired by the beauty and soul of Mexico.\n\nThe candles come boxed and gift-ready, carefully packaged with protective filler, and include a ritual card to enhance the experience and invite a mindful moment when lighting each candle.\n\nA thoughtful gift or a special treat for yourself—where aroma, intention, and handcrafted beauty come together.",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T21:51:51.046Z",
+              "itemVariationData": {
+                "itemId": "WIDTBZFEQG5E5TQZOCU7TVVQ",
+                "name": "Regular",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "4500",
+                  "currency": "CAD"
+                },
+                "locationOverrides": [
+                  {
+                    "locationId": "L75Y7F7KGFPVM",
+                    "trackInventory": true
+                  }
+                ],
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "W6Z5OESMWQMIPONDCN2O5IXC",
+              "updatedAt": "2025-12-20T21:51:55.191Z",
+              "version": "1766267515191",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "N736EVNEWW5LGTWSWIHPJPJL"
+          ],
+          "descriptionHtml": " <b>Lavender &amp; Bougainvillea Ritual Set</b><br><br>This beautiful set includes two handcrafted candles, 8 oz each, poured in mason jar glass containers, designed to bring warmth, intention, and elegance to any space.<br>\t•\t🌸 Lavender Scent: soft and calming, perfect for relaxation, self-care, and peaceful moments.<br>\t•\t🌺 Mexican Bougainvillea Scent: a floral, vibrant fragrance inspired by the beauty and soul of Mexico.<br><br>The candles come boxed and gift-ready, carefully packaged with protective filler, and include a ritual card to enhance the experience and invite a mindful moment when lighting each candle.<br><br>A thoughtful gift or a special treat for yourself—where aroma, intention, and handcrafted beauty come together. <br>",
+          "descriptionPlaintext": "Lavender & Bougainvillea Ritual Set\n\nThis beautiful set includes two handcrafted candles, 8 oz each, poured in mason jar glass containers, designed to bring warmth, intention, and elegance to any space.\n\t•\t🌸 Lavender Scent: soft and calming, perfect for relaxation, self-care, and peaceful moments.\n\t•\t🌺 Mexican Bougainvillea Scent: a floral, vibrant fragrance inspired by the beauty and soul of Mexico.\n\nThe candles come boxed and gift-ready, carefully packaged with protective filler, and include a ritual card to enhance the experience and invite a mindful moment when lighting each candle.\n\nA thoughtful gift or a special treat for yourself—where aroma, intention, and handcrafted beauty come together.",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "WIDTBZFEQG5E5TQZOCU7TVVQ",
+        "updatedAt": "2025-12-20T21:51:58.735Z",
+        "version": "1766267518735",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T22:00:49.527Z",
+        "itemData": {
+          "name": "Sweet Morning Waffle Candle Trio",
+          "description": "🧇 Sweet Morning Waffle Candle Trio\nThis charming trio of handcrafted soy wax waffle candles is inspired by cozy mornings and sweet indulgence. Each waffle candle is carefully detailed with realistic toppings, making every piece unique and visually irresistible.\n\nDesigned as a decorative candle set, this trio brings warmth, comfort, and a playful touch to any space. The candles are beautifully presented in a gift box, then securely placed inside a shipping box with bubble wrap to ensure safe delivery.\n\nPerfect as a gift or a statement piece, this set blends artisanal craftsmanship with a cozy, dessert-inspired aesthetic—made to delight before it’s ever lit.\n\nScents: \n\n     •    Honey Butter Waffle\n\t•\tWarm Vanilla Sugar\n\t•\tButtermilk Waffle",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T22:00:49.527Z",
+              "itemVariationData": {
+                "itemId": "77MYAXSW6XV7LXHAY5EZJM7P",
+                "name": "Regular",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "3800",
+                  "currency": "CAD"
+                },
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "IRF52DV4WX5AKXAYY3G5JQDJ",
+              "updatedAt": "2025-12-20T22:02:20.126Z",
+              "version": "1766268140126",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "ERGLTYEI3GEVJ4QSWYVXXOH7"
+          ],
+          "descriptionHtml": "🧇 <b>Sweet Morning Waffle Candle Trio</b><br>This charming trio of handcrafted soy wax waffle candles is inspired by cozy mornings and sweet indulgence. Each waffle candle is carefully detailed with realistic toppings, making every piece unique and visually irresistible.<br><br>Designed as a decorative candle set, this trio brings warmth, comfort, and a playful touch to any space. The candles are beautifully presented in a gift box, then securely placed inside a shipping box with bubble wrap to ensure safe delivery.<br><br>Perfect as a gift or a statement piece, this set blends artisanal craftsmanship with a cozy, dessert-inspired aesthetic—made to delight before it’s ever lit.<br><br>Scents: <br><br>     •    Honey Butter Waffle<br>\t•\tWarm Vanilla Sugar<br>\t•\tButtermilk Waffle",
+          "descriptionPlaintext": "🧇 Sweet Morning Waffle Candle Trio\nThis charming trio of handcrafted soy wax waffle candles is inspired by cozy mornings and sweet indulgence. Each waffle candle is carefully detailed with realistic toppings, making every piece unique and visually irresistible.\n\nDesigned as a decorative candle set, this trio brings warmth, comfort, and a playful touch to any space. The candles are beautifully presented in a gift box, then securely placed inside a shipping box with bubble wrap to ensure safe delivery.\n\nPerfect as a gift or a statement piece, this set blends artisanal craftsmanship with a cozy, dessert-inspired aesthetic—made to delight before it’s ever lit.\n\nScents: \n\n     •    Honey Butter Waffle\n\t•\tWarm Vanilla Sugar\n\t•\tButtermilk Waffle",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "77MYAXSW6XV7LXHAY5EZJM7P",
+        "updatedAt": "2025-12-20T22:02:20.126Z",
+        "version": "1766268140126",
+        "isDeleted": false,
+        "presentAtAllLocations": false,
+        "presentAtLocationIds": [
+          "L75Y7F7KGFPVM"
+        ]
+      },
+      {
+        "type": "ITEM",
+        "created_at": "2025-12-20T22:24:04.071Z",
+        "itemData": {
+          "name": "Sweet Moment Mini Candle",
+          "description": "Sweet Moment Mini Candle\nThis handcrafted 2 oz soy candle is poured into a minimalist metal tin, making it a charming and versatile piece for gifts, favors, or intentional moments.\n\nEach candle is delicately scented and finished with decorative details that enhance its visual appeal. Please note that decorations may vary depending on availability, making every candle unique while maintaining the same aesthetic and quality.\n\nPerfect for baby showers, weddings, special events, or thoughtful custom orders. These candles are made to order, ensuring freshness, care, and attention to detail in every piece.\n\nA small candle with meaningful presence—designed to bring warmth, intention, and beauty to any space.\n\nCustom Orders:\nAll custom items are final sale. Colors and decorations may vary due to the handmade nature of the product. No cancellations or refunds once the order is placed. \nBecause of the personalized nature of these products, colors, decorations, and finishes may vary slightly from photos shown, depending on availability and the handmade process. These variations are part of the uniqueness of each piece.\n\nScents:\n\n     •    Lavender\n\t•\tWhite Cotton\n\t•\tBaby Powder\n\t•\tChamomile & Vanilla\n\t•\tSoft Linen\n     •    Vanilla Bean\n\t•\tVanilla Cashmere\n\t•\tHoney & Oat\n\t•\tSweet Cream\n\t•\tWarm Vanilla Sugar\n     •    Jasmine\n\t•\tPeony\n\t•\tRose Petals\n\t•\tLavender & Vanilla\n     •    Lemon Blossom\n\t•\tBergamot\n\t•\tEucalyptus Mint\n\t•\tOrange Blossom",
+          "isTaxable": true,
+          "variations": [
+            {
+              "type": "ITEM_VARIATION",
+              "created_at": "2025-12-20T22:24:04.071Z",
+              "itemVariationData": {
+                "itemId": "CAAVCXK2Y7TLQQ73PV3LTP3Y",
+                "name": "Regular",
+                "ordinal": 1,
+                "pricingType": "FIXED_PRICING",
+                "priceMoney": {
+                  "amount": "1000",
+                  "currency": "CAD"
+                },
+                "trackInventory": true,
+                "sellable": true,
+                "stockable": true,
+                "channels": [
+                  "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+                ]
+              },
+              "id": "RT2XMO5U2DFJPCFPTUTT6ECM",
+              "updatedAt": "2025-12-20T22:24:43.435Z",
+              "version": "1766269483435",
+              "isDeleted": false,
+              "presentAtAllLocations": false,
+              "presentAtLocationIds": [
+                "L75Y7F7KGFPVM"
+              ]
+            }
+          ],
+          "productType": "REGULAR",
+          "skipModifierScreen": false,
+          "ecom_available": false,
+          "ecom_visibility": "UNAVAILABLE",
+          "imageIds": [
+            "VSISPO4YMNHMKTDMX3X2XV4S"
+          ],
+          "descriptionHtml": "<b>Sweet Moment Mini Candle</b><br>This handcrafted 2 oz soy candle is poured into a minimalist metal tin, making it a charming and versatile piece for gifts, favors, or intentional moments.<br><br>Each candle is delicately scented and finished with decorative details that enhance its visual appeal. Please note that decorations may vary depending on availability, making every candle unique while maintaining the same aesthetic and quality.<br><br>Perfect for baby showers, weddings, special events, or thoughtful custom orders. These candles are made to order, ensuring freshness, care, and attention to detail in every piece.<br><br>A small candle with meaningful presence—designed to bring warmth, intention, and beauty to any space.<b><br><br>Custom Orders:</b><br>All custom items are final sale. Colors and decorations may vary due to the handmade nature of the product. No cancellations or refunds once the order is placed. <br>Because of the personalized nature of these products, colors, decorations, and finishes may vary slightly from photos shown, depending on availability and the handmade process. These variations are part of the uniqueness of each piece.<br><br>Scents:<br><br>     •    Lavender<br>\t•\tWhite Cotton<br>\t•\tBaby Powder<br>\t•\tChamomile &amp; Vanilla<br>\t•\tSoft Linen<br>     •    Vanilla Bean<br>\t•\tVanilla Cashmere<br>\t•\tHoney &amp; Oat<br>\t•\tSweet Cream<br>\t•\tWarm Vanilla Sugar<br>     •    Jasmine<br>\t•\tPeony<br>\t•\tRose Petals<br>\t•\tLavender &amp; Vanilla<br>     •    Lemon Blossom<br>\t•\tBergamot<br>\t•\tEucalyptus Mint<br>\t•\tOrange Blossom",
+          "descriptionPlaintext": "Sweet Moment Mini Candle\nThis handcrafted 2 oz soy candle is poured into a minimalist metal tin, making it a charming and versatile piece for gifts, favors, or intentional moments.\n\nEach candle is delicately scented and finished with decorative details that enhance its visual appeal. Please note that decorations may vary depending on availability, making every candle unique while maintaining the same aesthetic and quality.\n\nPerfect for baby showers, weddings, special events, or thoughtful custom orders. These candles are made to order, ensuring freshness, care, and attention to detail in every piece.\n\nA small candle with meaningful presence—designed to bring warmth, intention, and beauty to any space.\n\nCustom Orders:\nAll custom items are final sale. Colors and decorations may vary due to the handmade nature of the product. No cancellations or refunds once the order is placed. \nBecause of the personalized nature of these products, colors, decorations, and finishes may vary slightly from photos shown, depending on availability and the handmade process. These variations are part of the uniqueness of each piece.\n\nScents:\n\n     •    Lavender\n\t•\tWhite Cotton\n\t•\tBaby Powder\n\t•\tChamomile & Vanilla\n\t•\tSoft Linen\n     •    Vanilla Bean\n\t•\tVanilla Cashmere\n\t•\tHoney & Oat\n\t•\tSweet Cream\n\t•\tWarm Vanilla Sugar\n     •    Jasmine\n\t•\tPeony\n\t•\tRose Petals\n\t•\tLavender & Vanilla\n     •    Lemon Blossom\n\t•\tBergamot\n\t•\tEucalyptus Mint\n\t•\tOrange Blossom",
+          "channels": [
+            "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+          ],
+          "isArchived": false
+        },
+        "id": "CAAVCXK2Y7TLQQ73PV3LTP3Y",
+        "updatedAt": "2025-12-20T22:25:30.694Z",
+        "version": "1766269530694",
         "isDeleted": false,
         "presentAtAllLocations": false,
         "presentAtLocationIds": [
@@ -1755,7 +1941,7 @@
               "ordinal": 0,
               "pricingType": "FIXED_PRICING",
               "priceMoney": {
-                "amount": "2400",
+                "amount": "1800",
                 "currency": "CAD"
               },
               "locationOverrides": [
@@ -1772,8 +1958,8 @@
               ]
             },
             "id": "ZKNYI7NDEBVGVC5BZY3264NY",
-            "updatedAt": "2025-12-20T07:04:33.177Z",
-            "version": "1766214273177",
+            "updatedAt": "2025-12-20T22:03:18.554Z",
+            "version": "1766268198554",
             "isDeleted": false,
             "presentAtAllLocations": false,
             "presentAtLocationIds": [
@@ -1807,8 +1993,8 @@
               ]
             },
             "id": "YZBW2OL4A6Q5K6LORSZYDEBL",
-            "updatedAt": "2025-12-20T07:04:33.177Z",
-            "version": "1766214273177",
+            "updatedAt": "2025-12-20T22:03:18.554Z",
+            "version": "1766268198554",
             "isDeleted": false,
             "presentAtAllLocations": false,
             "presentAtLocationIds": [
@@ -1831,8 +2017,194 @@
         "isArchived": false
       },
       "id": "QJ4YKRSNJU2F2FZIS5X4YVLO",
-      "updatedAt": "2025-12-20T07:04:35.414Z",
-      "version": "1766214275414",
+      "updatedAt": "2025-12-20T22:03:18.554Z",
+      "version": "1766268198554",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T21:51:51.046Z",
+      "itemData": {
+        "name": "Lavender & Bougainvillea Ritual Set",
+        "description": "Lavender & Bougainvillea Ritual Set\n\nThis beautiful set includes two handcrafted candles, 8 oz each, poured in mason jar glass containers, designed to bring warmth, intention, and elegance to any space.\n\t•\t🌸 Lavender Scent: soft and calming, perfect for relaxation, self-care, and peaceful moments.\n\t•\t🌺 Mexican Bougainvillea Scent: a floral, vibrant fragrance inspired by the beauty and soul of Mexico.\n\nThe candles come boxed and gift-ready, carefully packaged with protective filler, and include a ritual card to enhance the experience and invite a mindful moment when lighting each candle.\n\nA thoughtful gift or a special treat for yourself—where aroma, intention, and handcrafted beauty come together.",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T21:51:51.046Z",
+            "itemVariationData": {
+              "itemId": "WIDTBZFEQG5E5TQZOCU7TVVQ",
+              "name": "Regular",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "4500",
+                "currency": "CAD"
+              },
+              "locationOverrides": [
+                {
+                  "locationId": "L75Y7F7KGFPVM",
+                  "trackInventory": true
+                }
+              ],
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "W6Z5OESMWQMIPONDCN2O5IXC",
+            "updatedAt": "2025-12-20T21:51:55.191Z",
+            "version": "1766267515191",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "N736EVNEWW5LGTWSWIHPJPJL"
+        ],
+        "descriptionHtml": " <b>Lavender &amp; Bougainvillea Ritual Set</b><br><br>This beautiful set includes two handcrafted candles, 8 oz each, poured in mason jar glass containers, designed to bring warmth, intention, and elegance to any space.<br>\t•\t🌸 Lavender Scent: soft and calming, perfect for relaxation, self-care, and peaceful moments.<br>\t•\t🌺 Mexican Bougainvillea Scent: a floral, vibrant fragrance inspired by the beauty and soul of Mexico.<br><br>The candles come boxed and gift-ready, carefully packaged with protective filler, and include a ritual card to enhance the experience and invite a mindful moment when lighting each candle.<br><br>A thoughtful gift or a special treat for yourself—where aroma, intention, and handcrafted beauty come together. <br>",
+        "descriptionPlaintext": "Lavender & Bougainvillea Ritual Set\n\nThis beautiful set includes two handcrafted candles, 8 oz each, poured in mason jar glass containers, designed to bring warmth, intention, and elegance to any space.\n\t•\t🌸 Lavender Scent: soft and calming, perfect for relaxation, self-care, and peaceful moments.\n\t•\t🌺 Mexican Bougainvillea Scent: a floral, vibrant fragrance inspired by the beauty and soul of Mexico.\n\nThe candles come boxed and gift-ready, carefully packaged with protective filler, and include a ritual card to enhance the experience and invite a mindful moment when lighting each candle.\n\nA thoughtful gift or a special treat for yourself—where aroma, intention, and handcrafted beauty come together.",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "WIDTBZFEQG5E5TQZOCU7TVVQ",
+      "updatedAt": "2025-12-20T21:51:58.735Z",
+      "version": "1766267518735",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T22:00:49.527Z",
+      "itemData": {
+        "name": "Sweet Morning Waffle Candle Trio",
+        "description": "🧇 Sweet Morning Waffle Candle Trio\nThis charming trio of handcrafted soy wax waffle candles is inspired by cozy mornings and sweet indulgence. Each waffle candle is carefully detailed with realistic toppings, making every piece unique and visually irresistible.\n\nDesigned as a decorative candle set, this trio brings warmth, comfort, and a playful touch to any space. The candles are beautifully presented in a gift box, then securely placed inside a shipping box with bubble wrap to ensure safe delivery.\n\nPerfect as a gift or a statement piece, this set blends artisanal craftsmanship with a cozy, dessert-inspired aesthetic—made to delight before it’s ever lit.\n\nScents: \n\n     •    Honey Butter Waffle\n\t•\tWarm Vanilla Sugar\n\t•\tButtermilk Waffle",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T22:00:49.527Z",
+            "itemVariationData": {
+              "itemId": "77MYAXSW6XV7LXHAY5EZJM7P",
+              "name": "Regular",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "3800",
+                "currency": "CAD"
+              },
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "IRF52DV4WX5AKXAYY3G5JQDJ",
+            "updatedAt": "2025-12-20T22:02:20.126Z",
+            "version": "1766268140126",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "ERGLTYEI3GEVJ4QSWYVXXOH7"
+        ],
+        "descriptionHtml": "🧇 <b>Sweet Morning Waffle Candle Trio</b><br>This charming trio of handcrafted soy wax waffle candles is inspired by cozy mornings and sweet indulgence. Each waffle candle is carefully detailed with realistic toppings, making every piece unique and visually irresistible.<br><br>Designed as a decorative candle set, this trio brings warmth, comfort, and a playful touch to any space. The candles are beautifully presented in a gift box, then securely placed inside a shipping box with bubble wrap to ensure safe delivery.<br><br>Perfect as a gift or a statement piece, this set blends artisanal craftsmanship with a cozy, dessert-inspired aesthetic—made to delight before it’s ever lit.<br><br>Scents: <br><br>     •    Honey Butter Waffle<br>\t•\tWarm Vanilla Sugar<br>\t•\tButtermilk Waffle",
+        "descriptionPlaintext": "🧇 Sweet Morning Waffle Candle Trio\nThis charming trio of handcrafted soy wax waffle candles is inspired by cozy mornings and sweet indulgence. Each waffle candle is carefully detailed with realistic toppings, making every piece unique and visually irresistible.\n\nDesigned as a decorative candle set, this trio brings warmth, comfort, and a playful touch to any space. The candles are beautifully presented in a gift box, then securely placed inside a shipping box with bubble wrap to ensure safe delivery.\n\nPerfect as a gift or a statement piece, this set blends artisanal craftsmanship with a cozy, dessert-inspired aesthetic—made to delight before it’s ever lit.\n\nScents: \n\n     •    Honey Butter Waffle\n\t•\tWarm Vanilla Sugar\n\t•\tButtermilk Waffle",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "77MYAXSW6XV7LXHAY5EZJM7P",
+      "updatedAt": "2025-12-20T22:02:20.126Z",
+      "version": "1766268140126",
+      "isDeleted": false,
+      "presentAtAllLocations": false,
+      "presentAtLocationIds": [
+        "L75Y7F7KGFPVM"
+      ]
+    },
+    {
+      "type": "ITEM",
+      "created_at": "2025-12-20T22:24:04.071Z",
+      "itemData": {
+        "name": "Sweet Moment Mini Candle",
+        "description": "Sweet Moment Mini Candle\nThis handcrafted 2 oz soy candle is poured into a minimalist metal tin, making it a charming and versatile piece for gifts, favors, or intentional moments.\n\nEach candle is delicately scented and finished with decorative details that enhance its visual appeal. Please note that decorations may vary depending on availability, making every candle unique while maintaining the same aesthetic and quality.\n\nPerfect for baby showers, weddings, special events, or thoughtful custom orders. These candles are made to order, ensuring freshness, care, and attention to detail in every piece.\n\nA small candle with meaningful presence—designed to bring warmth, intention, and beauty to any space.\n\nCustom Orders:\nAll custom items are final sale. Colors and decorations may vary due to the handmade nature of the product. No cancellations or refunds once the order is placed. \nBecause of the personalized nature of these products, colors, decorations, and finishes may vary slightly from photos shown, depending on availability and the handmade process. These variations are part of the uniqueness of each piece.\n\nScents:\n\n     •    Lavender\n\t•\tWhite Cotton\n\t•\tBaby Powder\n\t•\tChamomile & Vanilla\n\t•\tSoft Linen\n     •    Vanilla Bean\n\t•\tVanilla Cashmere\n\t•\tHoney & Oat\n\t•\tSweet Cream\n\t•\tWarm Vanilla Sugar\n     •    Jasmine\n\t•\tPeony\n\t•\tRose Petals\n\t•\tLavender & Vanilla\n     •    Lemon Blossom\n\t•\tBergamot\n\t•\tEucalyptus Mint\n\t•\tOrange Blossom",
+        "isTaxable": true,
+        "variations": [
+          {
+            "type": "ITEM_VARIATION",
+            "created_at": "2025-12-20T22:24:04.071Z",
+            "itemVariationData": {
+              "itemId": "CAAVCXK2Y7TLQQ73PV3LTP3Y",
+              "name": "Regular",
+              "ordinal": 1,
+              "pricingType": "FIXED_PRICING",
+              "priceMoney": {
+                "amount": "1000",
+                "currency": "CAD"
+              },
+              "trackInventory": true,
+              "sellable": true,
+              "stockable": true,
+              "channels": [
+                "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+              ]
+            },
+            "id": "RT2XMO5U2DFJPCFPTUTT6ECM",
+            "updatedAt": "2025-12-20T22:24:43.435Z",
+            "version": "1766269483435",
+            "isDeleted": false,
+            "presentAtAllLocations": false,
+            "presentAtLocationIds": [
+              "L75Y7F7KGFPVM"
+            ]
+          }
+        ],
+        "productType": "REGULAR",
+        "skipModifierScreen": false,
+        "ecom_available": false,
+        "ecom_visibility": "UNAVAILABLE",
+        "imageIds": [
+          "VSISPO4YMNHMKTDMX3X2XV4S"
+        ],
+        "descriptionHtml": "<b>Sweet Moment Mini Candle</b><br>This handcrafted 2 oz soy candle is poured into a minimalist metal tin, making it a charming and versatile piece for gifts, favors, or intentional moments.<br><br>Each candle is delicately scented and finished with decorative details that enhance its visual appeal. Please note that decorations may vary depending on availability, making every candle unique while maintaining the same aesthetic and quality.<br><br>Perfect for baby showers, weddings, special events, or thoughtful custom orders. These candles are made to order, ensuring freshness, care, and attention to detail in every piece.<br><br>A small candle with meaningful presence—designed to bring warmth, intention, and beauty to any space.<b><br><br>Custom Orders:</b><br>All custom items are final sale. Colors and decorations may vary due to the handmade nature of the product. No cancellations or refunds once the order is placed. <br>Because of the personalized nature of these products, colors, decorations, and finishes may vary slightly from photos shown, depending on availability and the handmade process. These variations are part of the uniqueness of each piece.<br><br>Scents:<br><br>     •    Lavender<br>\t•\tWhite Cotton<br>\t•\tBaby Powder<br>\t•\tChamomile &amp; Vanilla<br>\t•\tSoft Linen<br>     •    Vanilla Bean<br>\t•\tVanilla Cashmere<br>\t•\tHoney &amp; Oat<br>\t•\tSweet Cream<br>\t•\tWarm Vanilla Sugar<br>     •    Jasmine<br>\t•\tPeony<br>\t•\tRose Petals<br>\t•\tLavender &amp; Vanilla<br>     •    Lemon Blossom<br>\t•\tBergamot<br>\t•\tEucalyptus Mint<br>\t•\tOrange Blossom",
+        "descriptionPlaintext": "Sweet Moment Mini Candle\nThis handcrafted 2 oz soy candle is poured into a minimalist metal tin, making it a charming and versatile piece for gifts, favors, or intentional moments.\n\nEach candle is delicately scented and finished with decorative details that enhance its visual appeal. Please note that decorations may vary depending on availability, making every candle unique while maintaining the same aesthetic and quality.\n\nPerfect for baby showers, weddings, special events, or thoughtful custom orders. These candles are made to order, ensuring freshness, care, and attention to detail in every piece.\n\nA small candle with meaningful presence—designed to bring warmth, intention, and beauty to any space.\n\nCustom Orders:\nAll custom items are final sale. Colors and decorations may vary due to the handmade nature of the product. No cancellations or refunds once the order is placed. \nBecause of the personalized nature of these products, colors, decorations, and finishes may vary slightly from photos shown, depending on availability and the handmade process. These variations are part of the uniqueness of each piece.\n\nScents:\n\n     •    Lavender\n\t•\tWhite Cotton\n\t•\tBaby Powder\n\t•\tChamomile & Vanilla\n\t•\tSoft Linen\n     •    Vanilla Bean\n\t•\tVanilla Cashmere\n\t•\tHoney & Oat\n\t•\tSweet Cream\n\t•\tWarm Vanilla Sugar\n     •    Jasmine\n\t•\tPeony\n\t•\tRose Petals\n\t•\tLavender & Vanilla\n     •    Lemon Blossom\n\t•\tBergamot\n\t•\tEucalyptus Mint\n\t•\tOrange Blossom",
+        "channels": [
+          "CH_FybAyVU2uJbUVBZebwVG4cXBMUFw0iZGqkz6mUR29945o"
+        ],
+        "isArchived": false
+      },
+      "id": "CAAVCXK2Y7TLQQ73PV3LTP3Y",
+      "updatedAt": "2025-12-20T22:25:30.694Z",
+      "version": "1766269530694",
       "isDeleted": false,
       "presentAtAllLocations": false,
       "presentAtLocationIds": [

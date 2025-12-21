@@ -1,0 +1,396 @@
+{
+  "catalog": {
+    "pageInfo": {
+      "hasNextPage": false,
+      "endCursor": null
+    },
+    "nodes": [
+      {
+        "__typename": "CatalogItem",
+        "id": "CIK6TNZ7ASGKCGXJR5HK65PG",
+        "name": "Sherry Berry Bouquet  ",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "Handcrafted soy wax candle designed as a delicate floral bouquet. Featuring sculpted wax flowers in soft blush and ivory tones, this piece is both decorative and functional.<br><br>✨ Customizable colors &amp; fragrance<br>✨ Available in gold or silver container<br>✨ Made with natural soy wax<br><br>Fragrance options:<br>• Strawberry &amp; Sandalwood<br>• Pine &amp; Berries<br>• Peonies &amp; Roses<br>• Jasmine<br><br>Perfect as a gift or a statement piece for any space.",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "WUISZOJK5IBJA6DFOQBMYXKT",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/22f086ee757147e0e69399771b2e342a654378a7/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "6M5XI37MN6ENRND3J6TPE62P",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 6800
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "GIILJPAT5QGQTOAPI6HKDACB",
+        "name": "Cookie Waxmelt Set",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "Christmas Cookies Wax Melt Set<br><br>A charming set of handcrafted soy wax melts inspired by classic iced Christmas cookies. Beautifully detailed and presented in a gift-ready box, this set fills your space with a cozy and festive aroma.<br><br>✨ Made with natural soy wax<br>✨ Handcrafted, bakery-inspired design<br>✨ Perfect for gifting or seasonal décor. <br><br>You can order it for any occasion and it adapts to the season or celebration.<br><br> The aromas are: cookie, coffee, chocolate, and bread. It may include some fresh seasonal aromas depending on availability.<br>",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "G6DUAMQQ4QXK7C2NMK22VKMZ",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/149db1d26b0f2729fb2c65bbba76156a48605430/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "6N3FVSAT2KHJLGUKGOKJVELU",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 4500
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "DYJ7K5CX3BCHNRIUA5H6TE5L",
+        "name": "Sweet Dreams Waxmelts Box",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Sweet Dreams Wax Melts Box</b><br>Handcrafted soy wax melts inspired by festive sweets, presented in a charming cardboard gift box. Designed for wax warmers, they fill your space with a warm, cozy holiday aroma.<br><br>Scents: Sandalwood, Peony, Strawberry, Roses, Orange &amp; Pine.<br><br>✨ Handmade<br>✨ Soy wax<br>✨ Gift-ready packaging<br>*** Burner is not included. ",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "2ABKTOKNDJHGWGTV7CWG7O2I",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/fa41cd2d05017099b3db5a11c58cf6d7d70293e0/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "6GFZUJGXX2FLBC5FBZQNLUBX",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 1500
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "5ZX2B4GGZ7KHI2C6GH2OE6K6",
+        "name": "Snowflakes & Winter Glow",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Snowflakes &amp; Winter Glow</b><br><br>Handcrafted soy wax pieces featuring elegant snowflake designs inspired by the warmth of the winter season. Available individually or as curated sets, with customizable colors and fragrances.<br><br>✨ Handmade with natural soy wax<br>✨ Four festive designs<br>✨ Custom-made, gift-ready pieces<br>",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "F7T6FM4XXS7PKR2JJQIB2AN6",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/f1dacbae93603a7415950f7b2d4ff6b66357041f/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "RUH44BDXYMPUU4TGZP5N2IB7",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 1000
+            }
+          },
+          {
+            "id": "YZN2Q3XBVJ4RVZYKYV22DBRB",
+            "name": "Winter Glow Set",
+            "priceMoney": {
+              "amount": 2800
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "EY7HUYYA7Y4RR6J2NU7TNIBU",
+        "name": "Winter Blossom Waxmelts Bars ",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Winter Blossom Bars</b> are handcrafted wax melt bars with a soft floral and sweet holiday aroma.<br>Blending notes inspired by Mexican Christmas and Winter Storm, they create a fresh, elegant winter atmosphere—light, cozy, and uplifting.<br><br>✨ Available individually or as a set of 3 bars.<br>🕯️ Hand-poured with love using soy wax.<br>*** Limited seasonal edition",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "TEKZTXMUIX6GSG5TJMSFZWQD",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/8bac0be1bc21a53963d553b35a15c2cafb56965a/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "QWWW5YW42VV7B4ENJIH2Q6TR",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 800
+            }
+          },
+          {
+            "id": "CWHHDHZHO2HMNQRUTY3NLNS7",
+            "name": "Set  of 3 pieces",
+            "priceMoney": {
+              "amount": 2200
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "BGLT35GABER5S2NIQ5CBTPX6",
+        "name": "Magic of Christmas Gift Box ",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Magic of Christmas Gift Box</b> is a handcrafted holiday wax set made to elevate your space.<br>This box includes 350 grams of scented wax in assorted shapes, paired with a hand-painted and sealed plaster tray, carefully finished by hand.<br><br>✨ Thoughtfully arranged and ready to gift.<br>🕯️ Made with love using soy wax.<br>*** Limited seasonal edition",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "XF6EJIBVIX3W6ZIQBB233GKC",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/d54f8abd08f75194aa898a176e96040c063e858a/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "ZPB7EURKF6T3XRHQY3XOUQUS",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 6000
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "WMCZ6XLHBDVPANHDSFAPIZB6",
+        "name": "Custom Shell Candle ",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b><i>Custom Shell Candle </i></b><br>This handcrafted shell-shaped candle is designed for weddings, baptisms, and special celebrations.<br>Each candle is made to order with approximately 90 grams of soy wax, carefully finished and presented in a clear gift box, perfect as a meaningful keepsake.<br><br>✨ Made on demand<br>📦 Orders are shipped 5-7 days after purchase is processed.<br><u>Some custom pieces may require additional time to complete. If so, we will notify you with an updated shipping date.</u><br><br>Available scents (subject to availability)<br>• Cinnamon<br>• Lavender<br>• Blueberries<br>• Orange<br>• Jasmine<br>• Winter Storm<br><br>Available colors<br>• White<br>• Pearl<br>• Beige<br><br>All personalized and made-to-order items are final sale.<br>Orders cannot be canceled, returned, or refunded once production has begun.<br><br>",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "DPSRF3XKGTBKWK3FTZXANIHZ",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/4064868d5cd807eaac22500a5afb849f7adbc5d9/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "KVRXZS4MMRF7TM2MYURQ7OMA",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 2400
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "4YLDJWJ4UUJHVPJ2CGDBU4OA",
+        "name": "Holiday Hearth Candle ",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Holiday Hearth Candle – 8 oz</b><br>Holiday Hearth is a handcrafted soy candle that brings the warmth of the holidays into your home.<br>This cozy seasonal blend features notes of Christmas Cookie, Old Fashion Christmas, and Salted Caramel Eggnog, creating a rich, sweet, and comforting holiday atmosphere.<br><br>Poured into an elegant amber glass jar with a gold lid, this candle is perfect for winter nights, festive décor, or thoughtful gifting.<br><br>✨ Hand-poured with love<br>🕯️ Clean-burning soy wax<br>🎄 Seasonal holiday blend<br>🎁 Beautifully presented, ideal for gifting<br>Limited seasonal edition!<br>",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "HYX5CXFE4U2PF4YOLCY66VPX",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/f2dda5eab57188c6fa8ecb9cbd7da9610a2c0edb/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "IOINDVQEZEOHFH2HXKLVIYR6",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 2600
+            }
+          },
+          {
+            "id": "GCUFJVWBESEAYXGJ7RAEQEDM",
+            "name": "Set of 2",
+            "priceMoney": {
+              "amount": 5000
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "YTDT23LZLNYXCF6E2LOQJXLO",
+        "name": "Berry Delight Dessert Candles",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Berry Delight Dessert Candles</b><br>These handcrafted dessert-style candles are inspired by elegant celebration cakes and sweet moments.<br>Each candle is carefully detailed and scented with a red berries fragrance, creating a fresh, fruity, and inviting aroma.<br><br>✨ Beautifully decorated and perfect for special occasions, gifts, or décor.<br><br>⸻<br><br>📏 Available sizes<br>\t•\tSmall dessert candle: approx. 45 g<br>\t•\tLarge dessert candle: approx. 75 g<br><br>🌸 Scent<br>\t•\tRed Berries<br><br>Decorative details may vary slightly as each piece is handmade.",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "AREPECXXGR5IPSEUKROQ3ESY",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/55f2e08833d3510f4fcc9cbb89d367cc7f019457/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "ARCXBEHWVFSPTN5XIFGQMPC6",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 1200
+            }
+          },
+          {
+            "id": "YTUZJIMVGKZFY3POCEZYAYSE",
+            "name": "Large size",
+            "priceMoney": {
+              "amount": 1800
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "QJ4YKRSNJU2F2FZIS5X4YVLO",
+        "name": "Woodland Acorn Candle",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Woodland Acorn Candle</b> is a handcrafted decorative candle inspired by nature and cozy seasonal moments.<br>Designed with an acorn-style top and a soft neutral base, this candle adds warmth and charm to any space, making it perfect for fall décor, winter styling, or thoughtful gifting.<br><br>✨ Hand-poured with care<br>🕯️ Made with soy wax<br>🍂 Decorative and cozy seasonal piece<br>❄️🍁 Winter and fall scents available. <br>Each candle is handmade, so slight variations make every piece unique.<br><br>Small and Large sizes available<br>(Different prices) <br>",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "KWFOZ5JPPZTP5VOX6O4FAXEC",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/6cdd1c7ea9959303f5a31384dce104ee32dc9ef6/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "ZKNYI7NDEBVGVC5BZY3264NY",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 1800
+            }
+          },
+          {
+            "id": "YZBW2OL4A6Q5K6LORSZYDEBL",
+            "name": "Small piece",
+            "priceMoney": {
+              "amount": 1500
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "WIDTBZFEQG5E5TQZOCU7TVVQ",
+        "name": "Lavender & Bougainvillea Ritual Set",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": " <b>Lavender &amp; Bougainvillea Ritual Set</b><br><br>This beautiful set includes two handcrafted candles, 8 oz each, poured in mason jar glass containers, designed to bring warmth, intention, and elegance to any space.<br>\t•\t🌸 Lavender Scent: soft and calming, perfect for relaxation, self-care, and peaceful moments.<br>\t•\t🌺 Mexican Bougainvillea Scent: a floral, vibrant fragrance inspired by the beauty and soul of Mexico.<br><br>The candles come boxed and gift-ready, carefully packaged with protective filler, and include a ritual card to enhance the experience and invite a mindful moment when lighting each candle.<br><br>A thoughtful gift or a special treat for yourself—where aroma, intention, and handcrafted beauty come together. <br>",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "N736EVNEWW5LGTWSWIHPJPJL",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/0e29c90de9abce184b2974047f1d6ab4691a6f2a/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "W6Z5OESMWQMIPONDCN2O5IXC",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 4500
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "77MYAXSW6XV7LXHAY5EZJM7P",
+        "name": "Sweet Morning Waffle Candle Trio",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "🧇 <b>Sweet Morning Waffle Candle Trio</b><br>This charming trio of handcrafted soy wax waffle candles is inspired by cozy mornings and sweet indulgence. Each waffle candle is carefully detailed with realistic toppings, making every piece unique and visually irresistible.<br><br>Designed as a decorative candle set, this trio brings warmth, comfort, and a playful touch to any space. The candles are beautifully presented in a gift box, then securely placed inside a shipping box with bubble wrap to ensure safe delivery.<br><br>Perfect as a gift or a statement piece, this set blends artisanal craftsmanship with a cozy, dessert-inspired aesthetic—made to delight before it’s ever lit.<br><br>Scents: <br><br>     •    Honey Butter Waffle<br>\t•\tWarm Vanilla Sugar<br>\t•\tButtermilk Waffle",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "ERGLTYEI3GEVJ4QSWYVXXOH7",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/8d8011a8e6e59b46bf79f35816c16a1138140c1f/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "IRF52DV4WX5AKXAYY3G5JQDJ",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 3800
+            }
+          }
+        ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "CAAVCXK2Y7TLQQ73PV3LTP3Y",
+        "name": "Sweet Moment Mini Candle",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "<b>Sweet Moment Mini Candle</b><br>This handcrafted 2 oz soy candle is poured into a minimalist metal tin, making it a charming and versatile piece for gifts, favors, or intentional moments.<br><br>Each candle is delicately scented and finished with decorative details that enhance its visual appeal. Please note that decorations may vary depending on availability, making every candle unique while maintaining the same aesthetic and quality.<br><br>Perfect for baby showers, weddings, special events, or thoughtful custom orders. These candles are made to order, ensuring freshness, care, and attention to detail in every piece.<br><br>A small candle with meaningful presence—designed to bring warmth, intention, and beauty to any space.<b><br><br>Custom Orders:</b><br>All custom items are final sale. Colors and decorations may vary due to the handmade nature of the product. No cancellations or refunds once the order is placed. <br>Because of the personalized nature of these products, colors, decorations, and finishes may vary slightly from photos shown, depending on availability and the handmade process. These variations are part of the uniqueness of each piece.<br><br>Scents:<br><br>     •    Lavender<br>\t•\tWhite Cotton<br>\t•\tBaby Powder<br>\t•\tChamomile &amp; Vanilla<br>\t•\tSoft Linen<br>     •    Vanilla Bean<br>\t•\tVanilla Cashmere<br>\t•\tHoney &amp; Oat<br>\t•\tSweet Cream<br>\t•\tWarm Vanilla Sugar<br>     •    Jasmine<br>\t•\tPeony<br>\t•\tRose Petals<br>\t•\tLavender &amp; Vanilla<br>     •    Lemon Blossom<br>\t•\tBergamot<br>\t•\tEucalyptus Mint<br>\t•\tOrange Blossom",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "VSISPO4YMNHMKTDMX3X2XV4S",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/0447abce37a5b9aa810bb4b34cd91612f9c405c2/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "RT2XMO5U2DFJPCFPTUTT6ECM",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 1000
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

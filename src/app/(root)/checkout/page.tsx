@@ -6,7 +6,7 @@ import { getCatalogGraphQL } from "@/actions/GetCatalogGraphql";
 const CheckoutPage = () => {
   const getItems = async () => {
     const items = await getCatalog();
-    // const graph = await getCatalogGraphQL();
+    const graph = await getCatalogGraphQL();
   };
 
   return (
