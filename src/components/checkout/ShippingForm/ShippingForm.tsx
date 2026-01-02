@@ -86,7 +86,7 @@ export function ShippingForm({
 
   return (
     <div
-      className={`bg-white rounded-lg border border-gray-200 p-6 ${className}`}
+      className={`bg-white/70 rounded-lg border border-gray-200 p-6 ${className}`}
     >
       <div className="mb-6">
         <h2 className="text-lg font-semibold text-gray-900">

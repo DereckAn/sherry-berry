@@ -1,8 +1,16 @@
 "use client";
 
-import { useCartStore, useTotalItems, useTotalPrice } from "@/shared/store/cartStore";
-import { MAX_QUANTITY_PER_ITEM, MIN_QUANTITY_PER_ITEM } from "@/shared/types/cart";
+import {
+  useCartStore,
+  useTotalItems,
+  useTotalPrice,
+} from "@/shared/store/cartStore";
+import {
+  MAX_QUANTITY_PER_ITEM,
+  MIN_QUANTITY_PER_ITEM,
+} from "@/shared/types/cart";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 
 interface CartProps {
@@ -107,7 +115,11 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <g strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+                  <g
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                  >
                     <path
                       fill="currentColor"
                       d="M19.5 22a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m-10 0a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"
@@ -115,7 +127,9 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                     <path d="M5 4h17l-2 11H7zm0 0c-.167-.667-1-2-3-2m18 13H5.23c-1.784 0-2.73.781-2.73 2s.946 2 2.73 2H19.5" />
                   </g>
                 </svg>
-                <p className="text-charcoal/70 text-lg">Tu carrito está vacío</p>
+                <p className="text-charcoal/70 text-lg">
+                  Tu carrito está vacío
+                </p>
                 <p className="text-charcoal/50 text-sm mt-2">
                   Explora nuestras velas artesanales
                 </p>
@@ -233,7 +247,7 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
               {/* Clear Cart */}
               <button
                 onClick={clearCart}
-                className="text-sm text-charcoal/60 hover:text-charcoal underline transition-colors"
+                className="text-sm text-end w-full text-charcoal/60 hover:text-charcoal underline transition-colors"
               >
                 Vaciar carrito
               </button>
@@ -251,15 +265,12 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
               </p>
 
               {/* Checkout Button */}
-              <button
-                className="w-full py-3 px-6 bg-primary text-white font-medium rounded-sm hover:bg-primary-hover transition-colors"
-                onClick={() => {
-                  // TODO: Implement checkout
-                  console.log("Proceed to checkout", items);
-                }}
+              <Link
+                className="w-full flex justify-center items-center py-3 px-6 bg-primary text-white font-medium rounded-sm hover:bg-primary-hover transition-colors"
+                href={"/checkout"}
               >
                 Proceder al Pago
-              </button>
+              </Link>
             </div>
           )}
         </div>

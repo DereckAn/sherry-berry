@@ -36,11 +36,11 @@ const CheckoutPage = () => {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="min-h-screen py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Checkout</h1>
-            <div className="bg-white rounded-lg shadow-sm p-8">
+            <div className="rounded-lg shadow-sm p-8">
               <div className="text-gray-400 mb-4">
                 <svg
                   className="w-16 h-16 mx-auto"
@@ -73,11 +73,11 @@ const CheckoutPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen py-20 lg:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Checkout</h1>
+          <h1 className="text-3xl lg:text-8xl font-legquinne font-bold text-gray-900">Checkout</h1>
           <p className="text-gray-600 mt-2">
             Review your order and complete your purchase
           </p>
