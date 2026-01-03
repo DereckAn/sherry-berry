@@ -1,7 +1,7 @@
 "use client";
 
-import { LANGUAGE_OPTIONS, navDictionary } from "@/shared/i18n/dictionary";
 import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { LANGUAGE_OPTIONS, navDictionary } from "@/shared/i18n/dictionary";
 import { useCartStore, useTotalItems } from "@/shared/store/cartStore";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -23,6 +23,7 @@ export function Header() {
 
   const isHomePage = pathname === "/";
   const isAboutPage = pathname === "/about";
+  const isCheckoutPage = pathname === "/checkout";
 
   // En la página About, siempre transparente con texto negro
   const textColorClass = isAboutPage
@@ -106,37 +107,40 @@ export function Header() {
                 ))}
               </select>
 
-              {/* Cart Button */}
-              <button
-                onClick={handleCartToggle}
-                className={`relative flex items-center gap-2 hover:text-primary transition-colors ${textColorClass}`}
-                aria-label="Abrir carrito"
-              >
-                <svg
-                  className="size-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {!isCheckoutPage ? (
+                <button
+                  onClick={handleCartToggle}
+                  className={`relative flex items-center gap-2 hover:text-primary transition-colors ${textColorClass}`}
+                  aria-label="Abrir carrito"
                 >
-                  <g
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
+                  <svg
+                    className="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <path
-                      fill="currentColor"
-                      d="M19.5 22a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m-10 0a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"
-                    />
-                    <path d="M5 4h17l-2 11H7zm0 0c-.167-.667-1-2-3-2m18 13H5.23c-1.784 0-2.73.781-2.73 2s.946 2 2.73 2H19.5" />
-                  </g>
-                </svg>
-                {/* Badge with item count */}
-                {totalItems > 0 && (
-                  <span className="absolute -top-2 -right-2 size-5 flex items-center justify-center bg-primary text-white text-xs font-medium rounded-full">
-                    {totalItems > 9 ? "9+" : totalItems}
-                  </span>
-                )}
-              </button>
+                    <g
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M19.5 22a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m-10 0a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"
+                      />
+                      <path d="M5 4h17l-2 11H7zm0 0c-.167-.667-1-2-3-2m18 13H5.23c-1.784 0-2.73.781-2.73 2s.946 2 2.73 2H19.5" />
+                    </g>
+                  </svg>
+                  {/* Badge with item count */}
+                  {totalItems > 0 && (
+                    <span className="absolute -top-2 -right-2 size-5 flex items-center justify-center bg-primary text-white text-xs font-medium rounded-full">
+                      {totalItems > 9 ? "9+" : totalItems}
+                    </span>
+                  )}
+                </button>
+              ) : (
+                <></>
+              )}
 
               {/* Menu Button */}
               <button
