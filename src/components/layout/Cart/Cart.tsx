@@ -139,10 +139,10 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                 {items.map((item) => (
                   <li
                     key={item.id}
-                    className="flex gap-4 p-4 bg-white rounded-sm border border-sand"
+                    className="flex gap-4 rounded-sm items-center border-sand"
                   >
                     {/* Product Image */}
-                    <div className="relative w-20 h-20 shrink-0 bg-sand rounded-sm overflow-hidden">
+                    <div className="relative w-20 self-stretch shrink-0 bg-sand rounded-sm overflow-hidden">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -153,7 +153,7 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                     </div>
 
                     {/* Product Info */}
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 ">
                       <h3 className="font-serif text-charcoal text-sm font-medium truncate">
                         {item.title}
                       </h3>
@@ -165,16 +165,16 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                       </p>
 
                       {/* Quantity Controls */}
-                      <div className="flex items-center gap-2 mt-2">
+                      <div className="flex items-center gap-1 mt-2">
                         <button
                           onClick={() =>
                             handleQuantityChange(item.id, item.quantity - 1)
                           }
-                          className="size-7 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors"
+                          className="size-5 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors"
                           aria-label="Disminuir cantidad"
                         >
                           <svg
-                            className="size-4"
+                            className="size-2"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -195,11 +195,11 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                             handleQuantityChange(item.id, item.quantity + 1)
                           }
                           disabled={item.quantity >= MAX_QUANTITY_PER_ITEM}
-                          className="size-7 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="size-5 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                           aria-label="Aumentar cantidad"
                         >
                           <svg
-                            className="size-4"
+                            className="size-2"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
