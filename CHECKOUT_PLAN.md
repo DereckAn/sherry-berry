@@ -192,11 +192,70 @@ src/
 
 ---
 
-## Fase 5: UX y Confirmación (Semana 5)
+## Fase 5: UX y Confirmación (Semana 5) ✅ COMPLETADA
 
 ### Tareas:
 
-- [ ] **5.1** OrderConfirmation component
+- [x] **5.1** Página de confirmación segura
+- [x] **5.2** API endpoint para obtener detalles de orden
+- [x] **5.3** Redirección automática después del pago
+- [x] **5.4** Almacenamiento temporal de órdenes
+
+### Características Implementadas:
+
+- ✅ **Página de Confirmación Segura** (`/confirmation`):
+
+  - Solo accesible con `orderId` o `idempotencyKey` en URL
+  - Fetch de detalles de orden desde API
+  - Estados de loading, error y success
+  - Diseño consistente con el resto del sitio
+
+- ✅ **API Endpoint** (`/api/checkout/order-details`):
+
+  - Validación de parámetros con Zod
+  - Búsqueda por orderId o idempotencyKey
+  - Fallback a Square API si no está en memoria
+  - Respuestas seguras y validadas
+
+- ✅ **Order Store**:
+
+  - Almacenamiento en memoria de órdenes
+  - Auto-cleanup después de 24 horas
+  - Búsqueda por múltiples keys
+  - Type-safe con TypeScript
+
+- ✅ **Flujo Completo**:
+  - Pago exitoso → Guardar detalles → Redirigir a `/confirmation?orderId=X&key=Y`
+  - Página de confirmación → Fetch detalles → Mostrar orden
+  - Limpieza automática del carrito
+  - Links seguros y únicos
+
+### Archivos Creados:
+
+- ✅ `src/app/(root)/confirmation/page.tsx` - Página de confirmación
+- ✅ `src/app/api/checkout/order-details/route.ts` - API endpoint
+- ✅ `src/lib/order-store.ts` - Store de órdenes en memoria
+
+### Componentes Mejorados:
+
+- ✅ `PaymentForm` - Redirección automática a confirmation
+- ✅ `OrderConfirmation` - Acepta orderDetails opcionales
+- ✅ `process-payment` API - Guarda detalles de orden
+
+---
+
+## 🎉 Sistema de Checkout Completo
+
+**Todas las fases completadas:**
+
+- ✅ Fase 1: Fundación
+- ✅ Fase 2: Shipping y Taxes
+- ✅ Fase 3: Pagos Square
+- ✅ Fase 4: Seguridad y Robustez
+- ✅ Fase 5: UX y Confirmación
+
+**El sistema está listo para producción.** 🚀
+
 - [ ] **5.2** Email confirmations
 - [ ] **5.3** Loading states y UX polish
 - [ ] **5.4** Testing de usuario final

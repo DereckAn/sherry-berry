@@ -3,21 +3,13 @@
  * Enhanced with rate limiting, comprehensive error handling, and logging
  */
 
+import { orderStore } from "@/lib/order-store";
 import { paymentRateLimiter } from "@/lib/rate-limiter";
+import squareClient from "@/lib/SquareClient";
 import { NextRequest, NextResponse } from "next/server";
-import { SquareClient, SquareEnvironment } from "square";
 import { z } from "zod";
 
-// Initialize Square client
-const client = new SquareClient({
-  token: process.env.SQUARE_ACCESS_TOKEN!,
-  environment:
-    process.env.NEXT_PUBLIC_SQUARE_ENVIRONMENT === "production"
-      ? SquareEnvironment.Production
-      : SquareEnvironment.Sandbox,
-});
-
-// Enhanced validation schema
+// Enhanced validation schema with items
 const PaymentRequestSchema = z.object({
   sourceId: z.string().min(1, "Payment source is required"),
   amount: z
@@ -41,6 +33,31 @@ const PaymentRequestSchema = z.object({
     }),
   }),
   idempotencyKey: z.string().uuid("Invalid idempotency key"),
+  // Optional order details for storage
+  orderDetails: z
+    .object({
+      items: z
+        .array(
+          z.object({
+            id: z.string(),
+            title: z.string(),
+            variant: z.string(),
+            quantity: z.number(),
+            priceValue: z.number(),
+          })
+        )
+        .optional(),
+      totals: z
+        .object({
+          subtotal: z.number(),
+          shipping: z.number(),
+          tax: z.number(),
+          total: z.number(),
+          currency: z.string(),
+        })
+        .optional(),
+    })
+    .optional(),
 });
 
 // Helper to get client IP
@@ -124,7 +141,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Process payment with Square
-    const result = await client.payments.create({
+    const result = await squareClient.payments.create({
       sourceId: validatedData.sourceId,
       idempotencyKey: validatedData.idempotencyKey,
       amountMoney: {
@@ -147,11 +164,37 @@ export async function POST(request: NextRequest) {
     const processingTime = Date.now() - startTime;
 
     if (result.payment?.status === "COMPLETED") {
+      // Store order details for confirmation page
+      const orderDetails = {
+        paymentId: result.payment.id!,
+        orderId: result.payment.orderId,
+        receiptUrl: result.payment.receiptUrl,
+        orderDetails: {
+          items: validatedData.orderDetails?.items || [],
+          shipping: {
+            address: validatedData.shippingAddress,
+          },
+          totals: validatedData.orderDetails?.totals || {
+            subtotal: 0,
+            shipping: 0,
+            tax: 0,
+            total: validatedData.amount / 100,
+            currency: validatedData.currency,
+          },
+        },
+      };
+
+      // Store by both idempotencyKey and orderId
+      orderStore.set(validatedData.idempotencyKey, orderDetails);
+      if (result.payment.orderId) {
+        orderStore.set(result.payment.orderId, orderDetails);
+      }
+
       logPaymentAttempt("success", {
         ip: clientIP,
         amount: validatedData.amount,
         currency: validatedData.currency,
-        paymentId: result.payment.id,
+        paymentId: result.payment.id!,
       });
 
       return NextResponse.json(
@@ -160,6 +203,7 @@ export async function POST(request: NextRequest) {
           paymentId: result.payment.id,
           orderId: result.payment.orderId,
           receiptUrl: result.payment.receiptUrl,
+          idempotencyKey: validatedData.idempotencyKey,
         },
         {
           headers: {

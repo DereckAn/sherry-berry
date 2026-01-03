@@ -13,16 +13,52 @@ interface OrderConfirmationProps {
   paymentId: string;
   orderId?: string;
   receiptUrl?: string;
+  orderDetails?: {
+    items: Array<{
+      id: string;
+      title: string;
+      variant: string;
+      quantity: number;
+      priceValue: number;
+    }>;
+    shipping: {
+      address: {
+        firstName: string;
+        lastName: string;
+        email: string;
+        address1: string;
+        address2?: string;
+        city: string;
+        state: string;
+        postalCode: string;
+        country: string;
+      };
+    };
+    totals: {
+      subtotal: number;
+      shipping: number;
+      tax: number;
+      total: number;
+      currency: string;
+    };
+  };
 }
 
 export function OrderConfirmation({
   paymentId,
   orderId,
   receiptUrl,
+  orderDetails,
 }: OrderConfirmationProps) {
-  const totals = useCheckoutStore((state) => state.totals);
-  const shipping = useCheckoutStore((state) => state.shipping);
-  const items = useCheckoutStore((state) => state.items);
+  // Use orderDetails if provided, otherwise fallback to stores
+  const storeItems = useCheckoutStore((state) => state.items);
+  const storeTotals = useCheckoutStore((state) => state.totals);
+  const storeShipping = useCheckoutStore((state) => state.shipping);
+
+  const items = orderDetails?.items || storeItems;
+  const totals = orderDetails?.totals || storeTotals;
+  const shipping = orderDetails?.shipping || storeShipping;
+
   const clearCart = useCartStore((state) => state.clearCart);
   const resetCheckout = useCheckoutStore((state) => state.reset);
 

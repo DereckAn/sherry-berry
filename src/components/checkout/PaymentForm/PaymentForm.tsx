@@ -37,6 +37,7 @@ export function PaymentForm({
 
   const totals = useCheckoutStore((state) => state.totals);
   const shipping = useCheckoutStore((state) => state.shipping);
+  const items = useCheckoutStore((state) => state.items);
 
   const MAX_RETRIES = 2;
   const isProcessing = paymentState === "processing";
@@ -101,6 +102,22 @@ export function PaymentForm({
         currency: totals.currency,
         shippingAddress: shipping!.address,
         idempotencyKey: idempotencyKeyRef.current,
+        orderDetails: {
+          items: items.map((item) => ({
+            id: item.id,
+            title: item.title,
+            variant: item.variant,
+            quantity: item.quantity,
+            priceValue: item.priceValue,
+          })),
+          totals: {
+            subtotal: totals.subtotal,
+            shipping: totals.shipping,
+            tax: totals.tax,
+            total: totals.total,
+            currency: totals.currency,
+          },
+        },
       }),
     });
 
@@ -119,6 +136,7 @@ export function PaymentForm({
       paymentId: data.paymentId,
       orderId: data.orderId,
       receiptUrl: data.receiptUrl,
+      idempotencyKey: data.idempotencyKey,
     };
   };
 
@@ -157,11 +175,25 @@ export function PaymentForm({
 
           // Success!
           setPaymentState("success");
-          onPaymentSuccess(
-            paymentData.paymentId,
-            paymentData.orderId,
-            paymentData.receiptUrl
+
+          // Redirect to confirmation page with orderId and key
+          const confirmationUrl = new URL(
+            "/confirmation",
+            window.location.origin
           );
+          if (paymentData.orderId) {
+            confirmationUrl.searchParams.append("orderId", paymentData.orderId);
+          }
+          confirmationUrl.searchParams.append(
+            "key",
+            paymentData.idempotencyKey
+          );
+
+          // Small delay to show success state
+          setTimeout(() => {
+            window.location.href = confirmationUrl.toString();
+          }, 500);
+
           return;
         } catch (error) {
           lastError = error as Error;
