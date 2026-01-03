@@ -46,7 +46,7 @@ export function CheckoutSummary({
   if (items.length === 0) {
     return (
       <div
-        className={`bg-white rounded-lg border border-gray-200 p-6 ${className}`}
+        className={`bg-white rounded-lg p-6 ${className}`}
       >
         <div className="text-center py-8">
           <div className="text-gray-400 mb-4">
@@ -76,11 +76,11 @@ export function CheckoutSummary({
   }
 
   return (
-    <div className={`bg-white rounded-lg border border-gray-200 ${className}`}>
+    <div className={`rounded bg-black/10 ${className}`}>
       {showTitle && (
-        <div className="px-6 py-4 border-b border-gray-200">
-          <h2 className="text-lg font-semibold text-gray-900">Order Summary</h2>
-          <p className="text-sm text-gray-500 mt-1">
+        <div className="px-6 py-4 border-b border-black/20">
+          <h2 className="text-5xl font-semibold font-legquinne mt-3">Order Summary</h2>
+          <p className="text-sm text-gray-500">
             {items.length} item{items.length !== 1 ? "s" : ""} in your cart
           </p>
         </div>
@@ -101,7 +101,7 @@ export function CheckoutSummary({
         </div>
 
         {/* Totals Section */}
-        <div className="border-t border-gray-200 pt-4 space-y-3">
+        <div className="border-t border-black/20 pt-4 space-y-3">
           <div className="flex justify-between text-sm">
             <span className="text-gray-600">Subtotal</span>
             <span className="font-medium">

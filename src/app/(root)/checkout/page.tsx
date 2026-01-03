@@ -1,114 +1,130 @@
 "use client";
 
-import { CheckoutSummary, ShippingForm } from "@/components/checkout";
-import { Button } from "@/components/ui/Button";
+/**
+ * Checkout Page - Complete checkout with cart, shipping, and payment
+ * All sections visible on one page for better UX
+ */
+
+import { CheckoutSummary } from "@/components/checkout/CheckoutSummary/CheckoutSummary";
+import { OrderConfirmation } from "@/components/checkout/OrderConfirmation/OrderConfirmation";
+import { PaymentForm } from "@/components/checkout/PaymentForm/PaymentForm";
+import { ShippingForm } from "@/components/checkout/ShippingForm/ShippingForm";
 import { useCartStore } from "@/shared/store/cartStore";
 import {
-  useCheckoutStep,
   useCheckoutStore,
+  useIsReadyForPayment,
 } from "@/shared/store/checkoutStore";
 import type { ShippingAddress, ShippingRate } from "@/types/checkout";
-import Link from "next/link";
-import { useEffect } from "react";
+import { useState } from "react";
 
-const CheckoutPage = () => {
+export default function CheckoutPage() {
   const items = useCartStore((state) => state.items);
-  const currentStep = useCheckoutStep();
   const updateShipping = useCheckoutStore((state) => state.updateShipping);
-  const setStep = useCheckoutStore((state) => state.setStep);
-  const calculateTotals = useCheckoutStore((state) => state.calculateTotals);
-
-  // Initialize checkout with cart items
-  useEffect(() => {
-    calculateTotals();
-  }, [items, calculateTotals]);
+  const isReadyForPayment = useIsReadyForPayment();
+  const [orderCompleted, setOrderCompleted] = useState(false);
+  const [paymentResult, setPaymentResult] = useState<{
+    paymentId: string;
+    orderId?: string;
+    receiptUrl?: string;
+  } | null>(null);
 
   const handleShippingUpdate = async (
     address: ShippingAddress,
     rate: ShippingRate
   ) => {
     await updateShipping(address, rate);
-    // Auto-advance to payment step when shipping is complete
-    if (currentStep === "cart") {
-      setStep("shipping");
-    }
   };
 
+  const handlePaymentSuccess = (
+    paymentId: string,
+    orderId?: string,
+    receiptUrl?: string
+  ) => {
+    setPaymentResult({ paymentId, orderId, receiptUrl });
+    setOrderCompleted(true);
+  };
+
+  const handlePaymentError = (error: string) => {
+    alert(`Payment failed: ${error}`);
+  };
+
+  // Show order confirmation after successful payment
+  if (orderCompleted && paymentResult) {
+    return <OrderConfirmation {...paymentResult} />;
+  }
+
+  // Redirect if cart is empty
   if (items.length === 0) {
     return (
-      <div className="min-h-screen py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Checkout</h1>
-            <div className="rounded-lg shadow-sm p-8">
-              <div className="text-gray-400 mb-4">
-                <svg
-                  className="w-16 h-16 mx-auto"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l-1 12H6L5 9z"
-                  />
-                </svg>
-              </div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                Your cart is empty
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Add some beautiful candles to get started
-              </p>
-              <Link href="/menu">
-                <Button>Browse Candles</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
+      <div className="max-w-4xl mx-auto py-12 px-4 text-center">
+        <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
+        <a href="/" className="text-pink-600 hover:text-pink-700 font-semibold">
+          Continue Shopping
+        </a>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen py-20 lg:py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl lg:text-8xl font-legquinne font-bold text-gray-900">Checkout</h1>
-          <p className="text-gray-600 mt-2">
-            Review your order and complete your purchase
-          </p>
-        </div>
+        <h1 className="text-6xl text-center mb-5 md:text-start  md:text-8xl font-bold font-legquinne text-gray-900">
+          Checkout
+        </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Column - Checkout Form */}
-          <div className="space-y-6">
+          {/* Left Column - Forms */}
+          <div className="lg:col-span-1 space-y-6">
             <ShippingForm
               onShippingUpdate={handleShippingUpdate}
-              className="w-full"
+              className="shadow-sm"
             />
 
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                Payment Information
-              </h2>
-              <div className="text-center py-8 text-gray-500">
-                <p>Payment form coming in Phase 3</p>
+            {isReadyForPayment ? (
+              <PaymentForm
+                onPaymentSuccess={handlePaymentSuccess}
+                onPaymentError={handlePaymentError}
+              />
+            ) : (
+              <div className="bg-white/70 rounded-lg border border-gray-200 p-8 text-center shadow-sm">
+                <div className="text-gray-400 mb-4">
+                  <svg
+                    className="w-16 h-16 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  Complete shipping information first
+                </h3>
+                <p className="text-gray-600">
+                  Please fill out your shipping address and select a shipping
+                  method to proceed with payment.
+                </p>
               </div>
-            </div>
+            )}
           </div>
 
-          {/* Right Column - Order Summary */}
-          <div className="lg:sticky lg:top-8">
-            <CheckoutSummary />
+          {/* Right Column - Order Summary (Sticky) */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-28">
+              <CheckoutSummary
+                showTitle={true}
+                showEditControls={false}
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default CheckoutPage;
+}

@@ -8,6 +8,7 @@ import type {
   CheckoutState,
   CheckoutStep,
   OrderTotals,
+  PaymentInfo,
   ShippingAddress,
   ShippingRate,
   TaxInfo,
@@ -24,6 +25,9 @@ interface CheckoutActions {
     address: ShippingAddress,
     rate: ShippingRate
   ) => Promise<void>;
+
+  /** Update payment information */
+  updatePayment: (payment: PaymentInfo) => void;
 
   /** Calculate and update totals */
   calculateTotals: () => Promise<void>;
@@ -88,6 +92,10 @@ export const useCheckoutStore = create<CheckoutStore>((set, get) => ({
     } finally {
       set({ isLoading: false });
     }
+  },
+
+  updatePayment: (payment) => {
+    set({ payment });
   },
 
   calculateTotals: async () => {

@@ -86,10 +86,10 @@ export function ShippingForm({
 
   return (
     <div
-      className={`bg-white/70 rounded-lg border border-gray-200 p-6 ${className}`}
+      className={`bg-black/10 rounded-lg  p-4 ${className}`}
     >
       <div className="mb-6">
-        <h2 className="text-lg font-semibold text-gray-900">
+        <h2 className="text-5xl mt-3 font-legquinne font-semibold text-black">
           Shipping Information
         </h2>
         <p className="text-sm text-gray-600 mt-1">
