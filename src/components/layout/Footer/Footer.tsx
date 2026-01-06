@@ -1,7 +1,13 @@
-import { Container } from '@/components/layout/Container';
-import { siteConfig } from '@/shared/config/site';
+"use client";
+
+import { Container } from "@/components/layout/Container";
+import { siteConfig } from "@/shared/config/site";
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { FOOTER } from "@/shared/i18n/content";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const content = FOOTER[language];
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,65 +28,45 @@ export function Footer() {
             {/* Quick Links */}
             <div>
               <h4 className="text-sm uppercase tracking-wider text-white mb-4">
-                Navegación
+                {content.navigation.title}
               </h4>
               <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Productos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Sobre nosotros
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contacto
-                  </a>
-                </li>
+                {content.navigation.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Customer Service */}
             <div>
               <h4 className="text-sm uppercase tracking-wider text-white mb-4">
-                Ayuda
+                {content.help.title}
               </h4>
               <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Preguntas frecuentes
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Envíos y devoluciones
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Cuidado de velas
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Garantía
-                  </a>
-                </li>
+                {content.help.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Contact */}
             <div>
               <h4 className="text-sm uppercase tracking-wider text-white mb-4">
-                Contacto
+                {content.contact.title}
               </h4>
               <ul className="space-y-3 text-sm">
                 <li>
@@ -106,18 +92,18 @@ export function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-white transition-colors"
-                      aria-label="Instagram"
+                      aria-label={content.social.instagram}
                     >
-                      Instagram
+                      {content.social.instagram}
                     </a>
                     <a
                       href={siteConfig.social.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-white transition-colors"
-                      aria-label="Facebook"
+                      aria-label={content.social.facebook}
                     >
-                      Facebook
+                      {content.social.facebook}
                     </a>
                   </div>
                 </li>
@@ -130,17 +116,17 @@ export function Footer() {
         <div className="border-t border-taupe py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
             <p>
-              © {currentYear} {siteConfig.name}. Todos los derechos reservados.
+              © {currentYear} {siteConfig.name}. {content.copyright}
             </p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white transition-colors">
-                Privacidad
+                {content.legal.privacy}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                Términos
+                {content.legal.terms}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                Cookies
+                {content.legal.cookies}
               </a>
             </div>
           </div>

@@ -80,10 +80,10 @@ fragment AboutStoryPointsParts on AboutStoryPoints {
   }
 }
 
-fragment SectionsParts on Sections {
+fragment FooterParts on Footer {
   __typename
-  language
-  title
-  excerpt
-  body
+  contact {
+    __typename
+    title
+  }
 }

@@ -1,0 +1,33 @@
+{
+  "navigation": {
+    "title": "Navegación",
+    "links": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Productos", "href": "/menu" },
+      { "label": "Sobre nosotros", "href": "/about" },
+      { "label": "Contacto", "href": "/contact" }
+    ]
+  },
+  "help": {
+    "title": "Ayuda",
+    "links": [
+      { "label": "Preguntas frecuentes", "href": "/faq" },
+      { "label": "Envíos y devoluciones", "href": "/shipping" },
+      { "label": "Cuidado de velas", "href": "/care" },
+      { "label": "Garantía", "href": "/warranty" }
+    ]
+  },
+  "contact": {
+    "title": "Contacto"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  },
+  "copyright": "Todos los derechos reservados.",
+  "legal": {
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies"
+  }
+}

@@ -70,8 +70,8 @@ type Query {
   aboutQuoteConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AboutQuoteFilter): AboutQuoteConnection!
   aboutStoryPoints(relativePath: String): AboutStoryPoints!
   aboutStoryPointsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AboutStoryPointsFilter): AboutStoryPointsConnection!
-  sections(relativePath: String): Sections!
-  sectionsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SectionsFilter): SectionsConnection!
+  footer(relativePath: String): Footer!
+  footerConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: FooterFilter): FooterConnection!
 }
 
 input DocumentFilter {
@@ -83,7 +83,7 @@ input DocumentFilter {
   aboutHero: AboutHeroFilter
   aboutQuote: AboutQuoteFilter
   aboutStoryPoints: AboutStoryPointsFilter
-  sections: SectionsFilter
+  footer: FooterFilter
 }
 
 type DocumentConnectionEdges {
@@ -109,7 +109,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | Sections | Folder
+union DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | Footer | Folder
 
 type HomeHeroImages {
   url: String!
@@ -403,38 +403,34 @@ type AboutStoryPointsConnection implements Connection {
   edges: [AboutStoryPointsConnectionEdges]
 }
 
-type Sections implements Node & Document {
-  language: String!
+type FooterContact {
   title: String!
-  excerpt: String
-  body: JSON
+}
+
+type Footer implements Node & Document {
+  contact: FooterContact
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
 }
 
-input RichTextFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-}
-
-input SectionsFilter {
-  language: StringFilter
+input FooterContactFilter {
   title: StringFilter
-  excerpt: StringFilter
-  body: RichTextFilter
 }
 
-type SectionsConnectionEdges {
+input FooterFilter {
+  contact: FooterContactFilter
+}
+
+type FooterConnectionEdges {
   cursor: String!
-  node: Sections
+  node: Footer
 }
 
-type SectionsConnection implements Connection {
+type FooterConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
-  edges: [SectionsConnectionEdges]
+  edges: [FooterConnectionEdges]
 }
 
 type Mutation {
@@ -459,8 +455,8 @@ type Mutation {
   createAboutQuote(relativePath: String!, params: AboutQuoteMutation!): AboutQuote!
   updateAboutStoryPoints(relativePath: String!, params: AboutStoryPointsMutation!): AboutStoryPoints!
   createAboutStoryPoints(relativePath: String!, params: AboutStoryPointsMutation!): AboutStoryPoints!
-  updateSections(relativePath: String!, params: SectionsMutation!): Sections!
-  createSections(relativePath: String!, params: SectionsMutation!): Sections!
+  updateFooter(relativePath: String!, params: FooterMutation!): Footer!
+  createFooter(relativePath: String!, params: FooterMutation!): Footer!
 }
 
 input DocumentUpdateMutation {
@@ -472,7 +468,7 @@ input DocumentUpdateMutation {
   aboutHero: AboutHeroMutation
   aboutQuote: AboutQuoteMutation
   aboutStoryPoints: AboutStoryPointsMutation
-  sections: SectionsMutation
+  footer: FooterMutation
   relativePath: String
 }
 
@@ -485,7 +481,7 @@ input DocumentMutation {
   aboutHero: AboutHeroMutation
   aboutQuote: AboutQuoteMutation
   aboutStoryPoints: AboutStoryPointsMutation
-  sections: SectionsMutation
+  footer: FooterMutation
 }
 
 input HomeHeroImagesMutation {
@@ -566,11 +562,12 @@ input AboutStoryPointsMutation {
   points: [AboutStoryPointsPointsMutation]
 }
 
-input SectionsMutation {
-  language: String
+input FooterContactMutation {
   title: String
-  excerpt: String
-  body: JSON
+}
+
+input FooterMutation {
+  contact: FooterContactMutation
 }
 
 schema {

@@ -1,0 +1,33 @@
+{
+  "navigation": {
+    "title": "Navigation",
+    "links": [
+      { "label": "Accueil", "href": "/" },
+      { "label": "Produits", "href": "/menu" },
+      { "label": "À propos", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  },
+  "help": {
+    "title": "Aide",
+    "links": [
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Livraison et retours", "href": "/shipping" },
+      { "label": "Entretien des bougies", "href": "/care" },
+      { "label": "Garantie", "href": "/warranty" }
+    ]
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  },
+  "copyright": "Tous droits réservés.",
+  "legal": {
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "cookies": "Cookies"
+  }
+}

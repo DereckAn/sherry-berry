@@ -390,6 +390,33 @@
             }
           }
         ]
+      },
+      {
+        "__typename": "CatalogItem",
+        "id": "YTRABRAT54CHC5P7MRMAD2IK",
+        "name": "Sachet Aromatic ",
+        "productType": "REGULAR",
+        "category": null,
+        "descriptionHtml": "Handcrafted botanical wax sachet designed to gently scent small spaces. Made with premium wax and real dried botanicals. Flame-free and perfect for closets, drawers, or gifting.",
+        "foodAndBeverageDetails": null,
+        "images": [
+          {
+            "id": "ADSOPMGMTLWYGBGW7V5I3MAY",
+            "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/53d1b427ba4eae4fe6dae8c6830e485bea9bbb68/original.jpeg"
+          }
+        ],
+        "options": null,
+        "modifierListInfos": null,
+        "taxes": null,
+        "variations": [
+          {
+            "id": "7FHXCPFHQSMILVXTXCR756E4",
+            "name": "Regular",
+            "priceMoney": {
+              "amount": 1
+            }
+          }
+        ]
       }
     ]
   }

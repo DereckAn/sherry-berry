@@ -384,41 +384,35 @@ var config_default = defineConfig({
         ]
       },
       // ============================================
-      // SHARED SECTIONS (MDX)
+      // FOOTER SECTION
       // ============================================
       {
-        name: "sections",
-        label: "Shared Sections",
-        path: "content/sections",
-        format: "mdx",
+        name: "footer",
+        label: "Footer \u2192 Contact",
+        path: "content/footer",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true
+          },
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
         fields: [
           {
-            name: "language",
-            label: "Language",
-            type: "string",
-            options: [
-              { value: "en", label: "English" },
-              { value: "es", label: "Espa\xF1ol" },
-              { value: "fr", label: "Fran\xE7ais" }
-            ],
-            required: true
-          },
-          {
-            name: "title",
-            label: "Title",
-            type: "string",
-            required: true
-          },
-          {
-            name: "excerpt",
-            label: "Excerpt",
-            type: "string"
-          },
-          {
-            name: "body",
-            label: "Body",
-            type: "rich-text",
-            isBody: true
+            name: "contact",
+            label: "Contact Section",
+            type: "object",
+            fields: [
+              {
+                name: "title",
+                label: "Section Title",
+                type: "string",
+                required: true
+              }
+            ]
           }
         ]
       }

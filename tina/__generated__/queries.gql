@@ -438,8 +438,8 @@ query aboutStoryPointsConnection($before: String, $after: String, $first: Float,
   }
 }
 
-query sections($relativePath: String!) {
-  sections(relativePath: $relativePath) {
+query footer($relativePath: String!) {
+  footer(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -452,12 +452,12 @@ query sections($relativePath: String!) {
       }
       id
     }
-    ...SectionsParts
+    ...FooterParts
   }
 }
 
-query sectionsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SectionsFilter) {
-  sectionsConnection(
+query footerConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: FooterFilter) {
+  footerConnection(
     before: $before
     after: $after
     first: $first
@@ -487,7 +487,7 @@ query sectionsConnection($before: String, $after: String, $first: Float, $last: 
           }
           id
         }
-        ...SectionsParts
+        ...FooterParts
       }
     }
   }

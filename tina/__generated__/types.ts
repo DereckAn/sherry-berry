@@ -98,8 +98,8 @@ export type Query = {
   aboutQuoteConnection: AboutQuoteConnection;
   aboutStoryPoints: AboutStoryPoints;
   aboutStoryPointsConnection: AboutStoryPointsConnection;
-  sections: Sections;
-  sectionsConnection: SectionsConnection;
+  footer: Footer;
+  footerConnection: FooterConnection;
 };
 
 
@@ -244,18 +244,18 @@ export type QueryAboutStoryPointsConnectionArgs = {
 };
 
 
-export type QuerySectionsArgs = {
+export type QueryFooterArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-export type QuerySectionsConnectionArgs = {
+export type QueryFooterConnectionArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<SectionsFilter>;
+  filter?: InputMaybe<FooterFilter>;
 };
 
 export type DocumentFilter = {
@@ -267,7 +267,7 @@ export type DocumentFilter = {
   aboutHero?: InputMaybe<AboutHeroFilter>;
   aboutQuote?: InputMaybe<AboutQuoteFilter>;
   aboutStoryPoints?: InputMaybe<AboutStoryPointsFilter>;
-  sections?: InputMaybe<SectionsFilter>;
+  footer?: InputMaybe<FooterFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -307,7 +307,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | Sections | Folder;
+export type DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | Footer | Folder;
 
 export type HomeHeroImages = {
   __typename?: 'HomeHeroImages';
@@ -629,41 +629,38 @@ export type AboutStoryPointsConnection = Connection & {
   edges?: Maybe<Array<Maybe<AboutStoryPointsConnectionEdges>>>;
 };
 
-export type Sections = Node & Document & {
-  __typename?: 'Sections';
-  language: Scalars['String']['output'];
+export type FooterContact = {
+  __typename?: 'FooterContact';
   title: Scalars['String']['output'];
-  excerpt?: Maybe<Scalars['String']['output']>;
-  body?: Maybe<Scalars['JSON']['output']>;
+};
+
+export type Footer = Node & Document & {
+  __typename?: 'Footer';
+  contact?: Maybe<FooterContact>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
 };
 
-export type RichTextFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type SectionsFilter = {
-  language?: InputMaybe<StringFilter>;
+export type FooterContactFilter = {
   title?: InputMaybe<StringFilter>;
-  excerpt?: InputMaybe<StringFilter>;
-  body?: InputMaybe<RichTextFilter>;
 };
 
-export type SectionsConnectionEdges = {
-  __typename?: 'SectionsConnectionEdges';
+export type FooterFilter = {
+  contact?: InputMaybe<FooterContactFilter>;
+};
+
+export type FooterConnectionEdges = {
+  __typename?: 'FooterConnectionEdges';
   cursor: Scalars['String']['output'];
-  node?: Maybe<Sections>;
+  node?: Maybe<Footer>;
 };
 
-export type SectionsConnection = Connection & {
-  __typename?: 'SectionsConnection';
+export type FooterConnection = Connection & {
+  __typename?: 'FooterConnection';
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<SectionsConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<FooterConnectionEdges>>>;
 };
 
 export type Mutation = {
@@ -689,8 +686,8 @@ export type Mutation = {
   createAboutQuote: AboutQuote;
   updateAboutStoryPoints: AboutStoryPoints;
   createAboutStoryPoints: AboutStoryPoints;
-  updateSections: Sections;
-  createSections: Sections;
+  updateFooter: Footer;
+  createFooter: Footer;
 };
 
 
@@ -823,15 +820,15 @@ export type MutationCreateAboutStoryPointsArgs = {
 };
 
 
-export type MutationUpdateSectionsArgs = {
+export type MutationUpdateFooterArgs = {
   relativePath: Scalars['String']['input'];
-  params: SectionsMutation;
+  params: FooterMutation;
 };
 
 
-export type MutationCreateSectionsArgs = {
+export type MutationCreateFooterArgs = {
   relativePath: Scalars['String']['input'];
-  params: SectionsMutation;
+  params: FooterMutation;
 };
 
 export type DocumentUpdateMutation = {
@@ -843,7 +840,7 @@ export type DocumentUpdateMutation = {
   aboutHero?: InputMaybe<AboutHeroMutation>;
   aboutQuote?: InputMaybe<AboutQuoteMutation>;
   aboutStoryPoints?: InputMaybe<AboutStoryPointsMutation>;
-  sections?: InputMaybe<SectionsMutation>;
+  footer?: InputMaybe<FooterMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -856,7 +853,7 @@ export type DocumentMutation = {
   aboutHero?: InputMaybe<AboutHeroMutation>;
   aboutQuote?: InputMaybe<AboutQuoteMutation>;
   aboutStoryPoints?: InputMaybe<AboutStoryPointsMutation>;
-  sections?: InputMaybe<SectionsMutation>;
+  footer?: InputMaybe<FooterMutation>;
 };
 
 export type HomeHeroImagesMutation = {
@@ -937,11 +934,12 @@ export type AboutStoryPointsMutation = {
   points?: InputMaybe<Array<InputMaybe<AboutStoryPointsPointsMutation>>>;
 };
 
-export type SectionsMutation = {
-  language?: InputMaybe<Scalars['String']['input']>;
+export type FooterContactMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
-  excerpt?: InputMaybe<Scalars['String']['input']>;
-  body?: InputMaybe<Scalars['JSON']['input']>;
+};
+
+export type FooterMutation = {
+  contact?: InputMaybe<FooterContactMutation>;
 };
 
 export type HomeHeroPartsFragment = { __typename: 'HomeHero', title: string, subtitle: string, ctaLabel: string, images?: Array<{ __typename: 'HomeHeroImages', url: string, alt: string } | null> | null };
@@ -960,7 +958,7 @@ export type AboutQuotePartsFragment = { __typename: 'AboutQuote', quote: string 
 
 export type AboutStoryPointsPartsFragment = { __typename: 'AboutStoryPoints', points?: Array<{ __typename: 'AboutStoryPointsPoints', title: string, text: string, image: string, imageAlt: string } | null> | null };
 
-export type SectionsPartsFragment = { __typename: 'Sections', language: string, title: string, excerpt?: string | null, body?: any | null };
+export type FooterPartsFragment = { __typename: 'Footer', contact?: { __typename: 'FooterContact', title: string } | null };
 
 export type HomeHeroQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1114,24 +1112,24 @@ export type AboutStoryPointsConnectionQueryVariables = Exact<{
 
 export type AboutStoryPointsConnectionQuery = { __typename?: 'Query', aboutStoryPointsConnection: { __typename?: 'AboutStoryPointsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutStoryPointsConnectionEdges', cursor: string, node?: { __typename: 'AboutStoryPoints', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutStoryPointsPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } | null } | null> | null } };
 
-export type SectionsQueryVariables = Exact<{
+export type FooterQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type SectionsQuery = { __typename?: 'Query', sections: { __typename: 'Sections', id: string, language: string, title: string, excerpt?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type FooterQuery = { __typename?: 'Query', footer: { __typename: 'Footer', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, contact?: { __typename: 'FooterContact', title: string } | null } };
 
-export type SectionsConnectionQueryVariables = Exact<{
+export type FooterConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<SectionsFilter>;
+  filter?: InputMaybe<FooterFilter>;
 }>;
 
 
-export type SectionsConnectionQuery = { __typename?: 'Query', sectionsConnection: { __typename?: 'SectionsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SectionsConnectionEdges', cursor: string, node?: { __typename: 'Sections', id: string, language: string, title: string, excerpt?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type FooterConnectionQuery = { __typename?: 'Query', footerConnection: { __typename?: 'FooterConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'FooterConnectionEdges', cursor: string, node?: { __typename: 'Footer', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, contact?: { __typename: 'FooterContact', title: string } | null } | null } | null> | null } };
 
 export const HomeHeroPartsFragmentDoc = gql`
     fragment HomeHeroParts on HomeHero {
@@ -1223,13 +1221,13 @@ export const AboutStoryPointsPartsFragmentDoc = gql`
   }
 }
     `;
-export const SectionsPartsFragmentDoc = gql`
-    fragment SectionsParts on Sections {
+export const FooterPartsFragmentDoc = gql`
+    fragment FooterParts on Footer {
   __typename
-  language
-  title
-  excerpt
-  body
+  contact {
+    __typename
+    title
+  }
 }
     `;
 export const HomeHeroDocument = gql`
@@ -1688,9 +1686,9 @@ export const AboutStoryPointsConnectionDocument = gql`
   }
 }
     ${AboutStoryPointsPartsFragmentDoc}`;
-export const SectionsDocument = gql`
-    query sections($relativePath: String!) {
-  sections(relativePath: $relativePath) {
+export const FooterDocument = gql`
+    query footer($relativePath: String!) {
+  footer(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -1703,13 +1701,13 @@ export const SectionsDocument = gql`
       }
       id
     }
-    ...SectionsParts
+    ...FooterParts
   }
 }
-    ${SectionsPartsFragmentDoc}`;
-export const SectionsConnectionDocument = gql`
-    query sectionsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SectionsFilter) {
-  sectionsConnection(
+    ${FooterPartsFragmentDoc}`;
+export const FooterConnectionDocument = gql`
+    query footerConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: FooterFilter) {
+  footerConnection(
     before: $before
     after: $after
     first: $first
@@ -1739,12 +1737,12 @@ export const SectionsConnectionDocument = gql`
           }
           id
         }
-        ...SectionsParts
+        ...FooterParts
       }
     }
   }
 }
-    ${SectionsPartsFragmentDoc}`;
+    ${FooterPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -1796,11 +1794,11 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
     aboutStoryPointsConnection(variables?: AboutStoryPointsConnectionQueryVariables, options?: C): Promise<{data: AboutStoryPointsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsConnectionQueryVariables, query: string}> {
         return requester<{data: AboutStoryPointsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsConnectionQueryVariables, query: string}, AboutStoryPointsConnectionQueryVariables>(AboutStoryPointsConnectionDocument, variables, options);
       },
-    sections(variables: SectionsQueryVariables, options?: C): Promise<{data: SectionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsQueryVariables, query: string}> {
-        return requester<{data: SectionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsQueryVariables, query: string}, SectionsQueryVariables>(SectionsDocument, variables, options);
+    footer(variables: FooterQueryVariables, options?: C): Promise<{data: FooterQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterQueryVariables, query: string}> {
+        return requester<{data: FooterQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterQueryVariables, query: string}, FooterQueryVariables>(FooterDocument, variables, options);
       },
-    sectionsConnection(variables?: SectionsConnectionQueryVariables, options?: C): Promise<{data: SectionsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsConnectionQueryVariables, query: string}> {
-        return requester<{data: SectionsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SectionsConnectionQueryVariables, query: string}, SectionsConnectionQueryVariables>(SectionsConnectionDocument, variables, options);
+    footerConnection(variables?: FooterConnectionQueryVariables, options?: C): Promise<{data: FooterConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterConnectionQueryVariables, query: string}> {
+        return requester<{data: FooterConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterConnectionQueryVariables, query: string}, FooterConnectionQueryVariables>(FooterConnectionDocument, variables, options);
       }
     };
   }

@@ -174,11 +174,6 @@ export function Header() {
                     </>
                   )}
                 </svg>
-                {/* <span
-                  className={`font-rokkitt ${isMenuOpen ? "text-black" : ""}`}
-                >
-                  {menuLabel}
-                </span> */}
               </button>
             </div>
           </div>

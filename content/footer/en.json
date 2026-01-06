@@ -1,0 +1,33 @@
+{
+  "navigation": {
+    "title": "Navigation",
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Products", "href": "/menu" },
+      { "label": "About Us", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  },
+  "help": {
+    "title": "Help",
+    "links": [
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Shipping & Returns", "href": "/shipping" },
+      { "label": "Candle Care", "href": "/care" },
+      { "label": "Warranty", "href": "/warranty" }
+    ]
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  },
+  "copyright": "All rights reserved.",
+  "legal": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  }
+}
