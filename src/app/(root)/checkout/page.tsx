@@ -9,6 +9,8 @@ import { CheckoutSummary } from "@/components/checkout/CheckoutSummary/CheckoutS
 import { OrderConfirmation } from "@/components/checkout/OrderConfirmation/OrderConfirmation";
 import { PaymentForm } from "@/components/checkout/PaymentForm/PaymentForm";
 import { ShippingForm } from "@/components/checkout/ShippingForm/ShippingForm";
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { CHECKOUT } from "@/shared/i18n/content";
 import { useCartStore } from "@/shared/store/cartStore";
 import {
   useCheckoutStore,
@@ -18,6 +20,8 @@ import type { ShippingAddress, ShippingRate } from "@/types/checkout";
 import { useState } from "react";
 
 export default function CheckoutPage() {
+  const { language } = useLanguage();
+  const content = CHECKOUT[language];
   const items = useCartStore((state) => state.items);
   const updateShipping = useCheckoutStore((state) => state.updateShipping);
   const isReadyForPayment = useIsReadyForPayment();
@@ -57,9 +61,11 @@ export default function CheckoutPage() {
   if (items.length === 0) {
     return (
       <div className="max-w-4xl mx-auto py-12 px-4 text-center">
-        <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
+        <h1 className="text-2xl font-bold mb-4">
+          {content.page.emptyCart.title}
+        </h1>
         <a href="/" className="text-pink-600 hover:text-pink-700 font-semibold">
-          Continue Shopping
+          {content.page.emptyCart.link}
         </a>
       </div>
     );
@@ -70,7 +76,7 @@ export default function CheckoutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <h1 className="text-6xl text-center mb-5 md:text-start  md:text-8xl font-bold font-legquinne text-gray-900">
-          Checkout
+          {content.page.title}
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -104,11 +110,10 @@ export default function CheckoutPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
-                  Complete shipping information first
+                  {content.page.paymentLocked.title}
                 </h3>
                 <p className="text-gray-600">
-                  Please fill out your shipping address and select a shipping
-                  method to proceed with payment.
+                  {content.page.paymentLocked.description}
                 </p>
               </div>
             )}
@@ -117,10 +122,7 @@ export default function CheckoutPage() {
           {/* Right Column - Order Summary (Sticky) */}
           <div className="lg:col-span-1">
             <div className="sticky top-28">
-              <CheckoutSummary
-                showTitle={true}
-                showEditControls={false}
-              />
+              <CheckoutSummary showTitle={true} showEditControls={false} />
             </div>
           </div>
         </div>

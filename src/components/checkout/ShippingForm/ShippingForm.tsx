@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/Button";
 import { calculateShippingRates } from "@/lib/shipping/calculator";
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { CHECKOUT } from "@/shared/i18n/content";
 import {
   COUNTRY_NAMES,
   SUPPORTED_COUNTRIES,
@@ -25,6 +27,8 @@ export function ShippingForm({
   initialAddress,
   className = "",
 }: ShippingFormProps) {
+  const { language } = useLanguage();
+  const content = CHECKOUT[language];
   const [availableRates, setAvailableRates] = useState<ShippingRate[]>([]);
   const [selectedRate, setSelectedRate] = useState<ShippingRate | null>(null);
   const [isCalculatingRates, setIsCalculatingRates] = useState(false);
@@ -85,15 +89,13 @@ export function ShippingForm({
   };
 
   return (
-    <div
-      className={`bg-black/10 rounded-lg  p-4 ${className}`}
-    >
+    <div className={`bg-black/10 rounded-lg  p-4 ${className}`}>
       <div className="mb-6">
         <h2 className="text-5xl mt-3 font-legquinne font-semibold text-black">
-          Shipping Information
+          {content.shippingForm.title}
         </h2>
         <p className="text-sm text-gray-600 mt-1">
-          Enter your shipping address to calculate rates
+          {content.shippingForm.subtitle}
         </p>
       </div>
 
@@ -105,13 +107,13 @@ export function ShippingForm({
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              First Name *
+              {content.shippingForm.fields.firstName} *
             </label>
             <input
               {...register("firstName")}
               type="text"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-              placeholder="John"
+              placeholder={content.shippingForm.placeholders.firstName}
             />
             {errors.firstName && (
               <p className="text-red-500 text-xs mt-1">
@@ -125,13 +127,13 @@ export function ShippingForm({
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Last Name *
+              {content.shippingForm.fields.lastName} *
             </label>
             <input
               {...register("lastName")}
               type="text"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-              placeholder="Doe"
+              placeholder={content.shippingForm.placeholders.lastName}
             />
             {errors.lastName && (
               <p className="text-red-500 text-xs mt-1">
@@ -146,13 +148,13 @@ export function ShippingForm({
             htmlFor="email"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Email Address *
+            {content.shippingForm.fields.email} *
           </label>
           <input
             {...register("email")}
             type="email"
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-            placeholder="john.doe@example.com"
+            placeholder={content.shippingForm.placeholders.email}
           />
           {errors.email && (
             <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
@@ -164,13 +166,13 @@ export function ShippingForm({
             htmlFor="phone"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Phone Number *
+            {content.shippingForm.fields.phone} *
           </label>
           <input
             {...register("phone")}
             type="tel"
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-            placeholder="+1 (555) 123-4567"
+            placeholder={content.shippingForm.placeholders.phone}
           />
           {errors.phone && (
             <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>
@@ -183,13 +185,13 @@ export function ShippingForm({
             htmlFor="address1"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Address Line 1 *
+            {content.shippingForm.fields.address1} *
           </label>
           <input
             {...register("address1")}
             type="text"
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-            placeholder="123 Main Street"
+            placeholder={content.shippingForm.placeholders.address1}
           />
           {errors.address1 && (
             <p className="text-red-500 text-xs mt-1">
@@ -203,13 +205,13 @@ export function ShippingForm({
             htmlFor="address2"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Address Line 2 (Optional)
+            {content.shippingForm.fields.address2}
           </label>
           <input
             {...register("address2")}
             type="text"
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-            placeholder="Apartment, suite, etc."
+            placeholder={content.shippingForm.placeholders.address2}
           />
         </div>
 
@@ -219,13 +221,13 @@ export function ShippingForm({
               htmlFor="city"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              City *
+              {content.shippingForm.fields.city} *
             </label>
             <input
               {...register("city")}
               type="text"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-              placeholder="New York"
+              placeholder={content.shippingForm.placeholders.city}
             />
             {errors.city && (
               <p className="text-red-500 text-xs mt-1">{errors.city.message}</p>
@@ -237,13 +239,13 @@ export function ShippingForm({
               htmlFor="state"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              State/Province *
+              {content.shippingForm.fields.state} *
             </label>
             <input
               {...register("state")}
               type="text"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-              placeholder="NY"
+              placeholder={content.shippingForm.placeholders.state}
             />
             {errors.state && (
               <p className="text-red-500 text-xs mt-1">
@@ -257,13 +259,13 @@ export function ShippingForm({
               htmlFor="postalCode"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Postal Code *
+              {content.shippingForm.fields.postalCode} *
             </label>
             <input
               {...register("postalCode")}
               type="text"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-              placeholder="10001"
+              placeholder={content.shippingForm.placeholders.postalCode}
             />
             {errors.postalCode && (
               <p className="text-red-500 text-xs mt-1">
@@ -278,13 +280,15 @@ export function ShippingForm({
             htmlFor="country"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Country *
+            {content.shippingForm.fields.country} *
           </label>
           <select
             {...register("country")}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
           >
-            <option value="">Select a country</option>
+            <option value="">
+              {content.shippingForm.fields.selectCountry}
+            </option>
             {SUPPORTED_COUNTRIES.map((country) => (
               <option key={country} value={country}>
                 {COUNTRY_NAMES[country]}
@@ -308,12 +312,12 @@ export function ShippingForm({
             {isCalculatingRates ? (
               <>
                 <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                Calculating Rates...
+                {content.shippingForm.buttons.calculating}
               </>
             ) : (
               <>
                 <Truck className="w-4 h-4 mr-2" />
-                Calculate Shipping Rates
+                {content.shippingForm.buttons.calculate}
               </>
             )}
           </Button>
@@ -324,7 +328,7 @@ export function ShippingForm({
       {availableRates.length > 0 && (
         <div className="mt-6 pt-6 border-t border-gray-200">
           <h3 className="text-md font-medium text-gray-900 mb-4">
-            Choose Shipping Method
+            {content.shippingForm.shippingMethod}
           </h3>
           <div className="space-y-3">
             {availableRates.map((rate) => (
@@ -360,6 +364,9 @@ function ShippingRateOption({
   isSelected,
   onSelect,
 }: ShippingRateOptionProps) {
+  const { language } = useLanguage();
+  const content = CHECKOUT[language];
+
   const formatPrice = (price: number, currency: string) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -395,7 +402,7 @@ function ShippingRateOption({
             </div>
             <p className="text-sm text-gray-600 mt-1">{rate.description}</p>
             <p className="text-xs text-gray-500 mt-1">
-              Estimated delivery: {rate.estimatedDays}
+              {content.shippingForm.estimatedDelivery}: {rate.estimatedDays}
             </p>
           </div>
         </div>

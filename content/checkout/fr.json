@@ -1,0 +1,70 @@
+{
+  "page": {
+    "title": "Paiement",
+    "emptyCart": {
+      "title": "Votre panier est vide",
+      "link": "Continuer vos Achats"
+    },
+    "paymentLocked": {
+      "title": "Complétez d'abord les informations d'expédition",
+      "description": "Veuillez remplir votre adresse de livraison et sélectionner un mode d'expédition pour procéder au paiement."
+    }
+  },
+  "shippingForm": {
+    "title": "Informations de Livraison",
+    "subtitle": "Entrez votre adresse de livraison pour calculer les tarifs",
+    "fields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse E-mail",
+      "phone": "Numéro de Téléphone",
+      "address1": "Adresse Ligne 1",
+      "address2": "Adresse Ligne 2 (Optionnel)",
+      "city": "Ville",
+      "state": "État/Province",
+      "postalCode": "Code Postal",
+      "country": "Pays",
+      "selectCountry": "Sélectionnez un pays"
+    },
+    "placeholders": {
+      "firstName": "Jean",
+      "lastName": "Dupont",
+      "email": "jean.dupont@exemple.com",
+      "phone": "+33 1 23 45 67 89",
+      "address1": "123 Rue Principale",
+      "address2": "Appartement, suite, etc.",
+      "city": "Paris",
+      "state": "Île-de-France",
+      "postalCode": "75001"
+    },
+    "buttons": {
+      "calculate": "Calculer les Frais de Livraison",
+      "calculating": "Calcul en cours..."
+    },
+    "shippingMethod": "Choisissez le Mode de Livraison",
+    "estimatedDelivery": "Livraison estimée"
+  },
+  "summary": {
+    "title": "Résumé de la Commande",
+    "itemsCount": "article(s) dans votre panier",
+    "emptyCart": {
+      "title": "Votre panier est vide",
+      "description": "Ajoutez de belles bougies pour commencer"
+    },
+    "totals": {
+      "subtotal": "Sous-total",
+      "shipping": "Livraison",
+      "taxes": "Taxes",
+      "total": "Total",
+      "free": "GRATUIT",
+      "calculatedNext": "Calculé à l'étape suivante",
+      "excludingNote": "*Hors frais de livraison et taxes"
+    },
+    "quantity": "Qté",
+    "actions": {
+      "decrease": "Diminuer la quantité",
+      "increase": "Augmenter la quantité",
+      "remove": "Retirer l'article"
+    }
+  }
+}

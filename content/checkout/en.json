@@ -1,0 +1,70 @@
+{
+  "page": {
+    "title": "Checkout",
+    "emptyCart": {
+      "title": "Your cart is empty",
+      "link": "Continue Shopping"
+    },
+    "paymentLocked": {
+      "title": "Complete shipping information first",
+      "description": "Please fill out your shipping address and select a shipping method to proceed with payment."
+    }
+  },
+  "shippingForm": {
+    "title": "Shipping Information",
+    "subtitle": "Enter your shipping address to calculate rates",
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "address1": "Address Line 1",
+      "address2": "Address Line 2 (Optional)",
+      "city": "City",
+      "state": "State/Province",
+      "postalCode": "Postal Code",
+      "country": "Country",
+      "selectCountry": "Select a country"
+    },
+    "placeholders": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phone": "+1 (555) 123-4567",
+      "address1": "123 Main Street",
+      "address2": "Apartment, suite, etc.",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10001"
+    },
+    "buttons": {
+      "calculate": "Calculate Shipping Rates",
+      "calculating": "Calculating Rates..."
+    },
+    "shippingMethod": "Choose Shipping Method",
+    "estimatedDelivery": "Estimated delivery"
+  },
+  "summary": {
+    "title": "Order Summary",
+    "itemsCount": "item(s) in your cart",
+    "emptyCart": {
+      "title": "Your cart is empty",
+      "description": "Add some beautiful candles to get started"
+    },
+    "totals": {
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "taxes": "Taxes",
+      "total": "Total",
+      "free": "FREE",
+      "calculatedNext": "Calculated at next step",
+      "excludingNote": "*Excluding shipping and taxes"
+    },
+    "quantity": "Qty",
+    "actions": {
+      "decrease": "Decrease quantity",
+      "increase": "Increase quantity",
+      "remove": "Remove item"
+    }
+  }
+}

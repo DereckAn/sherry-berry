@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { CHECKOUT } from "@/shared/i18n/content";
 import { useCartStore } from "@/shared/store/cartStore";
 import {
   useCheckoutStore,
@@ -20,6 +22,8 @@ export function CheckoutSummary({
   showEditControls = true,
   className = "",
 }: CheckoutSummaryProps) {
+  const { language } = useLanguage();
+  const content = CHECKOUT[language];
   const items = useCartStore((state) => state.items);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
   const removeItem = useCartStore((state) => state.removeItem);
@@ -45,9 +49,7 @@ export function CheckoutSummary({
 
   if (items.length === 0) {
     return (
-      <div
-        className={`bg-white rounded-lg p-6 ${className}`}
-      >
+      <div className={`bg-white rounded-lg p-6 ${className}`}>
         <div className="text-center py-8">
           <div className="text-gray-400 mb-4">
             <svg
@@ -65,10 +67,10 @@ export function CheckoutSummary({
             </svg>
           </div>
           <h3 className="text-lg font-medium text-gray-900 mb-2">
-            Your cart is empty
+            {content.summary.emptyCart.title}
           </h3>
           <p className="text-gray-500">
-            Add some beautiful candles to get started
+            {content.summary.emptyCart.description}
           </p>
         </div>
       </div>
@@ -79,9 +81,11 @@ export function CheckoutSummary({
     <div className={`rounded bg-black/10 ${className}`}>
       {showTitle && (
         <div className="px-6 py-4 border-b border-black/20">
-          <h2 className="text-5xl font-semibold font-legquinne mt-3">Order Summary</h2>
+          <h2 className="text-5xl font-semibold font-legquinne mt-3">
+            {content.summary.title}
+          </h2>
           <p className="text-sm text-gray-500">
-            {items.length} item{items.length !== 1 ? "s" : ""} in your cart
+            {items.length} {content.summary.itemsCount}
           </p>
         </div>
       )}
@@ -103,14 +107,18 @@ export function CheckoutSummary({
         {/* Totals Section */}
         <div className="border-t border-black/20 pt-4 space-y-3">
           <div className="flex justify-between text-sm">
-            <span className="text-gray-600">Subtotal</span>
+            <span className="text-gray-600">
+              {content.summary.totals.subtotal}
+            </span>
             <span className="font-medium">
               {formatPrice(checkoutTotals.subtotal)}
             </span>
           </div>
 
           <div className="flex justify-between text-sm">
-            <span className="text-gray-600">Shipping</span>
+            <span className="text-gray-600">
+              {content.summary.totals.shipping}
+            </span>
             {checkoutTotals.shipping > 0 ? (
               <span className="font-medium">
                 {formatPrice(checkoutTotals.shipping)}
@@ -118,27 +126,31 @@ export function CheckoutSummary({
             ) : (
               <span className="text-gray-400">
                 {checkoutTotals.shipping === 0 && checkoutTotals.subtotal > 0
-                  ? "FREE"
-                  : "Calculated at next step"}
+                  ? content.summary.totals.free
+                  : content.summary.totals.calculatedNext}
               </span>
             )}
           </div>
 
           <div className="flex justify-between text-sm">
-            <span className="text-gray-600">Taxes</span>
+            <span className="text-gray-600">
+              {content.summary.totals.taxes}
+            </span>
             {checkoutTotals.tax > 0 ? (
               <span className="font-medium">
                 {formatPrice(checkoutTotals.tax)}
               </span>
             ) : (
-              <span className="text-gray-400">Calculated at next step</span>
+              <span className="text-gray-400">
+                {content.summary.totals.calculatedNext}
+              </span>
             )}
           </div>
 
           <div className="border-t border-gray-200 pt-3">
             <div className="flex justify-between">
               <span className="text-base font-semibold text-gray-900">
-                Total
+                {content.summary.totals.total}
               </span>
               <span className="text-base font-semibold text-gray-900">
                 {formatPrice(checkoutTotals.total)}
@@ -149,7 +161,7 @@ export function CheckoutSummary({
             </div>
             {checkoutTotals.shipping === 0 && checkoutTotals.tax === 0 && (
               <p className="text-xs text-gray-500 mt-1">
-                *Excluding shipping and taxes
+                {content.summary.totals.excludingNote}
               </p>
             )}
           </div>
@@ -172,6 +184,8 @@ function CheckoutItem({
   onQuantityChange,
   onRemove,
 }: CheckoutItemProps) {
+  const { language } = useLanguage();
+  const content = CHECKOUT[language];
   const itemTotal = item.priceValue * item.quantity;
   const checkoutTotals = useCheckoutTotals();
 
@@ -219,7 +233,7 @@ function CheckoutItem({
               <button
                 onClick={() => onQuantityChange(item.id, item.quantity - 1)}
                 className="p-1 hover:bg-gray-50 transition-colors"
-                aria-label="Decrease quantity"
+                aria-label={content.summary.actions.decrease}
               >
                 <Minus className="w-4 h-4 text-gray-600" />
               </button>
@@ -230,7 +244,7 @@ function CheckoutItem({
                 onClick={() => onQuantityChange(item.id, item.quantity + 1)}
                 className="p-1 hover:bg-gray-50 transition-colors"
                 disabled={item.quantity >= 10}
-                aria-label="Increase quantity"
+                aria-label={content.summary.actions.increase}
               >
                 <Plus className="w-4 h-4 text-gray-600" />
               </button>
@@ -240,14 +254,16 @@ function CheckoutItem({
             <button
               onClick={() => onRemove(item.id)}
               className="p-1 text-red-500 hover:text-red-700 transition-colors"
-              aria-label="Remove item"
+              aria-label={content.summary.actions.remove}
             >
               <Trash2 className="w-4 h-4" />
             </button>
           </div>
         ) : (
           <div className="text-right">
-            <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
+            <p className="text-sm text-gray-600">
+              {content.summary.quantity}: {item.quantity}
+            </p>
             <p className="text-sm font-medium text-gray-900">
               {formatPrice(itemTotal)}
             </p>

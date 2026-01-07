@@ -1,0 +1,70 @@
+{
+  "page": {
+    "title": "Checkout",
+    "emptyCart": {
+      "title": "Tu carrito está vacío",
+      "link": "Continuar Comprando"
+    },
+    "paymentLocked": {
+      "title": "Completa la información de envío primero",
+      "description": "Por favor completa tu dirección de envío y selecciona un método de envío para proceder con el pago."
+    }
+  },
+  "shippingForm": {
+    "title": "Información de Envío",
+    "subtitle": "Ingresa tu dirección de envío para calcular las tarifas",
+    "fields": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "address1": "Dirección Línea 1",
+      "address2": "Dirección Línea 2 (Opcional)",
+      "city": "Ciudad",
+      "state": "Estado/Provincia",
+      "postalCode": "Código Postal",
+      "country": "País",
+      "selectCountry": "Selecciona un país"
+    },
+    "placeholders": {
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "email": "juan.perez@ejemplo.com",
+      "phone": "+1 (555) 123-4567",
+      "address1": "Calle Principal 123",
+      "address2": "Apartamento, suite, etc.",
+      "city": "Ciudad de México",
+      "state": "CDMX",
+      "postalCode": "01000"
+    },
+    "buttons": {
+      "calculate": "Calcular Tarifas de Envío",
+      "calculating": "Calculando Tarifas..."
+    },
+    "shippingMethod": "Elige el Método de Envío",
+    "estimatedDelivery": "Entrega estimada"
+  },
+  "summary": {
+    "title": "Resumen del Pedido",
+    "itemsCount": "artículo(s) en tu carrito",
+    "emptyCart": {
+      "title": "Tu carrito está vacío",
+      "description": "Agrega algunas velas hermosas para comenzar"
+    },
+    "totals": {
+      "subtotal": "Subtotal",
+      "shipping": "Envío",
+      "taxes": "Impuestos",
+      "total": "Total",
+      "free": "GRATIS",
+      "calculatedNext": "Calculado en el siguiente paso",
+      "excludingNote": "*Sin incluir envío e impuestos"
+    },
+    "quantity": "Cant",
+    "actions": {
+      "decrease": "Disminuir cantidad",
+      "increase": "Aumentar cantidad",
+      "remove": "Eliminar artículo"
+    }
+  }
+}
