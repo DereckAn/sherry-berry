@@ -10,3 +10,4 @@ export * from "./about";
 export * from "./cart";
 export * from "./footer";
 export * from "./home";
+export * from "./product";

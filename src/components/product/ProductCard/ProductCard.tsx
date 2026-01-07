@@ -1,4 +1,8 @@
-import { Button } from '@/components/ui/Button';
+"use client";
+
+import { Button } from "@/components/ui/Button";
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { PRODUCT } from "@/shared/i18n/content";
 
 export interface ProductCardProps {
   name: string;
@@ -8,6 +12,9 @@ export interface ProductCardProps {
 }
 
 export function ProductCard({ name, price, description }: ProductCardProps) {
+  const { language } = useLanguage();
+  const content = PRODUCT[language];
+
   return (
     <article className="group">
       {/* Image container */}
@@ -16,7 +23,9 @@ export function ProductCard({ name, price, description }: ProductCardProps) {
         <div className="absolute inset-0 flex items-center justify-center text-taupe">
           <div className="text-center">
             <div className="text-6xl mb-2">🕯️</div>
-            <p className="text-xs uppercase tracking-wider">Product Image</p>
+            <p className="text-xs uppercase tracking-wider">
+              {content.card.imagePlaceholder}
+            </p>
           </div>
         </div>
 
@@ -34,12 +43,10 @@ export function ProductCard({ name, price, description }: ProductCardProps) {
             ${price.toFixed(2)}
           </span>
         </div>
-        <p className="text-sm text-taupe line-clamp-2">
-          {description}
-        </p>
+        <p className="text-sm text-taupe line-clamp-2">{description}</p>
         <div className="pt-2">
           <Button variant="outline" size="sm" fullWidth>
-            Agregar al carrito
+            {content.card.addToCart}
           </Button>
         </div>
       </div>

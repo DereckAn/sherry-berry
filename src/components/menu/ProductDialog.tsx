@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { PRODUCT } from "@/shared/i18n/content";
 import { useCartStore } from "@/shared/store/cartStore";
 import type { Product } from "@/shared/types/cart";
 import {
@@ -20,6 +22,8 @@ export function ProductDialog({
   isOpen,
   onClose,
 }: ProductDialogProps) {
+  const { language } = useLanguage();
+  const content = PRODUCT[language];
   const [quantity, setQuantity] = useState(1);
   const addItem = useCartStore((state) => state.addItem);
   const openCart = useCartStore((state) => state.openCart);
@@ -97,7 +101,7 @@ export function ProductDialog({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-10 p-2 bg-white/80 hover:bg-white rounded-full transition-colors"
-          aria-label="Cerrar"
+          aria-label={content.dialog.close}
         >
           <svg
             className="size-5 text-charcoal"
@@ -152,18 +156,15 @@ export function ProductDialog({
 
             {/* Features */}
             <ul className="space-y-2 pt-2">
-              <li className="flex items-center gap-2 text-sm text-charcoal/60">
-                <span className="text-primary">✓</span>
-                100% cera de soya natural
-              </li>
-              <li className="flex items-center gap-2 text-sm text-charcoal/60">
-                <span className="text-primary">✓</span>
-                Mecha de algodón sin plomo
-              </li>
-              <li className="flex items-center gap-2 text-sm text-charcoal/60">
-                <span className="text-primary">✓</span>
-                40+ horas de duración
-              </li>
+              {content.dialog.features.map((feature, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-2 text-sm text-charcoal/60"
+                >
+                  <span className="text-primary">✓</span>
+                  {feature}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -171,13 +172,15 @@ export function ProductDialog({
           <div className="space-y-4 pt-6 mt-6 border-t border-sand">
             {/* Quantity selector */}
             <div className="flex items-center justify-between">
-              <span className="text-sm text-charcoal/70">Cantidad</span>
+              <span className="text-sm text-charcoal/70">
+                {content.dialog.quantity}
+              </span>
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => handleQuantityChange(-1)}
                   disabled={quantity <= MIN_QUANTITY_PER_ITEM}
                   className="size-10 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                  aria-label="Disminuir cantidad"
+                  aria-label={content.dialog.decrease}
                 >
                   <svg
                     className="size-4"
@@ -200,7 +203,7 @@ export function ProductDialog({
                   onClick={() => handleQuantityChange(1)}
                   disabled={quantity >= MAX_QUANTITY_PER_ITEM}
                   className="size-10 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                  aria-label="Aumentar cantidad"
+                  aria-label={content.dialog.increase}
                 >
                   <svg
                     className="size-4"
@@ -221,7 +224,9 @@ export function ProductDialog({
 
             {/* Subtotal */}
             <div className="flex items-center justify-between text-sm">
-              <span className="text-charcoal/70">Subtotal</span>
+              <span className="text-charcoal/70">
+                {content.dialog.subtotal}
+              </span>
               <span className="font-medium text-charcoal">
                 ${(product.priceValue * quantity).toFixed(2)} CAD
               </span>
@@ -250,7 +255,7 @@ export function ProductDialog({
                   <path d="M5 4h17l-2 11H7zm0 0c-.167-.667-1-2-3-2m18 13H5.23c-1.784 0-2.73.781-2.73 2s.946 2 2.73 2H19.5" />
                 </g>
               </svg>
-              Agregar al Carrito
+              {content.dialog.addToCart}
             </button>
           </div>
         </div>

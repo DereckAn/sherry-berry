@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { PRODUCT } from "@/shared/i18n/content";
 import type { Product } from "@/shared/types/cart";
 import Image from "next/image";
 import { useState } from "react";
@@ -10,6 +12,8 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const { language } = useLanguage();
+  const content = PRODUCT[language];
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
@@ -29,7 +33,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Hover overlay */}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
             <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 text-charcoal px-4 py-2 rounded-sm text-sm font-medium">
-              Ver detalles
+              {content.card.viewDetails}
             </span>
           </div>
         </div>

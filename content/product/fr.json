@@ -1,0 +1,20 @@
+{
+  "dialog": {
+    "close": "Fermer",
+    "quantity": "Quantité",
+    "decrease": "Diminuer la quantité",
+    "increase": "Augmenter la quantité",
+    "subtotal": "Sous-total",
+    "addToCart": "Ajouter au Panier",
+    "features": [
+      "100% cire de soja naturelle",
+      "Mèche en coton sans plomb",
+      "40+ heures de combustion"
+    ]
+  },
+  "card": {
+    "viewDetails": "Voir les détails",
+    "addToCart": "Ajouter au panier",
+    "imagePlaceholder": "Image du produit"
+  }
+}

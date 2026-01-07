@@ -1,0 +1,20 @@
+{
+  "dialog": {
+    "close": "Close",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "subtotal": "Subtotal",
+    "addToCart": "Add to Cart",
+    "features": [
+      "100% natural soy wax",
+      "Lead-free cotton wick",
+      "40+ hours burn time"
+    ]
+  },
+  "card": {
+    "viewDetails": "View details",
+    "addToCart": "Add to cart",
+    "imagePlaceholder": "Product Image"
+  }
+}

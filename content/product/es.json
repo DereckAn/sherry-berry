@@ -1,0 +1,20 @@
+{
+  "dialog": {
+    "close": "Cerrar",
+    "quantity": "Cantidad",
+    "decrease": "Disminuir cantidad",
+    "increase": "Aumentar cantidad",
+    "subtotal": "Subtotal",
+    "addToCart": "Agregar al Carrito",
+    "features": [
+      "100% cera de soya natural",
+      "Mecha de algodón sin plomo",
+      "40+ horas de duración"
+    ]
+  },
+  "card": {
+    "viewDetails": "Ver detalles",
+    "addToCart": "Agregar al carrito",
+    "imagePlaceholder": "Product Image"
+  }
+}
