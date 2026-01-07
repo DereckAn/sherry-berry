@@ -1,0 +1,30 @@
+{
+  "videoId": "mqVflITAM_U",
+  "title": "Sherry Berry - Notre Processus Artisanal",
+  "textSteps": [
+    {
+      "id": 1,
+      "heading": "Créé avec Passion",
+      "description": "Chaque pièce que nous créons raconte une histoire. Des ingrédients bruts au produit fini, notre processus artisanal garantit qualité et authenticité dans chaque détail."
+    },
+    {
+      "id": 2,
+      "heading": "Ingrédients Sélectionnés à la Main",
+      "description": "Nous choisissons soigneusement chaque ingrédient pour sa qualité et son caractère. Seuls les meilleurs matériaux naturels entrent dans nos bougies, garantissant un parfum pur et durable."
+    },
+    {
+      "id": 3,
+      "heading": "Processus Artisanal",
+      "description": "Les techniques traditionnelles rencontrent l'innovation moderne. Chaque bougie est coulée à la main avec précision, combinant des méthodes ancestrales avec un design contemporain."
+    },
+    {
+      "id": 4,
+      "heading": "Assurance Qualité",
+      "description": "Chaque bougie subit un contrôle qualité rigoureux. Nous testons le temps de combustion, la diffusion du parfum et l'apparence pour garantir que chaque pièce répond à nos normes exigeantes."
+    }
+  ],
+  "mainSection": {
+    "title": "L'Art de la Création",
+    "description": "Notre processus commence par des ingrédients soigneusement sélectionnés, choisis à la main pour leur qualité et leur caractère. Chaque étape est un travail d'amour, combinant techniques traditionnelles et innovation moderne."
+  }
+}

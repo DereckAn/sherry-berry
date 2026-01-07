@@ -3,30 +3,48 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+export type TextStep = {
+  id: number;
+  heading: string;
+  description: string;
+};
+
 interface VideoMorphProps {
   videoId: string;
-  title?: string;
-  sideText?: {
-    heading: string;
-    description: string;
-  };
+  title: string;
+  textSteps: TextStep[];
 }
 
-const VideoMorph = ({
-  videoId,
-  title = "Our Art Process",
-  sideText = {
-    heading: "Crafted with Passion",
-    description:
-      "Every piece we create tells a story. From raw ingredients to the finished product, our artisanal process ensures quality and authenticity in every detail.",
-  },
-}: VideoMorphProps) => {
+const VideoMorph = ({ videoId, title, textSteps }: VideoMorphProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [currentStepIndex, setCurrentStepIndex] = useState(-1);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
+
+  // Calculate which text step should be visible based on scroll
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (latest) => {
+      // Start showing text after circle is fully formed (after 0.5/50%)
+      if (latest < 0.5) {
+        setCurrentStepIndex(-1); // No text visible yet
+      } else {
+        // Divide remaining scroll (0.5 to 1.0) among text steps
+        const textScrollRange = 1.0 - 0.5;
+        const stepSize = textScrollRange / textSteps.length;
+        const adjustedProgress = latest - 0.5;
+        const newIndex = Math.min(
+          Math.floor(adjustedProgress / stepSize),
+          textSteps.length - 1
+        );
+        setCurrentStepIndex(newIndex);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollYProgress, textSteps.length]);
 
   const width = useTransform(
     scrollYProgress,
@@ -59,15 +77,8 @@ const VideoMorph = ({
   const x = useTransform(
     scrollYProgress,
     [0.4, 0.7, 1],
-    ["0%", "-20%", "-30%"]
+    ["0%", "-35%", "-40%"]
   );
-
-  const textOpacity = useTransform(
-    scrollYProgress,
-    [0.5, 0.7, 0.85],
-    [0, 0.5, 1]
-  );
-  const textX = useTransform(scrollYProgress, [0.5, 0.8], ["100px", "0px"]);
 
   const scale = useTransform(scrollYProgress, [0, 0.3, 0.6], [1, 0.95, 0.85]);
 
@@ -80,8 +91,16 @@ const VideoMorph = ({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Calculate height based on number of text steps
+  // More height = more scroll space for smoother transitions
+  const sectionHeight = `${300 + textSteps.length * 150}vh`;
+
   return (
-    <section ref={containerRef} className="relative h-[400vh]">
+    <section
+      ref={containerRef}
+      className="relative"
+      style={{ height: sectionHeight }}
+    >
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col md:flex-row items-center justify-center">
         <motion.div
           style={{
@@ -132,20 +151,34 @@ const VideoMorph = ({
           </motion.div>
         </motion.div>
 
-        <motion.div
-          style={{
-            opacity: textOpacity,
-            x: textX,
-          }}
-          className="relative md:absolute right-0 md:right-16 lg:right-24 max-w-md px-6 md:px-0 mt-6 md:mt-0 text-center md:text-left text-cream"
-        >
-          <motion.h2 className="font-legquinne text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6">
-            {sideText.heading}
-          </motion.h2>
-          <motion.p className="font-antic text-base md:text-xl leading-relaxed opacity-90">
-            {sideText.description}
-          </motion.p>
-        </motion.div>
+        {/* Text Steps Container */}
+        <div>
+          {textSteps.map((step, index) => {
+            const isVisible = currentStepIndex === index;
+            return (
+              <motion.div
+                key={step.id}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: isVisible ? 1 : 0,
+                  x: isVisible ? 0 : 100,
+                }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="absolute right-0 md:right-10 lg:right-24 max-w-md px-6 md:px-0 mt-6 md:mt-0 text-center md:text-left text-cream md:top-1/2 md:-translate-1/2"
+                style={{
+                  pointerEvents: isVisible ? "auto" : "none",
+                }}
+              >
+                <motion.h2 className="font-legquinne text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6">
+                  {step.heading}
+                </motion.h2>
+                <motion.p className="font-antic text-base md:text-xl leading-relaxed opacity-90">
+                  {step.description}
+                </motion.p>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

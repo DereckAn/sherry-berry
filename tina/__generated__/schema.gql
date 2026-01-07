@@ -70,6 +70,8 @@ type Query {
   aboutQuoteConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AboutQuoteFilter): AboutQuoteConnection!
   aboutStoryPoints(relativePath: String): AboutStoryPoints!
   aboutStoryPointsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AboutStoryPointsFilter): AboutStoryPointsConnection!
+  ourArtHero(relativePath: String): OurArtHero!
+  ourArtHeroConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: OurArtHeroFilter): OurArtHeroConnection!
   footer(relativePath: String): Footer!
   footerConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: FooterFilter): FooterConnection!
 }
@@ -83,6 +85,7 @@ input DocumentFilter {
   aboutHero: AboutHeroFilter
   aboutQuote: AboutQuoteFilter
   aboutStoryPoints: AboutStoryPointsFilter
+  ourArtHero: OurArtHeroFilter
   footer: FooterFilter
 }
 
@@ -109,7 +112,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | Footer | Folder
+union DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | OurArtHero | Footer | Folder
 
 type HomeHeroImages {
   url: String!
@@ -403,6 +406,56 @@ type AboutStoryPointsConnection implements Connection {
   edges: [AboutStoryPointsConnectionEdges]
 }
 
+type OurArtHeroTextSteps {
+  id: Float!
+  heading: String!
+  description: String!
+}
+
+type OurArtHeroMainSection {
+  title: String!
+  description: String!
+}
+
+type OurArtHero implements Node & Document {
+  videoId: String!
+  title: String!
+  textSteps: [OurArtHeroTextSteps]
+  mainSection: OurArtHeroMainSection
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input OurArtHeroTextStepsFilter {
+  id: NumberFilter
+  heading: StringFilter
+  description: StringFilter
+}
+
+input OurArtHeroMainSectionFilter {
+  title: StringFilter
+  description: StringFilter
+}
+
+input OurArtHeroFilter {
+  videoId: StringFilter
+  title: StringFilter
+  textSteps: OurArtHeroTextStepsFilter
+  mainSection: OurArtHeroMainSectionFilter
+}
+
+type OurArtHeroConnectionEdges {
+  cursor: String!
+  node: OurArtHero
+}
+
+type OurArtHeroConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [OurArtHeroConnectionEdges]
+}
+
 type FooterContact {
   title: String!
 }
@@ -455,6 +508,8 @@ type Mutation {
   createAboutQuote(relativePath: String!, params: AboutQuoteMutation!): AboutQuote!
   updateAboutStoryPoints(relativePath: String!, params: AboutStoryPointsMutation!): AboutStoryPoints!
   createAboutStoryPoints(relativePath: String!, params: AboutStoryPointsMutation!): AboutStoryPoints!
+  updateOurArtHero(relativePath: String!, params: OurArtHeroMutation!): OurArtHero!
+  createOurArtHero(relativePath: String!, params: OurArtHeroMutation!): OurArtHero!
   updateFooter(relativePath: String!, params: FooterMutation!): Footer!
   createFooter(relativePath: String!, params: FooterMutation!): Footer!
 }
@@ -468,6 +523,7 @@ input DocumentUpdateMutation {
   aboutHero: AboutHeroMutation
   aboutQuote: AboutQuoteMutation
   aboutStoryPoints: AboutStoryPointsMutation
+  ourArtHero: OurArtHeroMutation
   footer: FooterMutation
   relativePath: String
 }
@@ -481,6 +537,7 @@ input DocumentMutation {
   aboutHero: AboutHeroMutation
   aboutQuote: AboutQuoteMutation
   aboutStoryPoints: AboutStoryPointsMutation
+  ourArtHero: OurArtHeroMutation
   footer: FooterMutation
 }
 
@@ -560,6 +617,24 @@ input AboutStoryPointsPointsMutation {
 
 input AboutStoryPointsMutation {
   points: [AboutStoryPointsPointsMutation]
+}
+
+input OurArtHeroTextStepsMutation {
+  id: Float
+  heading: String
+  description: String
+}
+
+input OurArtHeroMainSectionMutation {
+  title: String
+  description: String
+}
+
+input OurArtHeroMutation {
+  videoId: String
+  title: String
+  textSteps: [OurArtHeroTextStepsMutation]
+  mainSection: OurArtHeroMainSectionMutation
 }
 
 input FooterContactMutation {

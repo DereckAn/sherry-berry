@@ -1,0 +1,30 @@
+{
+  "videoId": "mqVflITAM_U",
+  "title": "Sherry Berry - Our Art Process",
+  "textSteps": [
+    {
+      "id": 1,
+      "heading": "Crafted with Passion",
+      "description": "Every piece we create tells a story. From raw ingredients to the finished product, our artisanal process ensures quality and authenticity in every detail."
+    },
+    {
+      "id": 2,
+      "heading": "Hand-Selected Ingredients",
+      "description": "We carefully choose each ingredient for its quality and character. Only the finest natural materials make it into our candles, ensuring a pure and lasting fragrance."
+    },
+    {
+      "id": 3,
+      "heading": "Artisanal Process",
+      "description": "Traditional techniques meet modern innovation. Each candle is hand-poured with precision, combining time-honored methods with contemporary design."
+    },
+    {
+      "id": 4,
+      "heading": "Quality Assurance",
+      "description": "Every candle undergoes rigorous quality control. We test burn time, scent throw, and appearance to ensure each piece meets our exacting standards."
+    }
+  ],
+  "mainSection": {
+    "title": "The Art of Creation",
+    "description": "Our process begins with carefully selected ingredients, hand-picked for their quality and character. Each step is a labor of love, combining traditional techniques with modern innovation."
+  }
+}

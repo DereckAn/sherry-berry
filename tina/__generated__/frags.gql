@@ -80,6 +80,23 @@ fragment AboutStoryPointsParts on AboutStoryPoints {
   }
 }
 
+fragment OurArtHeroParts on OurArtHero {
+  __typename
+  videoId
+  title
+  textSteps {
+    __typename
+    id
+    heading
+    description
+  }
+  mainSection {
+    __typename
+    title
+    description
+  }
+}
+
 fragment FooterParts on Footer {
   __typename
   contact {

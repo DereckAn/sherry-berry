@@ -1,0 +1,30 @@
+{
+  "videoId": "mqVflITAM_U",
+  "title": "Sherry Berry - Nuestro Proceso Artesanal",
+  "textSteps": [
+    {
+      "id": 1,
+      "heading": "Creado con Pasión",
+      "description": "Cada pieza que creamos cuenta una historia. Desde los ingredientes crudos hasta el producto terminado, nuestro proceso artesanal garantiza calidad y autenticidad en cada detalle."
+    },
+    {
+      "id": 2,
+      "heading": "Ingredientes Seleccionados a Mano",
+      "description": "Elegimos cuidadosamente cada ingrediente por su calidad y carácter. Solo los mejores materiales naturales llegan a nuestras velas, asegurando una fragancia pura y duradera."
+    },
+    {
+      "id": 3,
+      "heading": "Proceso Artesanal",
+      "description": "Las técnicas tradicionales se encuentran con la innovación moderna. Cada vela se vierte a mano con precisión, combinando métodos consagrados con diseño contemporáneo."
+    },
+    {
+      "id": 4,
+      "heading": "Control de Calidad",
+      "description": "Cada vela pasa por un riguroso control de calidad. Probamos el tiempo de combustión, la proyección del aroma y la apariencia para asegurar que cada pieza cumpla con nuestros exigentes estándares."
+    }
+  ],
+  "mainSection": {
+    "title": "El Arte de la Creación",
+    "description": "Nuestro proceso comienza con ingredientes cuidadosamente seleccionados, elegidos a mano por su calidad y carácter. Cada paso es un trabajo de amor, combinando técnicas tradicionales con innovación moderna."
+  }
+}

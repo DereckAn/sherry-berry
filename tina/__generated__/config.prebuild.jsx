@@ -384,6 +384,84 @@ var config_default = defineConfig({
         ]
       },
       // ============================================
+      // OUR ART PAGE
+      // ============================================
+      {
+        name: "ourArtHero",
+        label: "Our Art \u2192 Hero & Steps",
+        path: "content/our-art/hero",
+        format: "json",
+        ui: {
+          filename: {
+            readonly: true
+          },
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
+        fields: [
+          {
+            name: "videoId",
+            label: "YouTube Video ID",
+            type: "string",
+            required: true,
+            description: "The YouTube video ID (e.g., mqVflITAM_U)"
+          },
+          {
+            name: "title",
+            label: "Video Title",
+            type: "string",
+            required: true
+          },
+          {
+            name: "textSteps",
+            label: "Text Steps (appear on scroll)",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: (item) => ({ label: item?.heading || "Step" })
+            },
+            fields: [
+              { name: "id", label: "ID", type: "number", required: true },
+              {
+                name: "heading",
+                label: "Heading",
+                type: "string",
+                required: true
+              },
+              {
+                name: "description",
+                label: "Description",
+                type: "string",
+                required: true,
+                ui: { component: "textarea" }
+              }
+            ]
+          },
+          {
+            name: "mainSection",
+            label: "Main Section (below video)",
+            type: "object",
+            fields: [
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+                required: true
+              },
+              {
+                name: "description",
+                label: "Description",
+                type: "string",
+                required: true,
+                ui: { component: "textarea" }
+              }
+            ]
+          }
+        ]
+      },
+      // ============================================
       // FOOTER SECTION
       // ============================================
       {

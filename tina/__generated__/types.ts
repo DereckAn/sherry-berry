@@ -98,6 +98,8 @@ export type Query = {
   aboutQuoteConnection: AboutQuoteConnection;
   aboutStoryPoints: AboutStoryPoints;
   aboutStoryPointsConnection: AboutStoryPointsConnection;
+  ourArtHero: OurArtHero;
+  ourArtHeroConnection: OurArtHeroConnection;
   footer: Footer;
   footerConnection: FooterConnection;
 };
@@ -244,6 +246,21 @@ export type QueryAboutStoryPointsConnectionArgs = {
 };
 
 
+export type QueryOurArtHeroArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryOurArtHeroConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<OurArtHeroFilter>;
+};
+
+
 export type QueryFooterArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
@@ -267,6 +284,7 @@ export type DocumentFilter = {
   aboutHero?: InputMaybe<AboutHeroFilter>;
   aboutQuote?: InputMaybe<AboutQuoteFilter>;
   aboutStoryPoints?: InputMaybe<AboutStoryPointsFilter>;
+  ourArtHero?: InputMaybe<OurArtHeroFilter>;
   footer?: InputMaybe<FooterFilter>;
 };
 
@@ -307,7 +325,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | Footer | Folder;
+export type DocumentNode = HomeHero | HomeFeaturedProducts | HomeProjects | HomeCta | HomeTrustBanner | AboutHero | AboutQuote | AboutStoryPoints | OurArtHero | Footer | Folder;
 
 export type HomeHeroImages = {
   __typename?: 'HomeHeroImages';
@@ -629,6 +647,61 @@ export type AboutStoryPointsConnection = Connection & {
   edges?: Maybe<Array<Maybe<AboutStoryPointsConnectionEdges>>>;
 };
 
+export type OurArtHeroTextSteps = {
+  __typename?: 'OurArtHeroTextSteps';
+  id: Scalars['Float']['output'];
+  heading: Scalars['String']['output'];
+  description: Scalars['String']['output'];
+};
+
+export type OurArtHeroMainSection = {
+  __typename?: 'OurArtHeroMainSection';
+  title: Scalars['String']['output'];
+  description: Scalars['String']['output'];
+};
+
+export type OurArtHero = Node & Document & {
+  __typename?: 'OurArtHero';
+  videoId: Scalars['String']['output'];
+  title: Scalars['String']['output'];
+  textSteps?: Maybe<Array<Maybe<OurArtHeroTextSteps>>>;
+  mainSection?: Maybe<OurArtHeroMainSection>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type OurArtHeroTextStepsFilter = {
+  id?: InputMaybe<NumberFilter>;
+  heading?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+};
+
+export type OurArtHeroMainSectionFilter = {
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+};
+
+export type OurArtHeroFilter = {
+  videoId?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  textSteps?: InputMaybe<OurArtHeroTextStepsFilter>;
+  mainSection?: InputMaybe<OurArtHeroMainSectionFilter>;
+};
+
+export type OurArtHeroConnectionEdges = {
+  __typename?: 'OurArtHeroConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<OurArtHero>;
+};
+
+export type OurArtHeroConnection = Connection & {
+  __typename?: 'OurArtHeroConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<OurArtHeroConnectionEdges>>>;
+};
+
 export type FooterContact = {
   __typename?: 'FooterContact';
   title: Scalars['String']['output'];
@@ -686,6 +759,8 @@ export type Mutation = {
   createAboutQuote: AboutQuote;
   updateAboutStoryPoints: AboutStoryPoints;
   createAboutStoryPoints: AboutStoryPoints;
+  updateOurArtHero: OurArtHero;
+  createOurArtHero: OurArtHero;
   updateFooter: Footer;
   createFooter: Footer;
 };
@@ -820,6 +895,18 @@ export type MutationCreateAboutStoryPointsArgs = {
 };
 
 
+export type MutationUpdateOurArtHeroArgs = {
+  relativePath: Scalars['String']['input'];
+  params: OurArtHeroMutation;
+};
+
+
+export type MutationCreateOurArtHeroArgs = {
+  relativePath: Scalars['String']['input'];
+  params: OurArtHeroMutation;
+};
+
+
 export type MutationUpdateFooterArgs = {
   relativePath: Scalars['String']['input'];
   params: FooterMutation;
@@ -840,6 +927,7 @@ export type DocumentUpdateMutation = {
   aboutHero?: InputMaybe<AboutHeroMutation>;
   aboutQuote?: InputMaybe<AboutQuoteMutation>;
   aboutStoryPoints?: InputMaybe<AboutStoryPointsMutation>;
+  ourArtHero?: InputMaybe<OurArtHeroMutation>;
   footer?: InputMaybe<FooterMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
@@ -853,6 +941,7 @@ export type DocumentMutation = {
   aboutHero?: InputMaybe<AboutHeroMutation>;
   aboutQuote?: InputMaybe<AboutQuoteMutation>;
   aboutStoryPoints?: InputMaybe<AboutStoryPointsMutation>;
+  ourArtHero?: InputMaybe<OurArtHeroMutation>;
   footer?: InputMaybe<FooterMutation>;
 };
 
@@ -934,6 +1023,24 @@ export type AboutStoryPointsMutation = {
   points?: InputMaybe<Array<InputMaybe<AboutStoryPointsPointsMutation>>>;
 };
 
+export type OurArtHeroTextStepsMutation = {
+  id?: InputMaybe<Scalars['Float']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type OurArtHeroMainSectionMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type OurArtHeroMutation = {
+  videoId?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  textSteps?: InputMaybe<Array<InputMaybe<OurArtHeroTextStepsMutation>>>;
+  mainSection?: InputMaybe<OurArtHeroMainSectionMutation>;
+};
+
 export type FooterContactMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
 };
@@ -957,6 +1064,8 @@ export type AboutHeroPartsFragment = { __typename: 'AboutHero', titleTop: string
 export type AboutQuotePartsFragment = { __typename: 'AboutQuote', quote: string };
 
 export type AboutStoryPointsPartsFragment = { __typename: 'AboutStoryPoints', points?: Array<{ __typename: 'AboutStoryPointsPoints', title: string, text: string, image: string, imageAlt: string } | null> | null };
+
+export type OurArtHeroPartsFragment = { __typename: 'OurArtHero', videoId: string, title: string, textSteps?: Array<{ __typename: 'OurArtHeroTextSteps', id: number, heading: string, description: string } | null> | null, mainSection?: { __typename: 'OurArtHeroMainSection', title: string, description: string } | null };
 
 export type FooterPartsFragment = { __typename: 'Footer', contact?: { __typename: 'FooterContact', title: string } | null };
 
@@ -1112,6 +1221,25 @@ export type AboutStoryPointsConnectionQueryVariables = Exact<{
 
 export type AboutStoryPointsConnectionQuery = { __typename?: 'Query', aboutStoryPointsConnection: { __typename?: 'AboutStoryPointsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutStoryPointsConnectionEdges', cursor: string, node?: { __typename: 'AboutStoryPoints', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, points?: Array<{ __typename: 'AboutStoryPointsPoints', title: string, text: string, image: string, imageAlt: string } | null> | null } | null } | null> | null } };
 
+export type OurArtHeroQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type OurArtHeroQuery = { __typename?: 'Query', ourArtHero: { __typename: 'OurArtHero', id: string, videoId: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, textSteps?: Array<{ __typename: 'OurArtHeroTextSteps', id: number, heading: string, description: string } | null> | null, mainSection?: { __typename: 'OurArtHeroMainSection', title: string, description: string } | null } };
+
+export type OurArtHeroConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<OurArtHeroFilter>;
+}>;
+
+
+export type OurArtHeroConnectionQuery = { __typename?: 'Query', ourArtHeroConnection: { __typename?: 'OurArtHeroConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'OurArtHeroConnectionEdges', cursor: string, node?: { __typename: 'OurArtHero', id: string, videoId: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, textSteps?: Array<{ __typename: 'OurArtHeroTextSteps', id: number, heading: string, description: string } | null> | null, mainSection?: { __typename: 'OurArtHeroMainSection', title: string, description: string } | null } | null } | null> | null } };
+
 export type FooterQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
@@ -1218,6 +1346,24 @@ export const AboutStoryPointsPartsFragmentDoc = gql`
     text
     image
     imageAlt
+  }
+}
+    `;
+export const OurArtHeroPartsFragmentDoc = gql`
+    fragment OurArtHeroParts on OurArtHero {
+  __typename
+  videoId
+  title
+  textSteps {
+    __typename
+    id
+    heading
+    description
+  }
+  mainSection {
+    __typename
+    title
+    description
   }
 }
     `;
@@ -1686,6 +1832,63 @@ export const AboutStoryPointsConnectionDocument = gql`
   }
 }
     ${AboutStoryPointsPartsFragmentDoc}`;
+export const OurArtHeroDocument = gql`
+    query ourArtHero($relativePath: String!) {
+  ourArtHero(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...OurArtHeroParts
+  }
+}
+    ${OurArtHeroPartsFragmentDoc}`;
+export const OurArtHeroConnectionDocument = gql`
+    query ourArtHeroConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: OurArtHeroFilter) {
+  ourArtHeroConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...OurArtHeroParts
+      }
+    }
+  }
+}
+    ${OurArtHeroPartsFragmentDoc}`;
 export const FooterDocument = gql`
     query footer($relativePath: String!) {
   footer(relativePath: $relativePath) {
@@ -1793,6 +1996,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     aboutStoryPointsConnection(variables?: AboutStoryPointsConnectionQueryVariables, options?: C): Promise<{data: AboutStoryPointsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsConnectionQueryVariables, query: string}> {
         return requester<{data: AboutStoryPointsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AboutStoryPointsConnectionQueryVariables, query: string}, AboutStoryPointsConnectionQueryVariables>(AboutStoryPointsConnectionDocument, variables, options);
+      },
+    ourArtHero(variables: OurArtHeroQueryVariables, options?: C): Promise<{data: OurArtHeroQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: OurArtHeroQueryVariables, query: string}> {
+        return requester<{data: OurArtHeroQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: OurArtHeroQueryVariables, query: string}, OurArtHeroQueryVariables>(OurArtHeroDocument, variables, options);
+      },
+    ourArtHeroConnection(variables?: OurArtHeroConnectionQueryVariables, options?: C): Promise<{data: OurArtHeroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: OurArtHeroConnectionQueryVariables, query: string}> {
+        return requester<{data: OurArtHeroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: OurArtHeroConnectionQueryVariables, query: string}, OurArtHeroConnectionQueryVariables>(OurArtHeroConnectionDocument, variables, options);
       },
     footer(variables: FooterQueryVariables, options?: C): Promise<{data: FooterQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterQueryVariables, query: string}> {
         return requester<{data: FooterQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterQueryVariables, query: string}, FooterQueryVariables>(FooterDocument, variables, options);

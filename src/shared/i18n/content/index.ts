@@ -11,4 +11,5 @@ export * from "./cart";
 export * from "./checkout";
 export * from "./footer";
 export * from "./home";
+export * from "./our-art";
 export * from "./product";
