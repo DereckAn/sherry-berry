@@ -1,0 +1,19 @@
+{
+  "title": "Tu Carrito",
+  "closeButton": "Cerrar carrito",
+  "emptyCart": {
+    "title": "Tu carrito está vacío",
+    "subtitle": "Explora nuestras velas artesanales"
+  },
+  "actions": {
+    "decrease": "Disminuir cantidad",
+    "increase": "Aumentar cantidad",
+    "remove": "Eliminar del carrito",
+    "clear": "Vaciar carrito"
+  },
+  "checkout": {
+    "subtotal": "Subtotal",
+    "taxNote": "Impuestos y envío calculados en checkout",
+    "button": "Proceder al Pago"
+  }
+}

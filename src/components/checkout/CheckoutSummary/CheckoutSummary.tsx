@@ -185,7 +185,7 @@ function CheckoutItem({
   return (
     <div className="flex items-start space-x-4">
       {/* Product Image */}
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <div className="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden">
           <Image
             src={item.image}
@@ -211,7 +211,7 @@ function CheckoutItem({
       </div>
 
       {/* Quantity Controls */}
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         {showEditControls ? (
           <div className="flex items-center space-x-2">
             {/* Quantity Selector */}
@@ -223,7 +223,7 @@ function CheckoutItem({
               >
                 <Minus className="w-4 h-4 text-gray-600" />
               </button>
-              <span className="px-3 py-1 text-sm font-medium min-w-[2rem] text-center">
+              <span className="px-3 py-1 text-sm font-medium min-w-8 text-center">
                 {item.quantity}
               </span>
               <button

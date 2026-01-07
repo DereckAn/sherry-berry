@@ -1,0 +1,19 @@
+{
+  "title": "Your Cart",
+  "closeButton": "Close cart",
+  "emptyCart": {
+    "title": "Your cart is empty",
+    "subtitle": "Explore our handcrafted candles"
+  },
+  "actions": {
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "remove": "Remove from cart",
+    "clear": "Clear cart"
+  },
+  "checkout": {
+    "subtotal": "Subtotal",
+    "taxNote": "Taxes and shipping calculated at checkout",
+    "button": "Proceed to Checkout"
+  }
+}

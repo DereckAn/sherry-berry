@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/shared/i18n/LanguageProvider";
+import { CART } from "@/shared/i18n/content";
 import {
   useCartStore,
   useTotalItems,
@@ -19,6 +21,8 @@ interface CartProps {
 }
 
 export const Cart = ({ isOpen, onClose }: CartProps) => {
+  const { language } = useLanguage();
+  const content = CART[language];
   const items = useCartStore((state) => state.items);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
   const removeItem = useCartStore((state) => state.removeItem);
@@ -82,12 +86,12 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-sand">
             <h2 className="text-xl font-serif text-charcoal">
-              Tu Carrito ({totalItems})
+              {content.title} ({totalItems})
             </h2>
             <button
               onClick={onClose}
               className="p-2 hover:bg-sand rounded-sm transition-colors"
-              aria-label="Cerrar carrito"
+              aria-label={content.closeButton}
             >
               <svg
                 className="size-6 text-charcoal"
@@ -128,10 +132,10 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                   </g>
                 </svg>
                 <p className="text-charcoal/70 text-lg">
-                  Tu carrito está vacío
+                  {content.emptyCart.title}
                 </p>
                 <p className="text-charcoal/50 text-sm mt-2">
-                  Explora nuestras velas artesanales
+                  {content.emptyCart.subtitle}
                 </p>
               </div>
             ) : (
@@ -171,7 +175,7 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                             handleQuantityChange(item.id, item.quantity - 1)
                           }
                           className="size-5 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors"
-                          aria-label="Disminuir cantidad"
+                          aria-label={content.actions.decrease}
                         >
                           <svg
                             className="size-2"
@@ -196,7 +200,7 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                           }
                           disabled={item.quantity >= MAX_QUANTITY_PER_ITEM}
                           className="size-5 flex items-center justify-center border border-sand rounded-sm hover:bg-sand transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                          aria-label="Aumentar cantidad"
+                          aria-label={content.actions.increase}
                         >
                           <svg
                             className="size-2"
@@ -217,7 +221,7 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                         <button
                           onClick={() => removeItem(item.id)}
                           className="ml-auto p-1.5 text-charcoal/50 hover:text-red-600 transition-colors"
-                          aria-label="Eliminar del carrito"
+                          aria-label={content.actions.remove}
                         >
                           <svg
                             className="size-4"
@@ -249,19 +253,21 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                 onClick={clearCart}
                 className="text-sm text-end w-full text-charcoal/60 hover:text-charcoal underline transition-colors"
               >
-                Vaciar carrito
+                {content.actions.clear}
               </button>
 
               {/* Subtotal */}
               <div className="flex items-center justify-between text-lg">
-                <span className="text-charcoal/70">Subtotal</span>
+                <span className="text-charcoal/70">
+                  {content.checkout.subtotal}
+                </span>
                 <span className="font-serif font-medium text-charcoal">
                   ${totalPrice.toFixed(2)} CAD
                 </span>
               </div>
 
               <p className="text-xs text-charcoal/50">
-                Impuestos y envío calculados en checkout
+                {content.checkout.taxNote}
               </p>
 
               {/* Checkout Button */}
@@ -269,7 +275,7 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
                 className="w-full flex justify-center items-center py-3 px-6 bg-primary text-white font-medium rounded-sm hover:bg-primary-hover transition-colors"
                 href={"/checkout"}
               >
-                Proceder al Pago
+                {content.checkout.button}
               </Link>
             </div>
           )}

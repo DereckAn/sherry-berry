@@ -1,0 +1,19 @@
+{
+  "title": "Votre Panier",
+  "closeButton": "Fermer le panier",
+  "emptyCart": {
+    "title": "Votre panier est vide",
+    "subtitle": "Découvrez nos bougies artisanales"
+  },
+  "actions": {
+    "decrease": "Diminuer la quantité",
+    "increase": "Augmenter la quantité",
+    "remove": "Retirer du panier",
+    "clear": "Vider le panier"
+  },
+  "checkout": {
+    "subtotal": "Sous-total",
+    "taxNote": "Taxes et frais de livraison calculés lors du paiement",
+    "button": "Procéder au Paiement"
+  }
+}
